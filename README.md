@@ -1,4 +1,4 @@
-# J!Party Game
+# J!Party Game [WIP]
 
 This project is the software piece of the J!Party collection.
 
