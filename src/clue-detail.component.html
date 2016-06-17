@@ -1,0 +1,8 @@
+<div *ngIf="clue">
+  <h2>Clue details!</h2>
+  <div><label>ID: </label>{{clue.id}}</div>
+  <label>Level: <input [(ngModel)]="clue.level" placeholder="level"></label>
+  <label>Clue: <input [(ngModel)]="clue.clue" placeholder="clue"></label>
+  <label>Answer: <input [(ngModel)]="clue.answer" placeholder="answer"></label>
+</div>
+<button (click)="goBack()">Back</button>
