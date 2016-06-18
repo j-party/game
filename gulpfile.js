@@ -29,7 +29,7 @@ let runCmd = function(cmd, args, callback) {
   });
 };
 
-gulp.task('build', function(done) {
+gulp.task('build', ['clean'], function(done) {
   return runSequence(['compile:ts', 'copy:css', 'copy:html'], done);
 });
 
