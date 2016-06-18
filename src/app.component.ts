@@ -1,46 +1,52 @@
-import { Component }      from '@angular/core';
+import { Component } from '@angular/core';
 import { RouteConfig, ROUTER_DIRECTIVES, ROUTER_PROVIDERS } from '@angular/router-deprecated';
-import { ClueService }    from './clue.service';
-import { DashboardComponent } from './dashboard.component';
+
+import { ClueService } from './clue.service';
+import { GameState } from './game-state.service';
+import { InputService } from './input.service';
+import { KeyboardService } from './keyboard.service';
+
 import { CluesComponent } from './clues.component';
 import { ClueDetailComponent } from './clue-detail.component';
+import { DashboardComponent } from './dashboard.component';
+import { TitleScreenComponent } from './title-screen.component';
 
 @Component({
   moduleId: module.id,
   selector: 'jparty-app',
   styleUrls: ['app.component.css'],
   template: `
-    <h1>{{title}}</h1>
-    <nav>
-      <a [routerLink]="['Dashboard']">Dashboard</a>
-      <a [routerLink]="['Board']">Board</a>
-    </nav>
-    <router-outlet></router-outlet>
+    <div class="screen">
+      <router-outlet></router-outlet>
+    </div>
   `,
   directives: [ROUTER_DIRECTIVES],
   providers: [
     ROUTER_PROVIDERS,
-    ClueService
+    ClueService,
+    GameState,
+    InputService,
+    KeyboardService
   ]
 })
-@RouteConfig([
-  {
-    path: '/dashboard',
-    name: 'Dashboard',
-    component: DashboardComponent,
-    useAsDefault: true
-  },
-  {
-    path: '/board',
-    name: 'Board',
-    component: CluesComponent
-  },
-  {
-    path: '/clue/:id',
-    name: 'ClueDetail',
-    component: ClueDetailComponent
-  },
-])
+@RouteConfig([{
+  path: '/',
+  name: 'Title',
+  component: TitleScreenComponent,
+  useAsDefault: true
+}, {
+  path: '/dashboard',
+  name: 'Dashboard',
+  component: DashboardComponent
+}, {
+  path: '/board',
+  name: 'Board',
+  component: CluesComponent
+}, {
+  path: '/clue/:id',
+  name: 'ClueDetail',
+  component: ClueDetailComponent
+}])
 export class AppComponent {
   title = 'J!Party';
 }
