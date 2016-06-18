@@ -3,6 +3,9 @@ import { CLUES } from './mock-clues';
 
 @Injectable()
 export class ClueService {
+  loadClues() {
+    return Promise.resolve(CLUES);
+  }
   getClues() {
     return Promise.resolve(CLUES);
   }
