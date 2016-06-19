@@ -1,5 +1,8 @@
 import { Component } from '@angular/core';
 import { RouteConfig, ROUTER_DIRECTIVES, ROUTER_PROVIDERS } from '@angular/router-deprecated';
+import { HTTP_PROVIDERS } from '@angular/http';
+
+import './rxjs-operators';
 
 import { ClueService } from './clue.service';
 import { GameState } from './game-state.service';
@@ -22,6 +25,7 @@ import { TitleScreenComponent } from './title-screen.component';
   `,
   directives: [ROUTER_DIRECTIVES],
   providers: [
+    HTTP_PROVIDERS,
     ROUTER_PROVIDERS,
     ClueService,
     GameState,

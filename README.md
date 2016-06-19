@@ -14,12 +14,9 @@ To build the game, you need the following tools:
 * [gulp](http://gulpjs.com/)
 * [bower](http://bower.io/)
 
-Next, install the package dependencies in the project folder:
+Next, install the package dependencies in the project folder: `npm install`
 
-```shell
-npm install
-bower install
-```
+You'll need a *clues database*, in the format created by [the J!Party crawler](https://github.com/j-party/crawler). Copy the database into the root folder of this project and name it `clues.db`.
 
 Once you have the packages installed, you can run any of the following tasks:
 

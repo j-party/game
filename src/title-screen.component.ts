@@ -28,8 +28,13 @@ export class TitleScreenComponent implements OnInit {
       });
     };
 
-    this.clueService.loadClues()
-      .then(turnOffLoading)
-      .then(waitForInput);
+    this.clueService.loadClues().subscribe(
+      percentage => this.loadingPercentage += percentage,
+      error => console.log('ERROR!', error),
+      () => {
+        turnOffLoading();
+        waitForInput();
+      }
+    );
   }
 }
