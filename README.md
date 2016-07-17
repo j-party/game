@@ -13,6 +13,7 @@ To build the game, you need the following tools:
 * [node/npm](http://nodejs.org/)
 * [gulp](http://gulpjs.com/)
 * [bower](http://bower.io/)
+* [sqlite3](https://www.sqlite.org/)
 
 Next, install the package dependencies in the project folder: `npm install`
 
