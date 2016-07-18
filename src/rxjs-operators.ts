@@ -2,6 +2,7 @@
 // Import just the rxjs statics and operators we need for THIS app.
 
 // Statics
+import 'rxjs/add/observable/concat';
 import 'rxjs/add/observable/throw';
 
 // Operators

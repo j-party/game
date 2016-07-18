@@ -5,6 +5,7 @@ import { HTTP_PROVIDERS } from '@angular/http';
 import './rxjs-operators';
 
 import { ClueService } from './clue.service';
+import { DatabaseParser } from './database-parser.service';
 import { GameState } from './game-state.service';
 import { InputService } from './input.service';
 import { KeyboardService } from './keyboard.service';
@@ -28,6 +29,7 @@ import { TitleScreenComponent } from './title-screen.component';
     HTTP_PROVIDERS,
     ROUTER_PROVIDERS,
     ClueService,
+    DatabaseParser,
     GameState,
     InputService,
     KeyboardService
