@@ -33,6 +33,7 @@ export class DatabaseParser {
     let parsedRow: DatabaseRow;
     let header = rows[headerLine].split('|');
     for (let i = headerLine + 1; i < rows.length; i++) {
+      if (rows[i].indexOf('|') === -1) { continue; }
       parsedRow = {};
       let cols = rows[i].split('|');
       for (let j = 0; j < cols.length; j++) {
