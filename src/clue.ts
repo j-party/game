@@ -1,6 +1,12 @@
 export class Clue {
   id: number;
-  level: number;
   clue: string;
   answer: string;
+}
+
+export class Category {
+  id: number;
+  name: string;
+  isFinal: boolean;
+  clues: Clue[];
 }

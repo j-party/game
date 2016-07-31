@@ -1,8 +1,10 @@
 <h3>Top Clues</h3>
 <div class="grid grid-pad">
-  <div *ngFor="let clue of clues" (click)="gotoDetail(clue)" class="col-1-4">
-    <div class="module clue">
-      <h4>{{clue.clue}}</h4>
+  <div *ngFor="let category of categories">
+    <div *ngFor="let clue of category.clues" (click)="gotoDetail(clue)" class="col-1-4">
+      <div class="module clue">
+        <h4>{{clue.clue}}</h4>
+      </div>
     </div>
   </div>
 </div>

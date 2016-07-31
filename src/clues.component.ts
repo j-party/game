@@ -19,7 +19,7 @@ export class CluesComponent implements OnInit {
     private clueService: ClueService
   ) {}
   getClues() {
-    this.clueService.getClues().then(clues => this.clues = clues);
+    //this.clueService.getClues().then(clues => this.clues = clues);
   }
   ngOnInit() {
     this.getClues();

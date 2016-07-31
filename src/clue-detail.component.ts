@@ -17,7 +17,7 @@ export class ClueDetailComponent implements OnInit {
   ) {}
   ngOnInit() {
     let id = +this.routeParams.get('id');
-    this.clueService.getClue(id).then(clue => this.clue = clue);
+    //this.clueService.getClue(id).then(clue => this.clue = clue);
   }
   goBack() {
     window.history.back();

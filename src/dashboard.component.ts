@@ -1,7 +1,7 @@
 import { Component, OnInit } from '@angular/core';
 import { Router } from '@angular/router-deprecated';
 
-import { Clue } from './clue';
+import { Category, Clue } from './clue';
 import { ClueService } from './clue.service';
 
 @Component({
@@ -11,14 +11,19 @@ import { ClueService } from './clue.service';
   templateUrl: 'dashboard.component.html'
 })
 export class DashboardComponent implements OnInit {
-  clues: Clue[] = [];
+  categories: Category[] = [];
   constructor(
     private router: Router,
     private clueService: ClueService
   ) {}
   ngOnInit() {
     this.clueService.getClues()
-      .then(clues => this.clues = clues.slice(1,3));
+      .then(categories => {
+        this.categories = [];
+        this.categories.push(categories[0]);
+        this.categories.push(categories[1]);
+        this.categories.push(categories[2]);
+      });
   }
   gotoDetail(clue: Clue) {
     let link = ['ClueDetail', { id: clue.id }];
