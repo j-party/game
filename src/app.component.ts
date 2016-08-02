@@ -9,6 +9,7 @@ import { DatabaseParser } from './database-parser.service';
 import { GameState } from './game-state.service';
 import { InputService } from './input.service';
 import { KeyboardService } from './keyboard.service';
+import { Randomizer } from './randomizer.service';
 
 import { CluesComponent } from './clues.component';
 import { ClueDetailComponent } from './clue-detail.component';
@@ -32,7 +33,8 @@ import { TitleScreenComponent } from './title-screen.component';
     DatabaseParser,
     GameState,
     InputService,
-    KeyboardService
+    KeyboardService,
+    Randomizer
   ]
 })
 @RouteConfig([{
