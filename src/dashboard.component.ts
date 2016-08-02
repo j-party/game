@@ -17,13 +17,7 @@ export class DashboardComponent implements OnInit {
     private clueService: ClueService
   ) {}
   ngOnInit() {
-    this.clueService.getClues()
-      .then(categories => {
-        this.categories = [];
-        this.categories.push(categories[0]);
-        this.categories.push(categories[1]);
-        this.categories.push(categories[2]);
-      });
+    this.clueService.choose(6).then(categories => { this.categories = categories; });
   }
   gotoDetail(clue: Clue) {
     let link = ['ClueDetail', { id: clue.id }];

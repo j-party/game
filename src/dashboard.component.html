@@ -1,10 +1,25 @@
 <h3>Top Clues</h3>
-<div class="grid grid-pad">
-  <div *ngFor="let category of categories">
-    <div *ngFor="let clue of category.clues" (click)="gotoDetail(clue)" class="col-1-4">
-      <div class="module clue">
-        <h4>{{clue.clue}}</h4>
-      </div>
-    </div>
-  </div>
-</div>
+<table border="1">
+  <thead>
+    <tr>
+      <th *ngFor="let category of categories">{{category.name}}</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td *ngFor="let category of categories" (click)="gotoDetail(category.clues[0])">{{category.clues[0].clue}}</td>
+    </tr>
+    <tr>
+      <td *ngFor="let category of categories" (click)="gotoDetail(category.clues[1])">{{category.clues[1].clue}}</td>
+    </tr>
+    <tr>
+      <td *ngFor="let category of categories" (click)="gotoDetail(category.clues[2])">{{category.clues[2].clue}}</td>
+    </tr>
+    <tr>
+      <td *ngFor="let category of categories" (click)="gotoDetail(category.clues[3])">{{category.clues[3].clue}}</td>
+    </tr>
+    <tr>
+      <td *ngFor="let category of categories" (click)="gotoDetail(category.clues[4])">{{category.clues[4].clue}}</td>
+    </tr>
+  </tbody>
+</table>

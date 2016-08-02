@@ -5,6 +5,7 @@ import { Observer } from 'rxjs/Observer';
 
 import { Clue, Category } from './clue';
 import { DatabaseRow, DatabaseParser } from './database-parser.service';
+import { Randomizer } from './randomizer.service';
 
 @Injectable()
 export class ClueService {
@@ -12,9 +13,24 @@ export class ClueService {
   private cluesFile = 'clues.txt';
   private clues: Category[] = [];
   constructor(
+    private dbParser: DatabaseParser,
     private http: Http,
-    private dbParser: DatabaseParser
+    private randomizer: Randomizer
   ) {}
+  // Chooses X number of categories with clues.
+  choose(num: Number) {
+    // TODO This should not have possible duplicates.
+    let categories: Category[] = [];
+    for (let i = 0; i < num; i++) {
+      let index = this.randomizer.generate(0, this.clues.length);
+      categories.push(this.clues[index]);
+    }
+    return Promise.resolve(categories);
+  }
+  // Returns all clues in the database.
+  getClues() {
+    return Promise.resolve(this.clues);
+  }
   // Loads the clues into the browser.
   // Returns an Observable of progress increments (totals to 100).
   loadClues(): Observable<number> {
@@ -94,8 +110,5 @@ export class ClueService {
     });
 
     return Observable.concat(loadDataFiles, parseData);
-  }
-  getClues() {
-    return Promise.resolve(this.clues);
   }
 }
