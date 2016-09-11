@@ -5633,7 +5633,7 @@ K(require)||(w=require,require=void 0);g=requirejs=function(b,c,d,m){var r,q="_"
 0),importScripts(d),b.completeLoad(c)}catch(q){b.onError(F("importscripts","importScripts failed for "+c+" at "+d,q,[c]))}};E&&!w.skipDataMain&&X(document.getElementsByTagName("script"),function(b){C||(C=b.parentNode);if(O=b.getAttribute("data-main"))return u=O,w.baseUrl||-1!==u.indexOf("!")||(I=u.split("/"),u=I.pop(),T=I.length?I.join("/")+"/":"./",w.baseUrl=T),u=u.replace(U,""),g.jsExtRegExp.test(u)&&(u=O),w.deps=w.deps?w.deps.concat(u):[u],!0});define=function(b,c,d){var e,g;"string"!==typeof b&&
 (d=c,c=b,b=null);L(c)||(d=c,c=null);!c&&K(d)&&(c=[],d.length&&(d.toString().replace(qa,ka).replace(ra,function(b,d){c.push(d)}),c=(1===d.length?["require"]:["require","exports","module"]).concat(c)));S&&(e=P||pa())&&(b||(b=e.getAttribute("data-requiremodule")),g=J[e.getAttribute("data-requirecontext")]);g?(g.defQueue.push([b,c,d]),g.defQueueMap[b]=!0):V.push([b,c,d])};define.amd={jQuery:!0};g.exec=function(b){return eval(b)};g(w)}})(this);
 
-requirejs.config({"baseUrl":"src/","paths":{"text":"../scripts/text","aurelia-binding":"../node_modules/aurelia-binding/dist/amd/aurelia-binding","aurelia-dependency-injection":"../node_modules/aurelia-dependency-injection/dist/amd/aurelia-dependency-injection","aurelia-event-aggregator":"../node_modules/aurelia-event-aggregator/dist/amd/aurelia-event-aggregator","aurelia-bootstrapper":"../node_modules/aurelia-bootstrapper/dist/amd/aurelia-bootstrapper","aurelia-fetch-client":"../node_modules/aurelia-fetch-client/dist/amd/aurelia-fetch-client","aurelia-framework":"../node_modules/aurelia-framework/dist/amd/aurelia-framework","aurelia-history-browser":"../node_modules/aurelia-history-browser/dist/amd/aurelia-history-browser","aurelia-history":"../node_modules/aurelia-history/dist/amd/aurelia-history","aurelia-loader":"../node_modules/aurelia-loader/dist/amd/aurelia-loader","aurelia-loader-default":"../node_modules/aurelia-loader-default/dist/amd/aurelia-loader-default","aurelia-logging":"../node_modules/aurelia-logging/dist/amd/aurelia-logging","aurelia-logging-console":"../node_modules/aurelia-logging-console/dist/amd/aurelia-logging-console","aurelia-metadata":"../node_modules/aurelia-metadata/dist/amd/aurelia-metadata","aurelia-pal":"../node_modules/aurelia-pal/dist/amd/aurelia-pal","aurelia-pal-browser":"../node_modules/aurelia-pal-browser/dist/amd/aurelia-pal-browser","aurelia-path":"../node_modules/aurelia-path/dist/amd/aurelia-path","aurelia-polyfills":"../node_modules/aurelia-polyfills/dist/amd/aurelia-polyfills","aurelia-route-recognizer":"../node_modules/aurelia-route-recognizer/dist/amd/aurelia-route-recognizer","aurelia-router":"../node_modules/aurelia-router/dist/amd/aurelia-router","aurelia-task-queue":"../node_modules/aurelia-task-queue/dist/amd/aurelia-task-queue","aurelia-templating":"../node_modules/aurelia-templating/dist/amd/aurelia-templating","aurelia-templating-binding":"../node_modules/aurelia-templating-binding/dist/amd/aurelia-templating-binding","app-bundle":"../scripts/app-bundle"},"packages":[{"name":"aurelia-testing","location":"../node_modules/aurelia-testing/dist/amd","main":"aurelia-testing"},{"name":"aurelia-templating-resources","location":"../node_modules/aurelia-templating-resources/dist/amd","main":"aurelia-templating-resources"},{"name":"aurelia-templating-router","location":"../node_modules/aurelia-templating-router/dist/amd","main":"aurelia-templating-router"}],"stubModules":["text"],"shim":{},"bundles":{"app-bundle":["app","clue","database-parser","clue-service","clue-detail","clues","dashboard","environment","game-state","input","keyboard-service","input-service","main","title-screen","resources/index"]}});
+requirejs.config({"baseUrl":"src/","paths":{"text":"../scripts/text","aurelia-binding":"../node_modules/aurelia-binding/dist/amd/aurelia-binding","aurelia-dependency-injection":"../node_modules/aurelia-dependency-injection/dist/amd/aurelia-dependency-injection","aurelia-event-aggregator":"../node_modules/aurelia-event-aggregator/dist/amd/aurelia-event-aggregator","aurelia-fetch-client":"../node_modules/aurelia-fetch-client/dist/amd/aurelia-fetch-client","aurelia-framework":"../node_modules/aurelia-framework/dist/amd/aurelia-framework","aurelia-history":"../node_modules/aurelia-history/dist/amd/aurelia-history","aurelia-loader":"../node_modules/aurelia-loader/dist/amd/aurelia-loader","aurelia-logging":"../node_modules/aurelia-logging/dist/amd/aurelia-logging","aurelia-metadata":"../node_modules/aurelia-metadata/dist/amd/aurelia-metadata","aurelia-pal":"../node_modules/aurelia-pal/dist/amd/aurelia-pal","aurelia-bootstrapper":"../node_modules/aurelia-bootstrapper/dist/amd/aurelia-bootstrapper","aurelia-pal-browser":"../node_modules/aurelia-pal-browser/dist/amd/aurelia-pal-browser","aurelia-path":"../node_modules/aurelia-path/dist/amd/aurelia-path","aurelia-polyfills":"../node_modules/aurelia-polyfills/dist/amd/aurelia-polyfills","aurelia-route-recognizer":"../node_modules/aurelia-route-recognizer/dist/amd/aurelia-route-recognizer","aurelia-router":"../node_modules/aurelia-router/dist/amd/aurelia-router","aurelia-task-queue":"../node_modules/aurelia-task-queue/dist/amd/aurelia-task-queue","aurelia-history-browser":"../node_modules/aurelia-history-browser/dist/amd/aurelia-history-browser","aurelia-loader-default":"../node_modules/aurelia-loader-default/dist/amd/aurelia-loader-default","aurelia-templating":"../node_modules/aurelia-templating/dist/amd/aurelia-templating","aurelia-logging-console":"../node_modules/aurelia-logging-console/dist/amd/aurelia-logging-console","aurelia-templating-binding":"../node_modules/aurelia-templating-binding/dist/amd/aurelia-templating-binding","app-bundle":"../scripts/app-bundle"},"packages":[{"name":"random-js","location":"../node_modules/random-js/lib","main":"random"},{"name":"aurelia-templating-router","location":"../node_modules/aurelia-templating-router/dist/amd","main":"aurelia-templating-router"},{"name":"aurelia-testing","location":"../node_modules/aurelia-testing/dist/amd","main":"aurelia-testing"},{"name":"aurelia-templating-resources","location":"../node_modules/aurelia-templating-resources/dist/amd","main":"aurelia-templating-resources"}],"stubModules":["text"],"shim":{},"bundles":{"app-bundle":["app","clue","database-parser","randomizer","clue-service","clue-detail","clues","dashboard","environment","game-state","input","keyboard-service","input-service","main","title-screen","resources/index"]}});
 define('text',{});
 define('aurelia-binding',['exports', 'aurelia-logging', 'aurelia-pal', 'aurelia-task-queue', 'aurelia-metadata'], function (exports, _aureliaLogging, _aureliaPal, _aureliaTaskQueue, _aureliaMetadata) {
   'use strict';
@@ -11867,151 +11867,6 @@ define('aurelia-event-aggregator',['exports', 'aurelia-logging'], function (expo
     config.instance(EventAggregator, includeEventsIn(config.aurelia));
   }
 });
-define('aurelia-bootstrapper',['exports', 'aurelia-pal', 'aurelia-pal-browser', 'aurelia-polyfills'], function (exports, _aureliaPal, _aureliaPalBrowser) {
-  'use strict';
-
-  Object.defineProperty(exports, "__esModule", {
-    value: true
-  });
-  exports.bootstrap = bootstrap;
-
-
-  var bootstrapQueue = [];
-  var sharedLoader = null;
-  var Aurelia = null;
-
-  function onBootstrap(callback) {
-    return new Promise(function (resolve, reject) {
-      if (sharedLoader) {
-        resolve(callback(sharedLoader));
-      } else {
-        bootstrapQueue.push(function () {
-          try {
-            resolve(callback(sharedLoader));
-          } catch (e) {
-            reject(e);
-          }
-        });
-      }
-    });
-  }
-
-  function ready(global) {
-    return new Promise(function (resolve, reject) {
-      if (global.document.readyState === 'complete') {
-        resolve(global.document);
-      } else {
-        global.document.addEventListener('DOMContentLoaded', completed);
-        global.addEventListener('load', completed);
-      }
-
-      function completed() {
-        global.document.removeEventListener('DOMContentLoaded', completed);
-        global.removeEventListener('load', completed);
-        resolve(global.document);
-      }
-    });
-  }
-
-  function createLoader() {
-    if (_aureliaPal.PLATFORM.Loader) {
-      return Promise.resolve(new _aureliaPal.PLATFORM.Loader());
-    }
-
-    if (window.System && typeof window.System.import === 'function') {
-      return System.normalize('aurelia-bootstrapper').then(function (bootstrapperName) {
-        return System.normalize('aurelia-loader-default', bootstrapperName);
-      }).then(function (loaderName) {
-        return System.import(loaderName).then(function (m) {
-          return new m.DefaultLoader();
-        });
-      });
-    }
-
-    if (typeof window.require === 'function') {
-      return new Promise(function (resolve, reject) {
-        return require(['aurelia-loader-default'], function (m) {
-          return resolve(new m.DefaultLoader());
-        }, reject);
-      });
-    }
-
-    return Promise.reject('No PLATFORM.Loader is defined and there is neither a System API (ES6) or a Require API (AMD) globally available to load your app.');
-  }
-
-  function preparePlatform(loader) {
-    return loader.normalize('aurelia-bootstrapper').then(function (bootstrapperName) {
-      return loader.normalize('aurelia-framework', bootstrapperName).then(function (frameworkName) {
-        loader.map('aurelia-framework', frameworkName);
-
-        return Promise.all([loader.normalize('aurelia-dependency-injection', frameworkName).then(function (diName) {
-          return loader.map('aurelia-dependency-injection', diName);
-        }), loader.normalize('aurelia-router', bootstrapperName).then(function (routerName) {
-          return loader.map('aurelia-router', routerName);
-        }), loader.normalize('aurelia-logging-console', bootstrapperName).then(function (loggingConsoleName) {
-          return loader.map('aurelia-logging-console', loggingConsoleName);
-        })]).then(function () {
-          return loader.loadModule(frameworkName).then(function (m) {
-            return Aurelia = m.Aurelia;
-          });
-        });
-      });
-    });
-  }
-
-  function handleApp(loader, appHost) {
-    var moduleId = appHost.getAttribute('aurelia-app') || appHost.getAttribute('data-aurelia-app');
-    return config(loader, appHost, moduleId);
-  }
-
-  function config(loader, appHost, configModuleId) {
-    var aurelia = new Aurelia(loader);
-    aurelia.host = appHost;
-    aurelia.configModuleId = configModuleId || null;
-
-    if (configModuleId) {
-      return loader.loadModule(configModuleId).then(function (customConfig) {
-        return customConfig.configure(aurelia);
-      });
-    }
-
-    aurelia.use.standardConfiguration().developmentLogging();
-
-    return aurelia.start().then(function () {
-      return aurelia.setRoot();
-    });
-  }
-
-  function run() {
-    return ready(window).then(function (doc) {
-      (0, _aureliaPalBrowser.initialize)();
-
-      var appHost = doc.querySelectorAll('[aurelia-app],[data-aurelia-app]');
-      return createLoader().then(function (loader) {
-        return preparePlatform(loader).then(function () {
-          for (var i = 0, ii = appHost.length; i < ii; ++i) {
-            handleApp(loader, appHost[i]).catch(console.error.bind(console));
-          }
-
-          sharedLoader = loader;
-          for (var _i = 0, _ii = bootstrapQueue.length; _i < _ii; ++_i) {
-            bootstrapQueue[_i]();
-          }
-          bootstrapQueue = null;
-        });
-      });
-    });
-  }
-
-  function bootstrap(configure) {
-    return onBootstrap(function (loader) {
-      var aurelia = new Aurelia(loader);
-      return configure(aurelia);
-    });
-  }
-
-  run();
-});
 define('aurelia-fetch-client',['exports'], function (exports) {
   'use strict';
 
@@ -12816,332 +12671,6 @@ define('aurelia-framework',['exports', 'aurelia-dependency-injection', 'aurelia-
   exports.FrameworkConfiguration = FrameworkConfiguration;
   var LogManager = exports.LogManager = TheLogManager;
 });
-define('aurelia-history-browser',['exports', 'aurelia-pal', 'aurelia-history'], function (exports, _aureliaPal, _aureliaHistory) {
-  'use strict';
-
-  Object.defineProperty(exports, "__esModule", {
-    value: true
-  });
-  exports.BrowserHistory = exports.DefaultLinkHandler = exports.LinkHandler = undefined;
-  exports.configure = configure;
-
-  var _class, _temp;
-
-  function _possibleConstructorReturn(self, call) {
-    if (!self) {
-      throw new ReferenceError("this hasn't been initialised - super() hasn't been called");
-    }
-
-    return call && (typeof call === "object" || typeof call === "function") ? call : self;
-  }
-
-  function _inherits(subClass, superClass) {
-    if (typeof superClass !== "function" && superClass !== null) {
-      throw new TypeError("Super expression must either be null or a function, not " + typeof superClass);
-    }
-
-    subClass.prototype = Object.create(superClass && superClass.prototype, {
-      constructor: {
-        value: subClass,
-        enumerable: false,
-        writable: true,
-        configurable: true
-      }
-    });
-    if (superClass) Object.setPrototypeOf ? Object.setPrototypeOf(subClass, superClass) : subClass.__proto__ = superClass;
-  }
-
-  
-
-  var LinkHandler = exports.LinkHandler = function () {
-    function LinkHandler() {
-      
-    }
-
-    LinkHandler.prototype.activate = function activate(history) {};
-
-    LinkHandler.prototype.deactivate = function deactivate() {};
-
-    return LinkHandler;
-  }();
-
-  var DefaultLinkHandler = exports.DefaultLinkHandler = function (_LinkHandler) {
-    _inherits(DefaultLinkHandler, _LinkHandler);
-
-    function DefaultLinkHandler() {
-      
-
-      var _this = _possibleConstructorReturn(this, _LinkHandler.call(this));
-
-      _this.handler = function (e) {
-        var _DefaultLinkHandler$g = DefaultLinkHandler.getEventInfo(e);
-
-        var shouldHandleEvent = _DefaultLinkHandler$g.shouldHandleEvent;
-        var href = _DefaultLinkHandler$g.href;
-
-
-        if (shouldHandleEvent) {
-          e.preventDefault();
-          _this.history.navigate(href);
-        }
-      };
-      return _this;
-    }
-
-    DefaultLinkHandler.prototype.activate = function activate(history) {
-      if (history._hasPushState) {
-        this.history = history;
-        _aureliaPal.DOM.addEventListener('click', this.handler, true);
-      }
-    };
-
-    DefaultLinkHandler.prototype.deactivate = function deactivate() {
-      _aureliaPal.DOM.removeEventListener('click', this.handler);
-    };
-
-    DefaultLinkHandler.getEventInfo = function getEventInfo(event) {
-      var info = {
-        shouldHandleEvent: false,
-        href: null,
-        anchor: null
-      };
-
-      var target = DefaultLinkHandler.findClosestAnchor(event.target);
-      if (!target || !DefaultLinkHandler.targetIsThisWindow(target)) {
-        return info;
-      }
-
-      if (event.altKey || event.ctrlKey || event.metaKey || event.shiftKey) {
-        return info;
-      }
-
-      var href = target.getAttribute('href');
-      info.anchor = target;
-      info.href = href;
-
-      var leftButtonClicked = event.which === 1;
-      var isRelative = href && !(href.charAt(0) === '#' || /^[a-z]+:/i.test(href));
-
-      info.shouldHandleEvent = leftButtonClicked && isRelative;
-      return info;
-    };
-
-    DefaultLinkHandler.findClosestAnchor = function findClosestAnchor(el) {
-      while (el) {
-        if (el.tagName === 'A') {
-          return el;
-        }
-
-        el = el.parentNode;
-      }
-    };
-
-    DefaultLinkHandler.targetIsThisWindow = function targetIsThisWindow(target) {
-      var targetWindow = target.getAttribute('target');
-      var win = _aureliaPal.PLATFORM.global;
-
-      return !targetWindow || targetWindow === win.name || targetWindow === '_self' || targetWindow === 'top' && win === win.top;
-    };
-
-    return DefaultLinkHandler;
-  }(LinkHandler);
-
-  function configure(config) {
-    config.singleton(_aureliaHistory.History, BrowserHistory);
-    config.transient(LinkHandler, DefaultLinkHandler);
-  }
-
-  var BrowserHistory = exports.BrowserHistory = (_temp = _class = function (_History) {
-    _inherits(BrowserHistory, _History);
-
-    function BrowserHistory(linkHandler) {
-      
-
-      var _this2 = _possibleConstructorReturn(this, _History.call(this));
-
-      _this2._isActive = false;
-      _this2._checkUrlCallback = _this2._checkUrl.bind(_this2);
-
-      _this2.location = _aureliaPal.PLATFORM.location;
-      _this2.history = _aureliaPal.PLATFORM.history;
-      _this2.linkHandler = linkHandler;
-      return _this2;
-    }
-
-    BrowserHistory.prototype.activate = function activate(options) {
-      if (this._isActive) {
-        throw new Error('History has already been activated.');
-      }
-
-      var wantsPushState = !!options.pushState;
-
-      this._isActive = true;
-      this.options = Object.assign({}, { root: '/' }, this.options, options);
-
-      this.root = ('/' + this.options.root + '/').replace(rootStripper, '/');
-
-      this._wantsHashChange = this.options.hashChange !== false;
-      this._hasPushState = !!(this.options.pushState && this.history && this.history.pushState);
-
-      var eventName = void 0;
-      if (this._hasPushState) {
-        eventName = 'popstate';
-      } else if (this._wantsHashChange) {
-        eventName = 'hashchange';
-      }
-
-      _aureliaPal.PLATFORM.addEventListener(eventName, this._checkUrlCallback);
-
-      if (this._wantsHashChange && wantsPushState) {
-        var loc = this.location;
-        var atRoot = loc.pathname.replace(/[^\/]$/, '$&/') === this.root;
-
-        if (!this._hasPushState && !atRoot) {
-          this.fragment = this._getFragment(null, true);
-          this.location.replace(this.root + this.location.search + '#' + this.fragment);
-
-          return true;
-        } else if (this._hasPushState && atRoot && loc.hash) {
-            this.fragment = this._getHash().replace(routeStripper, '');
-            this.history.replaceState({}, _aureliaPal.DOM.title, this.root + this.fragment + loc.search);
-          }
-      }
-
-      if (!this.fragment) {
-        this.fragment = this._getFragment();
-      }
-
-      this.linkHandler.activate(this);
-
-      if (!this.options.silent) {
-        return this._loadUrl();
-      }
-    };
-
-    BrowserHistory.prototype.deactivate = function deactivate() {
-      _aureliaPal.PLATFORM.removeEventListener('popstate', this._checkUrlCallback);
-      _aureliaPal.PLATFORM.removeEventListener('hashchange', this._checkUrlCallback);
-      this._isActive = false;
-      this.linkHandler.deactivate();
-    };
-
-    BrowserHistory.prototype.getAbsoluteRoot = function getAbsoluteRoot() {
-      var origin = createOrigin(this.location.protocol, this.location.hostname, this.location.port);
-      return '' + origin + this.root;
-    };
-
-    BrowserHistory.prototype.navigate = function navigate(fragment) {
-      var _ref = arguments.length <= 1 || arguments[1] === undefined ? {} : arguments[1];
-
-      var _ref$trigger = _ref.trigger;
-      var trigger = _ref$trigger === undefined ? true : _ref$trigger;
-      var _ref$replace = _ref.replace;
-      var replace = _ref$replace === undefined ? false : _ref$replace;
-
-      if (fragment && absoluteUrl.test(fragment)) {
-        this.location.href = fragment;
-        return true;
-      }
-
-      if (!this._isActive) {
-        return false;
-      }
-
-      fragment = this._getFragment(fragment || '');
-
-      if (this.fragment === fragment && !replace) {
-        return false;
-      }
-
-      this.fragment = fragment;
-
-      var url = this.root + fragment;
-
-      if (fragment === '' && url !== '/') {
-        url = url.slice(0, -1);
-      }
-
-      if (this._hasPushState) {
-        url = url.replace('//', '/');
-        this.history[replace ? 'replaceState' : 'pushState']({}, _aureliaPal.DOM.title, url);
-      } else if (this._wantsHashChange) {
-        updateHash(this.location, fragment, replace);
-      } else {
-        return this.location.assign(url);
-      }
-
-      if (trigger) {
-        return this._loadUrl(fragment);
-      }
-    };
-
-    BrowserHistory.prototype.navigateBack = function navigateBack() {
-      this.history.back();
-    };
-
-    BrowserHistory.prototype.setTitle = function setTitle(title) {
-      _aureliaPal.DOM.title = title;
-    };
-
-    BrowserHistory.prototype._getHash = function _getHash() {
-      return this.location.hash.substr(1);
-    };
-
-    BrowserHistory.prototype._getFragment = function _getFragment(fragment, forcePushState) {
-      var root = void 0;
-
-      if (!fragment) {
-        if (this._hasPushState || !this._wantsHashChange || forcePushState) {
-          fragment = this.location.pathname + this.location.search;
-          root = this.root.replace(trailingSlash, '');
-          if (!fragment.indexOf(root)) {
-            fragment = fragment.substr(root.length);
-          }
-        } else {
-          fragment = this._getHash();
-        }
-      }
-
-      return '/' + fragment.replace(routeStripper, '');
-    };
-
-    BrowserHistory.prototype._checkUrl = function _checkUrl() {
-      var current = this._getFragment();
-      if (current !== this.fragment) {
-        this._loadUrl();
-      }
-    };
-
-    BrowserHistory.prototype._loadUrl = function _loadUrl(fragmentOverride) {
-      var fragment = this.fragment = this._getFragment(fragmentOverride);
-
-      return this.options.routeHandler ? this.options.routeHandler(fragment) : false;
-    };
-
-    return BrowserHistory;
-  }(_aureliaHistory.History), _class.inject = [LinkHandler], _temp);
-
-  var routeStripper = /^#?\/*|\s+$/g;
-
-  var rootStripper = /^\/+|\/+$/g;
-
-  var trailingSlash = /\/$/;
-
-  var absoluteUrl = /^([a-z][a-z0-9+\-.]*:)?\/\//i;
-
-  function updateHash(location, fragment, replace) {
-    if (replace) {
-      var _href = location.href.replace(/(javascript:|#).*$/, '');
-      location.replace(_href + '#' + fragment);
-    } else {
-      location.hash = '#' + fragment;
-    }
-  }
-
-  function createOrigin(protocol, hostname, port) {
-    return protocol + '//' + hostname + (port ? ':' + port : '');
-  }
-});
 define('aurelia-history',['exports'], function (exports) {
   'use strict';
 
@@ -13340,264 +12869,6 @@ define('aurelia-loader',['exports', 'aurelia-path', 'aurelia-metadata'], functio
     return Loader;
   }();
 });
-define('aurelia-loader-default',['exports', 'aurelia-loader', 'aurelia-pal', 'aurelia-metadata'], function (exports, _aureliaLoader, _aureliaPal, _aureliaMetadata) {
-  'use strict';
-
-  Object.defineProperty(exports, "__esModule", {
-    value: true
-  });
-  exports.DefaultLoader = exports.TextTemplateLoader = undefined;
-
-  function _possibleConstructorReturn(self, call) {
-    if (!self) {
-      throw new ReferenceError("this hasn't been initialised - super() hasn't been called");
-    }
-
-    return call && (typeof call === "object" || typeof call === "function") ? call : self;
-  }
-
-  function _inherits(subClass, superClass) {
-    if (typeof superClass !== "function" && superClass !== null) {
-      throw new TypeError("Super expression must either be null or a function, not " + typeof superClass);
-    }
-
-    subClass.prototype = Object.create(superClass && superClass.prototype, {
-      constructor: {
-        value: subClass,
-        enumerable: false,
-        writable: true,
-        configurable: true
-      }
-    });
-    if (superClass) Object.setPrototypeOf ? Object.setPrototypeOf(subClass, superClass) : subClass.__proto__ = superClass;
-  }
-
-  
-
-  var TextTemplateLoader = exports.TextTemplateLoader = function () {
-    function TextTemplateLoader() {
-      
-    }
-
-    TextTemplateLoader.prototype.loadTemplate = function loadTemplate(loader, entry) {
-      return loader.loadText(entry.address).then(function (text) {
-        entry.template = _aureliaPal.DOM.createTemplateFromMarkup(text);
-      });
-    };
-
-    return TextTemplateLoader;
-  }();
-
-  function ensureOriginOnExports(executed, name) {
-    var target = executed;
-    var key = void 0;
-    var exportedValue = void 0;
-
-    if (target.__useDefault) {
-      target = target['default'];
-    }
-
-    _aureliaMetadata.Origin.set(target, new _aureliaMetadata.Origin(name, 'default'));
-
-    for (key in target) {
-      exportedValue = target[key];
-
-      if (typeof exportedValue === 'function') {
-        _aureliaMetadata.Origin.set(exportedValue, new _aureliaMetadata.Origin(name, key));
-      }
-    }
-
-    return executed;
-  }
-
-  var DefaultLoader = exports.DefaultLoader = function (_Loader) {
-    _inherits(DefaultLoader, _Loader);
-
-    function DefaultLoader() {
-      
-
-      var _this = _possibleConstructorReturn(this, _Loader.call(this));
-
-      _this.textPluginName = 'text';
-
-
-      _this.moduleRegistry = Object.create(null);
-      _this.useTemplateLoader(new TextTemplateLoader());
-
-      var that = _this;
-
-      _this.addPlugin('template-registry-entry', {
-        'fetch': function fetch(address) {
-          var entry = that.getOrCreateTemplateRegistryEntry(address);
-          return entry.templateIsLoaded ? entry : that.templateLoader.loadTemplate(that, entry).then(function (x) {
-            return entry;
-          });
-        }
-      });
-      return _this;
-    }
-
-    DefaultLoader.prototype.useTemplateLoader = function useTemplateLoader(templateLoader) {
-      this.templateLoader = templateLoader;
-    };
-
-    DefaultLoader.prototype.loadAllModules = function loadAllModules(ids) {
-      var loads = [];
-
-      for (var i = 0, ii = ids.length; i < ii; ++i) {
-        loads.push(this.loadModule(ids[i]));
-      }
-
-      return Promise.all(loads);
-    };
-
-    DefaultLoader.prototype.loadTemplate = function loadTemplate(url) {
-      return this._import(this.applyPluginToUrl(url, 'template-registry-entry'));
-    };
-
-    DefaultLoader.prototype.loadText = function loadText(url) {
-      return this._import(this.applyPluginToUrl(url, this.textPluginName)).then(function (textOrModule) {
-        if (typeof textOrModule === 'string') {
-          return textOrModule;
-        }
-
-        return textOrModule['default'];
-      });
-    };
-
-    return DefaultLoader;
-  }(_aureliaLoader.Loader);
-
-  _aureliaPal.PLATFORM.Loader = DefaultLoader;
-
-  if (!_aureliaPal.PLATFORM.global.System || !_aureliaPal.PLATFORM.global.System.import) {
-    if (_aureliaPal.PLATFORM.global.requirejs && requirejs.s && requirejs.s.contexts && requirejs.s.contexts._ && requirejs.s.contexts._.defined) {
-      _aureliaPal.PLATFORM.eachModule = function (callback) {
-        var defined = requirejs.s.contexts._.defined;
-        for (var key in defined) {
-          try {
-            if (callback(key, defined[key])) return;
-          } catch (e) {}
-        }
-      };
-    } else {
-      _aureliaPal.PLATFORM.eachModule = function (callback) {};
-    }
-
-    DefaultLoader.prototype._import = function (moduleId) {
-      return new Promise(function (resolve, reject) {
-        require([moduleId], resolve, reject);
-      });
-    };
-
-    DefaultLoader.prototype.loadModule = function (id) {
-      var _this2 = this;
-
-      var existing = this.moduleRegistry[id];
-      if (existing !== undefined) {
-        return Promise.resolve(existing);
-      }
-
-      return new Promise(function (resolve, reject) {
-        require([id], function (m) {
-          _this2.moduleRegistry[id] = m;
-          resolve(ensureOriginOnExports(m, id));
-        }, reject);
-      });
-    };
-
-    DefaultLoader.prototype.map = function (id, source) {};
-
-    DefaultLoader.prototype.normalize = function (moduleId, relativeTo) {
-      return Promise.resolve(moduleId);
-    };
-
-    DefaultLoader.prototype.normalizeSync = function (moduleId, relativeTo) {
-      return moduleId;
-    };
-
-    DefaultLoader.prototype.applyPluginToUrl = function (url, pluginName) {
-      return pluginName + '!' + url;
-    };
-
-    DefaultLoader.prototype.addPlugin = function (pluginName, implementation) {
-      var nonAnonDefine = define;
-      nonAnonDefine(pluginName, [], {
-        'load': function load(name, req, onload) {
-          var result = implementation.fetch(name);
-          Promise.resolve(result).then(onload);
-        }
-      });
-    };
-  } else {
-    _aureliaPal.PLATFORM.eachModule = function (callback) {
-      var modules = System._loader.modules;
-
-      for (var key in modules) {
-        try {
-          if (callback(key, modules[key].module)) return;
-        } catch (e) {}
-      }
-    };
-
-    System.set('text', System.newModule({
-      'translate': function translate(load) {
-        return 'module.exports = "' + load.source.replace(/(["\\])/g, '\\$1').replace(/[\f]/g, '\\f').replace(/[\b]/g, '\\b').replace(/[\n]/g, '\\n').replace(/[\t]/g, '\\t').replace(/[\r]/g, '\\r').replace(/[\u2028]/g, '\\u2028').replace(/[\u2029]/g, '\\u2029') + '";';
-      }
-    }));
-
-    DefaultLoader.prototype._import = function (moduleId) {
-      return System.import(moduleId);
-    };
-
-    DefaultLoader.prototype.loadModule = function (id) {
-      var _this3 = this;
-
-      return System.normalize(id).then(function (newId) {
-        var existing = _this3.moduleRegistry[newId];
-        if (existing !== undefined) {
-          return Promise.resolve(existing);
-        }
-
-        return System.import(newId).then(function (m) {
-          _this3.moduleRegistry[newId] = m;
-          return ensureOriginOnExports(m, newId);
-        });
-      });
-    };
-
-    DefaultLoader.prototype.map = function (id, source) {
-      System.map[id] = source;
-    };
-
-    DefaultLoader.prototype.normalizeSync = function (moduleId, relativeTo) {
-      return System.normalizeSync(moduleId, relativeTo);
-    };
-
-    DefaultLoader.prototype.normalize = function (moduleId, relativeTo) {
-      return System.normalize(moduleId, relativeTo);
-    };
-
-    DefaultLoader.prototype.applyPluginToUrl = function (url, pluginName) {
-      return url + '!' + pluginName;
-    };
-
-    DefaultLoader.prototype.addPlugin = function (pluginName, implementation) {
-      System.set(pluginName, System.newModule({
-        'fetch': function fetch(load, _fetch) {
-          var result = implementation.fetch(load.address);
-          return Promise.resolve(result).then(function (x) {
-            load.metadata.result = x;
-            return '';
-          });
-        },
-        'instantiate': function instantiate(load) {
-          return load.metadata.result;
-        }
-      }));
-    };
-  }
-});
 define('aurelia-logging',['exports'], function (exports) {
   'use strict';
 
@@ -13724,64 +12995,6 @@ define('aurelia-logging',['exports'], function (exports) {
     Logger.prototype.error = function error(message) {};
 
     return Logger;
-  }();
-});
-define('aurelia-logging-console',['exports', 'aurelia-logging'], function (exports, _aureliaLogging) {
-  'use strict';
-
-  Object.defineProperty(exports, "__esModule", {
-    value: true
-  });
-  exports.ConsoleAppender = undefined;
-
-  
-
-  var ConsoleAppender = exports.ConsoleAppender = function () {
-    function ConsoleAppender() {
-      
-    }
-
-    ConsoleAppender.prototype.debug = function debug(logger) {
-      var _console;
-
-      for (var _len = arguments.length, rest = Array(_len > 1 ? _len - 1 : 0), _key = 1; _key < _len; _key++) {
-        rest[_key - 1] = arguments[_key];
-      }
-
-      (_console = console).debug.apply(_console, ['DEBUG [' + logger.id + ']'].concat(rest));
-    };
-
-    ConsoleAppender.prototype.info = function info(logger) {
-      var _console2;
-
-      for (var _len2 = arguments.length, rest = Array(_len2 > 1 ? _len2 - 1 : 0), _key2 = 1; _key2 < _len2; _key2++) {
-        rest[_key2 - 1] = arguments[_key2];
-      }
-
-      (_console2 = console).info.apply(_console2, ['INFO [' + logger.id + ']'].concat(rest));
-    };
-
-    ConsoleAppender.prototype.warn = function warn(logger) {
-      var _console3;
-
-      for (var _len3 = arguments.length, rest = Array(_len3 > 1 ? _len3 - 1 : 0), _key3 = 1; _key3 < _len3; _key3++) {
-        rest[_key3 - 1] = arguments[_key3];
-      }
-
-      (_console3 = console).warn.apply(_console3, ['WARN [' + logger.id + ']'].concat(rest));
-    };
-
-    ConsoleAppender.prototype.error = function error(logger) {
-      var _console4;
-
-      for (var _len4 = arguments.length, rest = Array(_len4 > 1 ? _len4 - 1 : 0), _key4 = 1; _key4 < _len4; _key4++) {
-        rest[_key4 - 1] = arguments[_key4];
-      }
-
-      (_console4 = console).error.apply(_console4, ['ERROR [' + logger.id + ']'].concat(rest));
-    };
-
-    return ConsoleAppender;
   }();
 });
 define('aurelia-metadata',['exports', 'aurelia-pal'], function (exports, _aureliaPal) {
@@ -14136,6 +13349,151 @@ define('aurelia-pal',['exports'], function (exports) {
 
     callback(PLATFORM, FEATURE, DOM);
   }
+});
+define('aurelia-bootstrapper',['exports', 'aurelia-pal', 'aurelia-pal-browser', 'aurelia-polyfills'], function (exports, _aureliaPal, _aureliaPalBrowser) {
+  'use strict';
+
+  Object.defineProperty(exports, "__esModule", {
+    value: true
+  });
+  exports.bootstrap = bootstrap;
+
+
+  var bootstrapQueue = [];
+  var sharedLoader = null;
+  var Aurelia = null;
+
+  function onBootstrap(callback) {
+    return new Promise(function (resolve, reject) {
+      if (sharedLoader) {
+        resolve(callback(sharedLoader));
+      } else {
+        bootstrapQueue.push(function () {
+          try {
+            resolve(callback(sharedLoader));
+          } catch (e) {
+            reject(e);
+          }
+        });
+      }
+    });
+  }
+
+  function ready(global) {
+    return new Promise(function (resolve, reject) {
+      if (global.document.readyState === 'complete') {
+        resolve(global.document);
+      } else {
+        global.document.addEventListener('DOMContentLoaded', completed);
+        global.addEventListener('load', completed);
+      }
+
+      function completed() {
+        global.document.removeEventListener('DOMContentLoaded', completed);
+        global.removeEventListener('load', completed);
+        resolve(global.document);
+      }
+    });
+  }
+
+  function createLoader() {
+    if (_aureliaPal.PLATFORM.Loader) {
+      return Promise.resolve(new _aureliaPal.PLATFORM.Loader());
+    }
+
+    if (window.System && typeof window.System.import === 'function') {
+      return System.normalize('aurelia-bootstrapper').then(function (bootstrapperName) {
+        return System.normalize('aurelia-loader-default', bootstrapperName);
+      }).then(function (loaderName) {
+        return System.import(loaderName).then(function (m) {
+          return new m.DefaultLoader();
+        });
+      });
+    }
+
+    if (typeof window.require === 'function') {
+      return new Promise(function (resolve, reject) {
+        return require(['aurelia-loader-default'], function (m) {
+          return resolve(new m.DefaultLoader());
+        }, reject);
+      });
+    }
+
+    return Promise.reject('No PLATFORM.Loader is defined and there is neither a System API (ES6) or a Require API (AMD) globally available to load your app.');
+  }
+
+  function preparePlatform(loader) {
+    return loader.normalize('aurelia-bootstrapper').then(function (bootstrapperName) {
+      return loader.normalize('aurelia-framework', bootstrapperName).then(function (frameworkName) {
+        loader.map('aurelia-framework', frameworkName);
+
+        return Promise.all([loader.normalize('aurelia-dependency-injection', frameworkName).then(function (diName) {
+          return loader.map('aurelia-dependency-injection', diName);
+        }), loader.normalize('aurelia-router', bootstrapperName).then(function (routerName) {
+          return loader.map('aurelia-router', routerName);
+        }), loader.normalize('aurelia-logging-console', bootstrapperName).then(function (loggingConsoleName) {
+          return loader.map('aurelia-logging-console', loggingConsoleName);
+        })]).then(function () {
+          return loader.loadModule(frameworkName).then(function (m) {
+            return Aurelia = m.Aurelia;
+          });
+        });
+      });
+    });
+  }
+
+  function handleApp(loader, appHost) {
+    var moduleId = appHost.getAttribute('aurelia-app') || appHost.getAttribute('data-aurelia-app');
+    return config(loader, appHost, moduleId);
+  }
+
+  function config(loader, appHost, configModuleId) {
+    var aurelia = new Aurelia(loader);
+    aurelia.host = appHost;
+    aurelia.configModuleId = configModuleId || null;
+
+    if (configModuleId) {
+      return loader.loadModule(configModuleId).then(function (customConfig) {
+        return customConfig.configure(aurelia);
+      });
+    }
+
+    aurelia.use.standardConfiguration().developmentLogging();
+
+    return aurelia.start().then(function () {
+      return aurelia.setRoot();
+    });
+  }
+
+  function run() {
+    return ready(window).then(function (doc) {
+      (0, _aureliaPalBrowser.initialize)();
+
+      var appHost = doc.querySelectorAll('[aurelia-app],[data-aurelia-app]');
+      return createLoader().then(function (loader) {
+        return preparePlatform(loader).then(function () {
+          for (var i = 0, ii = appHost.length; i < ii; ++i) {
+            handleApp(loader, appHost[i]).catch(console.error.bind(console));
+          }
+
+          sharedLoader = loader;
+          for (var _i = 0, _ii = bootstrapQueue.length; _i < _ii; ++_i) {
+            bootstrapQueue[_i]();
+          }
+          bootstrapQueue = null;
+        });
+      });
+    });
+  }
+
+  function bootstrap(configure) {
+    return onBootstrap(function (loader) {
+      var aurelia = new Aurelia(loader);
+      return configure(aurelia);
+    });
+  }
+
+  run();
 });
 define('aurelia-pal-browser',['exports', 'aurelia-pal'], function (exports, _aureliaPal) {
   'use strict';
@@ -18121,6 +17479,590 @@ define('aurelia-task-queue',['exports', 'aurelia-pal'], function (exports, _aure
 
     return TaskQueue;
   }();
+});
+define('aurelia-history-browser',['exports', 'aurelia-pal', 'aurelia-history'], function (exports, _aureliaPal, _aureliaHistory) {
+  'use strict';
+
+  Object.defineProperty(exports, "__esModule", {
+    value: true
+  });
+  exports.BrowserHistory = exports.DefaultLinkHandler = exports.LinkHandler = undefined;
+  exports.configure = configure;
+
+  var _class, _temp;
+
+  function _possibleConstructorReturn(self, call) {
+    if (!self) {
+      throw new ReferenceError("this hasn't been initialised - super() hasn't been called");
+    }
+
+    return call && (typeof call === "object" || typeof call === "function") ? call : self;
+  }
+
+  function _inherits(subClass, superClass) {
+    if (typeof superClass !== "function" && superClass !== null) {
+      throw new TypeError("Super expression must either be null or a function, not " + typeof superClass);
+    }
+
+    subClass.prototype = Object.create(superClass && superClass.prototype, {
+      constructor: {
+        value: subClass,
+        enumerable: false,
+        writable: true,
+        configurable: true
+      }
+    });
+    if (superClass) Object.setPrototypeOf ? Object.setPrototypeOf(subClass, superClass) : subClass.__proto__ = superClass;
+  }
+
+  
+
+  var LinkHandler = exports.LinkHandler = function () {
+    function LinkHandler() {
+      
+    }
+
+    LinkHandler.prototype.activate = function activate(history) {};
+
+    LinkHandler.prototype.deactivate = function deactivate() {};
+
+    return LinkHandler;
+  }();
+
+  var DefaultLinkHandler = exports.DefaultLinkHandler = function (_LinkHandler) {
+    _inherits(DefaultLinkHandler, _LinkHandler);
+
+    function DefaultLinkHandler() {
+      
+
+      var _this = _possibleConstructorReturn(this, _LinkHandler.call(this));
+
+      _this.handler = function (e) {
+        var _DefaultLinkHandler$g = DefaultLinkHandler.getEventInfo(e);
+
+        var shouldHandleEvent = _DefaultLinkHandler$g.shouldHandleEvent;
+        var href = _DefaultLinkHandler$g.href;
+
+
+        if (shouldHandleEvent) {
+          e.preventDefault();
+          _this.history.navigate(href);
+        }
+      };
+      return _this;
+    }
+
+    DefaultLinkHandler.prototype.activate = function activate(history) {
+      if (history._hasPushState) {
+        this.history = history;
+        _aureliaPal.DOM.addEventListener('click', this.handler, true);
+      }
+    };
+
+    DefaultLinkHandler.prototype.deactivate = function deactivate() {
+      _aureliaPal.DOM.removeEventListener('click', this.handler);
+    };
+
+    DefaultLinkHandler.getEventInfo = function getEventInfo(event) {
+      var info = {
+        shouldHandleEvent: false,
+        href: null,
+        anchor: null
+      };
+
+      var target = DefaultLinkHandler.findClosestAnchor(event.target);
+      if (!target || !DefaultLinkHandler.targetIsThisWindow(target)) {
+        return info;
+      }
+
+      if (event.altKey || event.ctrlKey || event.metaKey || event.shiftKey) {
+        return info;
+      }
+
+      var href = target.getAttribute('href');
+      info.anchor = target;
+      info.href = href;
+
+      var leftButtonClicked = event.which === 1;
+      var isRelative = href && !(href.charAt(0) === '#' || /^[a-z]+:/i.test(href));
+
+      info.shouldHandleEvent = leftButtonClicked && isRelative;
+      return info;
+    };
+
+    DefaultLinkHandler.findClosestAnchor = function findClosestAnchor(el) {
+      while (el) {
+        if (el.tagName === 'A') {
+          return el;
+        }
+
+        el = el.parentNode;
+      }
+    };
+
+    DefaultLinkHandler.targetIsThisWindow = function targetIsThisWindow(target) {
+      var targetWindow = target.getAttribute('target');
+      var win = _aureliaPal.PLATFORM.global;
+
+      return !targetWindow || targetWindow === win.name || targetWindow === '_self' || targetWindow === 'top' && win === win.top;
+    };
+
+    return DefaultLinkHandler;
+  }(LinkHandler);
+
+  function configure(config) {
+    config.singleton(_aureliaHistory.History, BrowserHistory);
+    config.transient(LinkHandler, DefaultLinkHandler);
+  }
+
+  var BrowserHistory = exports.BrowserHistory = (_temp = _class = function (_History) {
+    _inherits(BrowserHistory, _History);
+
+    function BrowserHistory(linkHandler) {
+      
+
+      var _this2 = _possibleConstructorReturn(this, _History.call(this));
+
+      _this2._isActive = false;
+      _this2._checkUrlCallback = _this2._checkUrl.bind(_this2);
+
+      _this2.location = _aureliaPal.PLATFORM.location;
+      _this2.history = _aureliaPal.PLATFORM.history;
+      _this2.linkHandler = linkHandler;
+      return _this2;
+    }
+
+    BrowserHistory.prototype.activate = function activate(options) {
+      if (this._isActive) {
+        throw new Error('History has already been activated.');
+      }
+
+      var wantsPushState = !!options.pushState;
+
+      this._isActive = true;
+      this.options = Object.assign({}, { root: '/' }, this.options, options);
+
+      this.root = ('/' + this.options.root + '/').replace(rootStripper, '/');
+
+      this._wantsHashChange = this.options.hashChange !== false;
+      this._hasPushState = !!(this.options.pushState && this.history && this.history.pushState);
+
+      var eventName = void 0;
+      if (this._hasPushState) {
+        eventName = 'popstate';
+      } else if (this._wantsHashChange) {
+        eventName = 'hashchange';
+      }
+
+      _aureliaPal.PLATFORM.addEventListener(eventName, this._checkUrlCallback);
+
+      if (this._wantsHashChange && wantsPushState) {
+        var loc = this.location;
+        var atRoot = loc.pathname.replace(/[^\/]$/, '$&/') === this.root;
+
+        if (!this._hasPushState && !atRoot) {
+          this.fragment = this._getFragment(null, true);
+          this.location.replace(this.root + this.location.search + '#' + this.fragment);
+
+          return true;
+        } else if (this._hasPushState && atRoot && loc.hash) {
+            this.fragment = this._getHash().replace(routeStripper, '');
+            this.history.replaceState({}, _aureliaPal.DOM.title, this.root + this.fragment + loc.search);
+          }
+      }
+
+      if (!this.fragment) {
+        this.fragment = this._getFragment();
+      }
+
+      this.linkHandler.activate(this);
+
+      if (!this.options.silent) {
+        return this._loadUrl();
+      }
+    };
+
+    BrowserHistory.prototype.deactivate = function deactivate() {
+      _aureliaPal.PLATFORM.removeEventListener('popstate', this._checkUrlCallback);
+      _aureliaPal.PLATFORM.removeEventListener('hashchange', this._checkUrlCallback);
+      this._isActive = false;
+      this.linkHandler.deactivate();
+    };
+
+    BrowserHistory.prototype.getAbsoluteRoot = function getAbsoluteRoot() {
+      var origin = createOrigin(this.location.protocol, this.location.hostname, this.location.port);
+      return '' + origin + this.root;
+    };
+
+    BrowserHistory.prototype.navigate = function navigate(fragment) {
+      var _ref = arguments.length <= 1 || arguments[1] === undefined ? {} : arguments[1];
+
+      var _ref$trigger = _ref.trigger;
+      var trigger = _ref$trigger === undefined ? true : _ref$trigger;
+      var _ref$replace = _ref.replace;
+      var replace = _ref$replace === undefined ? false : _ref$replace;
+
+      if (fragment && absoluteUrl.test(fragment)) {
+        this.location.href = fragment;
+        return true;
+      }
+
+      if (!this._isActive) {
+        return false;
+      }
+
+      fragment = this._getFragment(fragment || '');
+
+      if (this.fragment === fragment && !replace) {
+        return false;
+      }
+
+      this.fragment = fragment;
+
+      var url = this.root + fragment;
+
+      if (fragment === '' && url !== '/') {
+        url = url.slice(0, -1);
+      }
+
+      if (this._hasPushState) {
+        url = url.replace('//', '/');
+        this.history[replace ? 'replaceState' : 'pushState']({}, _aureliaPal.DOM.title, url);
+      } else if (this._wantsHashChange) {
+        updateHash(this.location, fragment, replace);
+      } else {
+        return this.location.assign(url);
+      }
+
+      if (trigger) {
+        return this._loadUrl(fragment);
+      }
+    };
+
+    BrowserHistory.prototype.navigateBack = function navigateBack() {
+      this.history.back();
+    };
+
+    BrowserHistory.prototype.setTitle = function setTitle(title) {
+      _aureliaPal.DOM.title = title;
+    };
+
+    BrowserHistory.prototype._getHash = function _getHash() {
+      return this.location.hash.substr(1);
+    };
+
+    BrowserHistory.prototype._getFragment = function _getFragment(fragment, forcePushState) {
+      var root = void 0;
+
+      if (!fragment) {
+        if (this._hasPushState || !this._wantsHashChange || forcePushState) {
+          fragment = this.location.pathname + this.location.search;
+          root = this.root.replace(trailingSlash, '');
+          if (!fragment.indexOf(root)) {
+            fragment = fragment.substr(root.length);
+          }
+        } else {
+          fragment = this._getHash();
+        }
+      }
+
+      return '/' + fragment.replace(routeStripper, '');
+    };
+
+    BrowserHistory.prototype._checkUrl = function _checkUrl() {
+      var current = this._getFragment();
+      if (current !== this.fragment) {
+        this._loadUrl();
+      }
+    };
+
+    BrowserHistory.prototype._loadUrl = function _loadUrl(fragmentOverride) {
+      var fragment = this.fragment = this._getFragment(fragmentOverride);
+
+      return this.options.routeHandler ? this.options.routeHandler(fragment) : false;
+    };
+
+    return BrowserHistory;
+  }(_aureliaHistory.History), _class.inject = [LinkHandler], _temp);
+
+  var routeStripper = /^#?\/*|\s+$/g;
+
+  var rootStripper = /^\/+|\/+$/g;
+
+  var trailingSlash = /\/$/;
+
+  var absoluteUrl = /^([a-z][a-z0-9+\-.]*:)?\/\//i;
+
+  function updateHash(location, fragment, replace) {
+    if (replace) {
+      var _href = location.href.replace(/(javascript:|#).*$/, '');
+      location.replace(_href + '#' + fragment);
+    } else {
+      location.hash = '#' + fragment;
+    }
+  }
+
+  function createOrigin(protocol, hostname, port) {
+    return protocol + '//' + hostname + (port ? ':' + port : '');
+  }
+});
+define('aurelia-loader-default',['exports', 'aurelia-loader', 'aurelia-pal', 'aurelia-metadata'], function (exports, _aureliaLoader, _aureliaPal, _aureliaMetadata) {
+  'use strict';
+
+  Object.defineProperty(exports, "__esModule", {
+    value: true
+  });
+  exports.DefaultLoader = exports.TextTemplateLoader = undefined;
+
+  function _possibleConstructorReturn(self, call) {
+    if (!self) {
+      throw new ReferenceError("this hasn't been initialised - super() hasn't been called");
+    }
+
+    return call && (typeof call === "object" || typeof call === "function") ? call : self;
+  }
+
+  function _inherits(subClass, superClass) {
+    if (typeof superClass !== "function" && superClass !== null) {
+      throw new TypeError("Super expression must either be null or a function, not " + typeof superClass);
+    }
+
+    subClass.prototype = Object.create(superClass && superClass.prototype, {
+      constructor: {
+        value: subClass,
+        enumerable: false,
+        writable: true,
+        configurable: true
+      }
+    });
+    if (superClass) Object.setPrototypeOf ? Object.setPrototypeOf(subClass, superClass) : subClass.__proto__ = superClass;
+  }
+
+  
+
+  var TextTemplateLoader = exports.TextTemplateLoader = function () {
+    function TextTemplateLoader() {
+      
+    }
+
+    TextTemplateLoader.prototype.loadTemplate = function loadTemplate(loader, entry) {
+      return loader.loadText(entry.address).then(function (text) {
+        entry.template = _aureliaPal.DOM.createTemplateFromMarkup(text);
+      });
+    };
+
+    return TextTemplateLoader;
+  }();
+
+  function ensureOriginOnExports(executed, name) {
+    var target = executed;
+    var key = void 0;
+    var exportedValue = void 0;
+
+    if (target.__useDefault) {
+      target = target['default'];
+    }
+
+    _aureliaMetadata.Origin.set(target, new _aureliaMetadata.Origin(name, 'default'));
+
+    for (key in target) {
+      exportedValue = target[key];
+
+      if (typeof exportedValue === 'function') {
+        _aureliaMetadata.Origin.set(exportedValue, new _aureliaMetadata.Origin(name, key));
+      }
+    }
+
+    return executed;
+  }
+
+  var DefaultLoader = exports.DefaultLoader = function (_Loader) {
+    _inherits(DefaultLoader, _Loader);
+
+    function DefaultLoader() {
+      
+
+      var _this = _possibleConstructorReturn(this, _Loader.call(this));
+
+      _this.textPluginName = 'text';
+
+
+      _this.moduleRegistry = Object.create(null);
+      _this.useTemplateLoader(new TextTemplateLoader());
+
+      var that = _this;
+
+      _this.addPlugin('template-registry-entry', {
+        'fetch': function fetch(address) {
+          var entry = that.getOrCreateTemplateRegistryEntry(address);
+          return entry.templateIsLoaded ? entry : that.templateLoader.loadTemplate(that, entry).then(function (x) {
+            return entry;
+          });
+        }
+      });
+      return _this;
+    }
+
+    DefaultLoader.prototype.useTemplateLoader = function useTemplateLoader(templateLoader) {
+      this.templateLoader = templateLoader;
+    };
+
+    DefaultLoader.prototype.loadAllModules = function loadAllModules(ids) {
+      var loads = [];
+
+      for (var i = 0, ii = ids.length; i < ii; ++i) {
+        loads.push(this.loadModule(ids[i]));
+      }
+
+      return Promise.all(loads);
+    };
+
+    DefaultLoader.prototype.loadTemplate = function loadTemplate(url) {
+      return this._import(this.applyPluginToUrl(url, 'template-registry-entry'));
+    };
+
+    DefaultLoader.prototype.loadText = function loadText(url) {
+      return this._import(this.applyPluginToUrl(url, this.textPluginName)).then(function (textOrModule) {
+        if (typeof textOrModule === 'string') {
+          return textOrModule;
+        }
+
+        return textOrModule['default'];
+      });
+    };
+
+    return DefaultLoader;
+  }(_aureliaLoader.Loader);
+
+  _aureliaPal.PLATFORM.Loader = DefaultLoader;
+
+  if (!_aureliaPal.PLATFORM.global.System || !_aureliaPal.PLATFORM.global.System.import) {
+    if (_aureliaPal.PLATFORM.global.requirejs && requirejs.s && requirejs.s.contexts && requirejs.s.contexts._ && requirejs.s.contexts._.defined) {
+      _aureliaPal.PLATFORM.eachModule = function (callback) {
+        var defined = requirejs.s.contexts._.defined;
+        for (var key in defined) {
+          try {
+            if (callback(key, defined[key])) return;
+          } catch (e) {}
+        }
+      };
+    } else {
+      _aureliaPal.PLATFORM.eachModule = function (callback) {};
+    }
+
+    DefaultLoader.prototype._import = function (moduleId) {
+      return new Promise(function (resolve, reject) {
+        require([moduleId], resolve, reject);
+      });
+    };
+
+    DefaultLoader.prototype.loadModule = function (id) {
+      var _this2 = this;
+
+      var existing = this.moduleRegistry[id];
+      if (existing !== undefined) {
+        return Promise.resolve(existing);
+      }
+
+      return new Promise(function (resolve, reject) {
+        require([id], function (m) {
+          _this2.moduleRegistry[id] = m;
+          resolve(ensureOriginOnExports(m, id));
+        }, reject);
+      });
+    };
+
+    DefaultLoader.prototype.map = function (id, source) {};
+
+    DefaultLoader.prototype.normalize = function (moduleId, relativeTo) {
+      return Promise.resolve(moduleId);
+    };
+
+    DefaultLoader.prototype.normalizeSync = function (moduleId, relativeTo) {
+      return moduleId;
+    };
+
+    DefaultLoader.prototype.applyPluginToUrl = function (url, pluginName) {
+      return pluginName + '!' + url;
+    };
+
+    DefaultLoader.prototype.addPlugin = function (pluginName, implementation) {
+      var nonAnonDefine = define;
+      nonAnonDefine(pluginName, [], {
+        'load': function load(name, req, onload) {
+          var result = implementation.fetch(name);
+          Promise.resolve(result).then(onload);
+        }
+      });
+    };
+  } else {
+    _aureliaPal.PLATFORM.eachModule = function (callback) {
+      var modules = System._loader.modules;
+
+      for (var key in modules) {
+        try {
+          if (callback(key, modules[key].module)) return;
+        } catch (e) {}
+      }
+    };
+
+    System.set('text', System.newModule({
+      'translate': function translate(load) {
+        return 'module.exports = "' + load.source.replace(/(["\\])/g, '\\$1').replace(/[\f]/g, '\\f').replace(/[\b]/g, '\\b').replace(/[\n]/g, '\\n').replace(/[\t]/g, '\\t').replace(/[\r]/g, '\\r').replace(/[\u2028]/g, '\\u2028').replace(/[\u2029]/g, '\\u2029') + '";';
+      }
+    }));
+
+    DefaultLoader.prototype._import = function (moduleId) {
+      return System.import(moduleId);
+    };
+
+    DefaultLoader.prototype.loadModule = function (id) {
+      var _this3 = this;
+
+      return System.normalize(id).then(function (newId) {
+        var existing = _this3.moduleRegistry[newId];
+        if (existing !== undefined) {
+          return Promise.resolve(existing);
+        }
+
+        return System.import(newId).then(function (m) {
+          _this3.moduleRegistry[newId] = m;
+          return ensureOriginOnExports(m, newId);
+        });
+      });
+    };
+
+    DefaultLoader.prototype.map = function (id, source) {
+      System.map[id] = source;
+    };
+
+    DefaultLoader.prototype.normalizeSync = function (moduleId, relativeTo) {
+      return System.normalizeSync(moduleId, relativeTo);
+    };
+
+    DefaultLoader.prototype.normalize = function (moduleId, relativeTo) {
+      return System.normalize(moduleId, relativeTo);
+    };
+
+    DefaultLoader.prototype.applyPluginToUrl = function (url, pluginName) {
+      return url + '!' + pluginName;
+    };
+
+    DefaultLoader.prototype.addPlugin = function (pluginName, implementation) {
+      System.set(pluginName, System.newModule({
+        'fetch': function fetch(load, _fetch) {
+          var result = implementation.fetch(load.address);
+          return Promise.resolve(result).then(function (x) {
+            load.metadata.result = x;
+            return '';
+          });
+        },
+        'instantiate': function instantiate(load) {
+          return load.metadata.result;
+        }
+      }));
+    };
+  }
 });
 define('aurelia-templating',['exports', 'aurelia-logging', 'aurelia-metadata', 'aurelia-pal', 'aurelia-path', 'aurelia-loader', 'aurelia-dependency-injection', 'aurelia-binding', 'aurelia-task-queue'], function (exports, _aureliaLogging, _aureliaMetadata, _aureliaPal, _aureliaPath, _aureliaLoader, _aureliaDependencyInjection, _aureliaBinding, _aureliaTaskQueue) {
   'use strict';
@@ -22912,6 +22854,1193 @@ define('aurelia-templating',['exports', 'aurelia-logging', 'aurelia-metadata', '
     return TemplatingEngine;
   }()) || _class23);
 });
+/*jshint eqnull:true*/
+(function (root) {
+  "use strict";
+
+  var GLOBAL_KEY = "Random";
+
+  var imul = (typeof Math.imul !== "function" || Math.imul(0xffffffff, 5) !== -5 ?
+    function (a, b) {
+      var ah = (a >>> 16) & 0xffff;
+      var al = a & 0xffff;
+      var bh = (b >>> 16) & 0xffff;
+      var bl = b & 0xffff;
+      // the shift by 0 fixes the sign on the high part
+      // the final |0 converts the unsigned value into a signed value
+      return (al * bl) + (((ah * bl + al * bh) << 16) >>> 0) | 0;
+    } :
+    Math.imul);
+
+  var stringRepeat = (typeof String.prototype.repeat === "function" && "x".repeat(3) === "xxx" ?
+    function (x, y) {
+      return x.repeat(y);
+    } : function (pattern, count) {
+      var result = "";
+      while (count > 0) {
+        if (count & 1) {
+          result += pattern;
+        }
+        count >>= 1;
+        pattern += pattern;
+      }
+      return result;
+    });
+
+  function Random(engine) {
+    if (!(this instanceof Random)) {
+      return new Random(engine);
+    }
+
+    if (engine == null) {
+      engine = Random.engines.nativeMath;
+    } else if (typeof engine !== "function") {
+      throw new TypeError("Expected engine to be a function, got " + typeof engine);
+    }
+    this.engine = engine;
+  }
+  var proto = Random.prototype;
+
+  Random.engines = {
+    nativeMath: function () {
+      return (Math.random() * 0x100000000) | 0;
+    },
+    mt19937: (function (Int32Array) {
+      // http://en.wikipedia.org/wiki/Mersenne_twister
+      function refreshData(data) {
+        var k = 0;
+        var tmp = 0;
+        for (;
+          (k | 0) < 227; k = (k + 1) | 0) {
+          tmp = (data[k] & 0x80000000) | (data[(k + 1) | 0] & 0x7fffffff);
+          data[k] = data[(k + 397) | 0] ^ (tmp >>> 1) ^ ((tmp & 0x1) ? 0x9908b0df : 0);
+        }
+
+        for (;
+          (k | 0) < 623; k = (k + 1) | 0) {
+          tmp = (data[k] & 0x80000000) | (data[(k + 1) | 0] & 0x7fffffff);
+          data[k] = data[(k - 227) | 0] ^ (tmp >>> 1) ^ ((tmp & 0x1) ? 0x9908b0df : 0);
+        }
+
+        tmp = (data[623] & 0x80000000) | (data[0] & 0x7fffffff);
+        data[623] = data[396] ^ (tmp >>> 1) ^ ((tmp & 0x1) ? 0x9908b0df : 0);
+      }
+
+      function temper(value) {
+        value ^= value >>> 11;
+        value ^= (value << 7) & 0x9d2c5680;
+        value ^= (value << 15) & 0xefc60000;
+        return value ^ (value >>> 18);
+      }
+
+      function seedWithArray(data, source) {
+        var i = 1;
+        var j = 0;
+        var sourceLength = source.length;
+        var k = Math.max(sourceLength, 624) | 0;
+        var previous = data[0] | 0;
+        for (;
+          (k | 0) > 0; --k) {
+          data[i] = previous = ((data[i] ^ imul((previous ^ (previous >>> 30)), 0x0019660d)) + (source[j] | 0) + (j | 0)) | 0;
+          i = (i + 1) | 0;
+          ++j;
+          if ((i | 0) > 623) {
+            data[0] = data[623];
+            i = 1;
+          }
+          if (j >= sourceLength) {
+            j = 0;
+          }
+        }
+        for (k = 623;
+          (k | 0) > 0; --k) {
+          data[i] = previous = ((data[i] ^ imul((previous ^ (previous >>> 30)), 0x5d588b65)) - i) | 0;
+          i = (i + 1) | 0;
+          if ((i | 0) > 623) {
+            data[0] = data[623];
+            i = 1;
+          }
+        }
+        data[0] = 0x80000000;
+      }
+
+      function mt19937() {
+        var data = new Int32Array(624);
+        var index = 0;
+        var uses = 0;
+
+        function next() {
+          if ((index | 0) >= 624) {
+            refreshData(data);
+            index = 0;
+          }
+
+          var value = data[index];
+          index = (index + 1) | 0;
+          uses += 1;
+          return temper(value) | 0;
+        }
+        next.getUseCount = function() {
+          return uses;
+        };
+        next.discard = function (count) {
+          uses += count;
+          if ((index | 0) >= 624) {
+            refreshData(data);
+            index = 0;
+          }
+          while ((count - index) > 624) {
+            count -= 624 - index;
+            refreshData(data);
+            index = 0;
+          }
+          index = (index + count) | 0;
+          return next;
+        };
+        next.seed = function (initial) {
+          var previous = 0;
+          data[0] = previous = initial | 0;
+
+          for (var i = 1; i < 624; i = (i + 1) | 0) {
+            data[i] = previous = (imul((previous ^ (previous >>> 30)), 0x6c078965) + i) | 0;
+          }
+          index = 624;
+          uses = 0;
+          return next;
+        };
+        next.seedWithArray = function (source) {
+          next.seed(0x012bd6aa);
+          seedWithArray(data, source);
+          return next;
+        };
+        next.autoSeed = function () {
+          return next.seedWithArray(Random.generateEntropyArray());
+        };
+        return next;
+      }
+
+      return mt19937;
+    }(typeof Int32Array === "function" ? Int32Array : Array)),
+    browserCrypto: (typeof crypto !== "undefined" && typeof crypto.getRandomValues === "function" && typeof Int32Array === "function") ? (function () {
+      var data = null;
+      var index = 128;
+
+      return function () {
+        if (index >= 128) {
+          if (data === null) {
+            data = new Int32Array(128);
+          }
+          crypto.getRandomValues(data);
+          index = 0;
+        }
+
+        return data[index++] | 0;
+      };
+    }()) : null
+  };
+
+  Random.generateEntropyArray = function () {
+    var array = [];
+    var engine = Random.engines.nativeMath;
+    for (var i = 0; i < 16; ++i) {
+      array[i] = engine() | 0;
+    }
+    array.push(new Date().getTime() | 0);
+    return array;
+  };
+
+  function returnValue(value) {
+    return function () {
+      return value;
+    };
+  }
+
+  // [-0x80000000, 0x7fffffff]
+  Random.int32 = function (engine) {
+    return engine() | 0;
+  };
+  proto.int32 = function () {
+    return Random.int32(this.engine);
+  };
+
+  // [0, 0xffffffff]
+  Random.uint32 = function (engine) {
+    return engine() >>> 0;
+  };
+  proto.uint32 = function () {
+    return Random.uint32(this.engine);
+  };
+
+  // [0, 0x1fffffffffffff]
+  Random.uint53 = function (engine) {
+    var high = engine() & 0x1fffff;
+    var low = engine() >>> 0;
+    return (high * 0x100000000) + low;
+  };
+  proto.uint53 = function () {
+    return Random.uint53(this.engine);
+  };
+
+  // [0, 0x20000000000000]
+  Random.uint53Full = function (engine) {
+    while (true) {
+      var high = engine() | 0;
+      if (high & 0x200000) {
+        if ((high & 0x3fffff) === 0x200000 && (engine() | 0) === 0) {
+          return 0x20000000000000;
+        }
+      } else {
+        var low = engine() >>> 0;
+        return ((high & 0x1fffff) * 0x100000000) + low;
+      }
+    }
+  };
+  proto.uint53Full = function () {
+    return Random.uint53Full(this.engine);
+  };
+
+  // [-0x20000000000000, 0x1fffffffffffff]
+  Random.int53 = function (engine) {
+    var high = engine() | 0;
+    var low = engine() >>> 0;
+    return ((high & 0x1fffff) * 0x100000000) + low + (high & 0x200000 ? -0x20000000000000 : 0);
+  };
+  proto.int53 = function () {
+    return Random.int53(this.engine);
+  };
+
+  // [-0x20000000000000, 0x20000000000000]
+  Random.int53Full = function (engine) {
+    while (true) {
+      var high = engine() | 0;
+      if (high & 0x400000) {
+        if ((high & 0x7fffff) === 0x400000 && (engine() | 0) === 0) {
+          return 0x20000000000000;
+        }
+      } else {
+        var low = engine() >>> 0;
+        return ((high & 0x1fffff) * 0x100000000) + low + (high & 0x200000 ? -0x20000000000000 : 0);
+      }
+    }
+  };
+  proto.int53Full = function () {
+    return Random.int53Full(this.engine);
+  };
+
+  function add(generate, addend) {
+    if (addend === 0) {
+      return generate;
+    } else {
+      return function (engine) {
+        return generate(engine) + addend;
+      };
+    }
+  }
+
+  Random.integer = (function () {
+    function isPowerOfTwoMinusOne(value) {
+      return ((value + 1) & value) === 0;
+    }
+
+    function bitmask(masking) {
+      return function (engine) {
+        return engine() & masking;
+      };
+    }
+
+    function downscaleToLoopCheckedRange(range) {
+      var extendedRange = range + 1;
+      var maximum = extendedRange * Math.floor(0x100000000 / extendedRange);
+      return function (engine) {
+        var value = 0;
+        do {
+          value = engine() >>> 0;
+        } while (value >= maximum);
+        return value % extendedRange;
+      };
+    }
+
+    function downscaleToRange(range) {
+      if (isPowerOfTwoMinusOne(range)) {
+        return bitmask(range);
+      } else {
+        return downscaleToLoopCheckedRange(range);
+      }
+    }
+
+    function isEvenlyDivisibleByMaxInt32(value) {
+      return (value | 0) === 0;
+    }
+
+    function upscaleWithHighMasking(masking) {
+      return function (engine) {
+        var high = engine() & masking;
+        var low = engine() >>> 0;
+        return (high * 0x100000000) + low;
+      };
+    }
+
+    function upscaleToLoopCheckedRange(extendedRange) {
+      var maximum = extendedRange * Math.floor(0x20000000000000 / extendedRange);
+      return function (engine) {
+        var ret = 0;
+        do {
+          var high = engine() & 0x1fffff;
+          var low = engine() >>> 0;
+          ret = (high * 0x100000000) + low;
+        } while (ret >= maximum);
+        return ret % extendedRange;
+      };
+    }
+
+    function upscaleWithinU53(range) {
+      var extendedRange = range + 1;
+      if (isEvenlyDivisibleByMaxInt32(extendedRange)) {
+        var highRange = ((extendedRange / 0x100000000) | 0) - 1;
+        if (isPowerOfTwoMinusOne(highRange)) {
+          return upscaleWithHighMasking(highRange);
+        }
+      }
+      return upscaleToLoopCheckedRange(extendedRange);
+    }
+
+    function upscaleWithinI53AndLoopCheck(min, max) {
+      return function (engine) {
+        var ret = 0;
+        do {
+          var high = engine() | 0;
+          var low = engine() >>> 0;
+          ret = ((high & 0x1fffff) * 0x100000000) + low + (high & 0x200000 ? -0x20000000000000 : 0);
+        } while (ret < min || ret > max);
+        return ret;
+      };
+    }
+
+    return function (min, max) {
+      min = Math.floor(min);
+      max = Math.floor(max);
+      if (min < -0x20000000000000 || !isFinite(min)) {
+        throw new RangeError("Expected min to be at least " + (-0x20000000000000));
+      } else if (max > 0x20000000000000 || !isFinite(max)) {
+        throw new RangeError("Expected max to be at most " + 0x20000000000000);
+      }
+
+      var range = max - min;
+      if (range <= 0 || !isFinite(range)) {
+        return returnValue(min);
+      } else if (range === 0xffffffff) {
+        if (min === 0) {
+          return Random.uint32;
+        } else {
+          return add(Random.int32, min + 0x80000000);
+        }
+      } else if (range < 0xffffffff) {
+        return add(downscaleToRange(range), min);
+      } else if (range === 0x1fffffffffffff) {
+        return add(Random.uint53, min);
+      } else if (range < 0x1fffffffffffff) {
+        return add(upscaleWithinU53(range), min);
+      } else if (max - 1 - min === 0x1fffffffffffff) {
+        return add(Random.uint53Full, min);
+      } else if (min === -0x20000000000000 && max === 0x20000000000000) {
+        return Random.int53Full;
+      } else if (min === -0x20000000000000 && max === 0x1fffffffffffff) {
+        return Random.int53;
+      } else if (min === -0x1fffffffffffff && max === 0x20000000000000) {
+        return add(Random.int53, 1);
+      } else if (max === 0x20000000000000) {
+        return add(upscaleWithinI53AndLoopCheck(min - 1, max - 1), 1);
+      } else {
+        return upscaleWithinI53AndLoopCheck(min, max);
+      }
+    };
+  }());
+  proto.integer = function (min, max) {
+    return Random.integer(min, max)(this.engine);
+  };
+
+  // [0, 1] (floating point)
+  Random.realZeroToOneInclusive = function (engine) {
+    return Random.uint53Full(engine) / 0x20000000000000;
+  };
+  proto.realZeroToOneInclusive = function () {
+    return Random.realZeroToOneInclusive(this.engine);
+  };
+
+  // [0, 1) (floating point)
+  Random.realZeroToOneExclusive = function (engine) {
+    return Random.uint53(engine) / 0x20000000000000;
+  };
+  proto.realZeroToOneExclusive = function () {
+    return Random.realZeroToOneExclusive(this.engine);
+  };
+
+  Random.real = (function () {
+    function multiply(generate, multiplier) {
+      if (multiplier === 1) {
+        return generate;
+      } else if (multiplier === 0) {
+        return function () {
+          return 0;
+        };
+      } else {
+        return function (engine) {
+          return generate(engine) * multiplier;
+        };
+      }
+    }
+
+    return function (left, right, inclusive) {
+      if (!isFinite(left)) {
+        throw new RangeError("Expected left to be a finite number");
+      } else if (!isFinite(right)) {
+        throw new RangeError("Expected right to be a finite number");
+      }
+      return add(
+        multiply(
+          inclusive ? Random.realZeroToOneInclusive : Random.realZeroToOneExclusive,
+          right - left),
+        left);
+    };
+  }());
+  proto.real = function (min, max, inclusive) {
+    return Random.real(min, max, inclusive)(this.engine);
+  };
+
+  Random.bool = (function () {
+    function isLeastBitTrue(engine) {
+      return (engine() & 1) === 1;
+    }
+
+    function lessThan(generate, value) {
+      return function (engine) {
+        return generate(engine) < value;
+      };
+    }
+
+    function probability(percentage) {
+      if (percentage <= 0) {
+        return returnValue(false);
+      } else if (percentage >= 1) {
+        return returnValue(true);
+      } else {
+        var scaled = percentage * 0x100000000;
+        if (scaled % 1 === 0) {
+          return lessThan(Random.int32, (scaled - 0x80000000) | 0);
+        } else {
+          return lessThan(Random.uint53, Math.round(percentage * 0x20000000000000));
+        }
+      }
+    }
+
+    return function (numerator, denominator) {
+      if (denominator == null) {
+        if (numerator == null) {
+          return isLeastBitTrue;
+        }
+        return probability(numerator);
+      } else {
+        if (numerator <= 0) {
+          return returnValue(false);
+        } else if (numerator >= denominator) {
+          return returnValue(true);
+        }
+        return lessThan(Random.integer(0, denominator - 1), numerator);
+      }
+    };
+  }());
+  proto.bool = function (numerator, denominator) {
+    return Random.bool(numerator, denominator)(this.engine);
+  };
+
+  function toInteger(value) {
+    var number = +value;
+    if (number < 0) {
+      return Math.ceil(number);
+    } else {
+      return Math.floor(number);
+    }
+  }
+
+  function convertSliceArgument(value, length) {
+    if (value < 0) {
+      return Math.max(value + length, 0);
+    } else {
+      return Math.min(value, length);
+    }
+  }
+  Random.pick = function (engine, array, begin, end) {
+    var length = array.length;
+    var start = begin == null ? 0 : convertSliceArgument(toInteger(begin), length);
+    var finish = end === void 0 ? length : convertSliceArgument(toInteger(end), length);
+    if (start >= finish) {
+      return void 0;
+    }
+    var distribution = Random.integer(start, finish - 1);
+    return array[distribution(engine)];
+  };
+  proto.pick = function (array, begin, end) {
+    return Random.pick(this.engine, array, begin, end);
+  };
+
+  function returnUndefined() {
+    return void 0;
+  }
+  var slice = Array.prototype.slice;
+  Random.picker = function (array, begin, end) {
+    var clone = slice.call(array, begin, end);
+    if (!clone.length) {
+      return returnUndefined;
+    }
+    var distribution = Random.integer(0, clone.length - 1);
+    return function (engine) {
+      return clone[distribution(engine)];
+    };
+  };
+
+  Random.shuffle = function (engine, array, downTo) {
+    var length = array.length;
+    if (length) {
+      if (downTo == null) {
+        downTo = 0;
+      }
+      for (var i = (length - 1) >>> 0; i > downTo; --i) {
+        var distribution = Random.integer(0, i);
+        var j = distribution(engine);
+        if (i !== j) {
+          var tmp = array[i];
+          array[i] = array[j];
+          array[j] = tmp;
+        }
+      }
+    }
+    return array;
+  };
+  proto.shuffle = function (array) {
+    return Random.shuffle(this.engine, array);
+  };
+
+  Random.sample = function (engine, population, sampleSize) {
+    if (sampleSize < 0 || sampleSize > population.length || !isFinite(sampleSize)) {
+      throw new RangeError("Expected sampleSize to be within 0 and the length of the population");
+    }
+
+    if (sampleSize === 0) {
+      return [];
+    }
+
+    var clone = slice.call(population);
+    var length = clone.length;
+    if (length === sampleSize) {
+      return Random.shuffle(engine, clone, 0);
+    }
+    var tailLength = length - sampleSize;
+    return Random.shuffle(engine, clone, tailLength - 1).slice(tailLength);
+  };
+  proto.sample = function (population, sampleSize) {
+    return Random.sample(this.engine, population, sampleSize);
+  };
+
+  Random.die = function (sideCount) {
+    return Random.integer(1, sideCount);
+  };
+  proto.die = function (sideCount) {
+    return Random.die(sideCount)(this.engine);
+  };
+
+  Random.dice = function (sideCount, dieCount) {
+    var distribution = Random.die(sideCount);
+    return function (engine) {
+      var result = [];
+      result.length = dieCount;
+      for (var i = 0; i < dieCount; ++i) {
+        result[i] = distribution(engine);
+      }
+      return result;
+    };
+  };
+  proto.dice = function (sideCount, dieCount) {
+    return Random.dice(sideCount, dieCount)(this.engine);
+  };
+
+  // http://en.wikipedia.org/wiki/Universally_unique_identifier
+  Random.uuid4 = (function () {
+    function zeroPad(string, zeroCount) {
+      return stringRepeat("0", zeroCount - string.length) + string;
+    }
+
+    return function (engine) {
+      var a = engine() >>> 0;
+      var b = engine() | 0;
+      var c = engine() | 0;
+      var d = engine() >>> 0;
+
+      return (
+        zeroPad(a.toString(16), 8) +
+        "-" +
+        zeroPad((b & 0xffff).toString(16), 4) +
+        "-" +
+        zeroPad((((b >> 4) & 0x0fff) | 0x4000).toString(16), 4) +
+        "-" +
+        zeroPad(((c & 0x3fff) | 0x8000).toString(16), 4) +
+        "-" +
+        zeroPad(((c >> 4) & 0xffff).toString(16), 4) +
+        zeroPad(d.toString(16), 8));
+    };
+  }());
+  proto.uuid4 = function () {
+    return Random.uuid4(this.engine);
+  };
+
+  Random.string = (function () {
+    // has 2**x chars, for faster uniform distribution
+    var DEFAULT_STRING_POOL = "abcdefghijklmnopqrstuvwxyzABCDEFGHIJKLMNOPQRSTUVWXYZ0123456789_-";
+
+    return function (pool) {
+      if (pool == null) {
+        pool = DEFAULT_STRING_POOL;
+      }
+
+      var length = pool.length;
+      if (!length) {
+        throw new Error("Expected pool not to be an empty string");
+      }
+
+      var distribution = Random.integer(0, length - 1);
+      return function (engine, length) {
+        var result = "";
+        for (var i = 0; i < length; ++i) {
+          var j = distribution(engine);
+          result += pool.charAt(j);
+        }
+        return result;
+      };
+    };
+  }());
+  proto.string = function (length, pool) {
+    return Random.string(pool)(this.engine, length);
+  };
+
+  Random.hex = (function () {
+    var LOWER_HEX_POOL = "0123456789abcdef";
+    var lowerHex = Random.string(LOWER_HEX_POOL);
+    var upperHex = Random.string(LOWER_HEX_POOL.toUpperCase());
+
+    return function (upper) {
+      if (upper) {
+        return upperHex;
+      } else {
+        return lowerHex;
+      }
+    };
+  }());
+  proto.hex = function (length, upper) {
+    return Random.hex(upper)(this.engine, length);
+  };
+
+  Random.date = function (start, end) {
+    if (!(start instanceof Date)) {
+      throw new TypeError("Expected start to be a Date, got " + typeof start);
+    } else if (!(end instanceof Date)) {
+      throw new TypeError("Expected end to be a Date, got " + typeof end);
+    }
+    var distribution = Random.integer(start.getTime(), end.getTime());
+    return function (engine) {
+      return new Date(distribution(engine));
+    };
+  };
+  proto.date = function (start, end) {
+    return Random.date(start, end)(this.engine);
+  };
+
+  if (typeof define === "function" && define.amd) {
+    define('random-js/random',[],function () {
+      return Random;
+    });
+  } else if (typeof module !== "undefined" && typeof require === "function") {
+    module.exports = Random;
+  } else {
+    (function () {
+      var oldGlobal = root[GLOBAL_KEY];
+      Random.noConflict = function () {
+        root[GLOBAL_KEY] = oldGlobal;
+        return this;
+      };
+    }());
+    root[GLOBAL_KEY] = Random;
+  }
+}(this));;define('random-js', ['random-js/random'], function (main) { return main; });
+
+define('aurelia-logging-console',['exports', 'aurelia-logging'], function (exports, _aureliaLogging) {
+  'use strict';
+
+  Object.defineProperty(exports, "__esModule", {
+    value: true
+  });
+  exports.ConsoleAppender = undefined;
+
+  
+
+  var ConsoleAppender = exports.ConsoleAppender = function () {
+    function ConsoleAppender() {
+      
+    }
+
+    ConsoleAppender.prototype.debug = function debug(logger) {
+      var _console;
+
+      for (var _len = arguments.length, rest = Array(_len > 1 ? _len - 1 : 0), _key = 1; _key < _len; _key++) {
+        rest[_key - 1] = arguments[_key];
+      }
+
+      (_console = console).debug.apply(_console, ['DEBUG [' + logger.id + ']'].concat(rest));
+    };
+
+    ConsoleAppender.prototype.info = function info(logger) {
+      var _console2;
+
+      for (var _len2 = arguments.length, rest = Array(_len2 > 1 ? _len2 - 1 : 0), _key2 = 1; _key2 < _len2; _key2++) {
+        rest[_key2 - 1] = arguments[_key2];
+      }
+
+      (_console2 = console).info.apply(_console2, ['INFO [' + logger.id + ']'].concat(rest));
+    };
+
+    ConsoleAppender.prototype.warn = function warn(logger) {
+      var _console3;
+
+      for (var _len3 = arguments.length, rest = Array(_len3 > 1 ? _len3 - 1 : 0), _key3 = 1; _key3 < _len3; _key3++) {
+        rest[_key3 - 1] = arguments[_key3];
+      }
+
+      (_console3 = console).warn.apply(_console3, ['WARN [' + logger.id + ']'].concat(rest));
+    };
+
+    ConsoleAppender.prototype.error = function error(logger) {
+      var _console4;
+
+      for (var _len4 = arguments.length, rest = Array(_len4 > 1 ? _len4 - 1 : 0), _key4 = 1; _key4 < _len4; _key4++) {
+        rest[_key4 - 1] = arguments[_key4];
+      }
+
+      (_console4 = console).error.apply(_console4, ['ERROR [' + logger.id + ']'].concat(rest));
+    };
+
+    return ConsoleAppender;
+  }();
+});
+define('aurelia-templating-router/aurelia-templating-router',['exports', 'aurelia-router', './route-loader', './router-view', './route-href'], function (exports, _aureliaRouter, _routeLoader, _routerView, _routeHref) {
+  'use strict';
+
+  Object.defineProperty(exports, "__esModule", {
+    value: true
+  });
+  exports.configure = exports.RouteHref = exports.RouterView = exports.TemplatingRouteLoader = undefined;
+
+
+  function configure(config) {
+    config.singleton(_aureliaRouter.RouteLoader, _routeLoader.TemplatingRouteLoader).singleton(_aureliaRouter.Router, _aureliaRouter.AppRouter).globalResources('./router-view', './route-href');
+
+    config.container.registerAlias(_aureliaRouter.Router, _aureliaRouter.AppRouter);
+  }
+
+  exports.TemplatingRouteLoader = _routeLoader.TemplatingRouteLoader;
+  exports.RouterView = _routerView.RouterView;
+  exports.RouteHref = _routeHref.RouteHref;
+  exports.configure = configure;
+});;define('aurelia-templating-router', ['aurelia-templating-router/aurelia-templating-router'], function (main) { return main; });
+
+define('aurelia-templating-router/route-loader',['exports', 'aurelia-dependency-injection', 'aurelia-templating', 'aurelia-router', 'aurelia-path', 'aurelia-metadata'], function (exports, _aureliaDependencyInjection, _aureliaTemplating, _aureliaRouter, _aureliaPath, _aureliaMetadata) {
+  'use strict';
+
+  Object.defineProperty(exports, "__esModule", {
+    value: true
+  });
+  exports.TemplatingRouteLoader = undefined;
+
+  
+
+  function _possibleConstructorReturn(self, call) {
+    if (!self) {
+      throw new ReferenceError("this hasn't been initialised - super() hasn't been called");
+    }
+
+    return call && (typeof call === "object" || typeof call === "function") ? call : self;
+  }
+
+  function _inherits(subClass, superClass) {
+    if (typeof superClass !== "function" && superClass !== null) {
+      throw new TypeError("Super expression must either be null or a function, not " + typeof superClass);
+    }
+
+    subClass.prototype = Object.create(superClass && superClass.prototype, {
+      constructor: {
+        value: subClass,
+        enumerable: false,
+        writable: true,
+        configurable: true
+      }
+    });
+    if (superClass) Object.setPrototypeOf ? Object.setPrototypeOf(subClass, superClass) : subClass.__proto__ = superClass;
+  }
+
+  var _dec, _class;
+
+  var TemplatingRouteLoader = exports.TemplatingRouteLoader = (_dec = (0, _aureliaDependencyInjection.inject)(_aureliaTemplating.CompositionEngine), _dec(_class = function (_RouteLoader) {
+    _inherits(TemplatingRouteLoader, _RouteLoader);
+
+    function TemplatingRouteLoader(compositionEngine) {
+      
+
+      var _this = _possibleConstructorReturn(this, _RouteLoader.call(this));
+
+      _this.compositionEngine = compositionEngine;
+      return _this;
+    }
+
+    TemplatingRouteLoader.prototype.loadRoute = function loadRoute(router, config) {
+      var childContainer = router.container.createChild();
+      var instruction = {
+        viewModel: (0, _aureliaPath.relativeToFile)(config.moduleId, _aureliaMetadata.Origin.get(router.container.viewModel.constructor).moduleId),
+        childContainer: childContainer,
+        view: config.view || config.viewStrategy,
+        router: router
+      };
+
+      childContainer.getChildRouter = function () {
+        var childRouter = void 0;
+
+        childContainer.registerHandler(_aureliaRouter.Router, function (c) {
+          return childRouter || (childRouter = router.createChild(childContainer));
+        });
+
+        return childContainer.get(_aureliaRouter.Router);
+      };
+
+      return this.compositionEngine.ensureViewModel(instruction);
+    };
+
+    return TemplatingRouteLoader;
+  }(_aureliaRouter.RouteLoader)) || _class);
+});
+define('aurelia-templating-router/router-view',['exports', 'aurelia-dependency-injection', 'aurelia-templating', 'aurelia-router', 'aurelia-metadata', 'aurelia-pal'], function (exports, _aureliaDependencyInjection, _aureliaTemplating, _aureliaRouter, _aureliaMetadata, _aureliaPal) {
+  'use strict';
+
+  Object.defineProperty(exports, "__esModule", {
+    value: true
+  });
+  exports.RouterView = undefined;
+
+  function _initDefineProp(target, property, descriptor, context) {
+    if (!descriptor) return;
+    Object.defineProperty(target, property, {
+      enumerable: descriptor.enumerable,
+      configurable: descriptor.configurable,
+      writable: descriptor.writable,
+      value: descriptor.initializer ? descriptor.initializer.call(context) : void 0
+    });
+  }
+
+  function _applyDecoratedDescriptor(target, property, decorators, descriptor, context) {
+    var desc = {};
+    Object['ke' + 'ys'](descriptor).forEach(function (key) {
+      desc[key] = descriptor[key];
+    });
+    desc.enumerable = !!desc.enumerable;
+    desc.configurable = !!desc.configurable;
+
+    if ('value' in desc || desc.initializer) {
+      desc.writable = true;
+    }
+
+    desc = decorators.slice().reverse().reduce(function (desc, decorator) {
+      return decorator(target, property, desc) || desc;
+    }, desc);
+
+    if (context && desc.initializer !== void 0) {
+      desc.value = desc.initializer ? desc.initializer.call(context) : void 0;
+      desc.initializer = undefined;
+    }
+
+    if (desc.initializer === void 0) {
+      Object['define' + 'Property'](target, property, desc);
+      desc = null;
+    }
+
+    return desc;
+  }
+
+  function _initializerWarningHelper(descriptor, context) {
+    throw new Error('Decorating class property failed. Please ensure that transform-class-properties is enabled.');
+  }
+
+  var _dec, _dec2, _class, _desc, _value, _class2, _descriptor, _descriptor2, _descriptor3, _descriptor4;
+
+  
+
+  var SwapStrategies = function () {
+    function SwapStrategies() {
+      
+    }
+
+    SwapStrategies.prototype.before = function before(viewSlot, previousView, callback) {
+      var promise = Promise.resolve(callback());
+
+      if (previousView !== undefined) {
+        return promise.then(function () {
+          return viewSlot.remove(previousView, true);
+        });
+      }
+
+      return promise;
+    };
+
+    SwapStrategies.prototype.with = function _with(viewSlot, previousView, callback) {
+      var promise = Promise.resolve(callback());
+
+      if (previousView !== undefined) {
+        return Promise.all([viewSlot.remove(previousView, true), promise]);
+      }
+
+      return promise;
+    };
+
+    SwapStrategies.prototype.after = function after(viewSlot, previousView, callback) {
+      return Promise.resolve(viewSlot.removeAll(true)).then(callback);
+    };
+
+    return SwapStrategies;
+  }();
+
+  var swapStrategies = new SwapStrategies();
+
+  var RouterView = exports.RouterView = (_dec = (0, _aureliaTemplating.customElement)('router-view'), _dec2 = (0, _aureliaDependencyInjection.inject)(_aureliaPal.DOM.Element, _aureliaDependencyInjection.Container, _aureliaTemplating.ViewSlot, _aureliaRouter.Router, _aureliaTemplating.ViewLocator, _aureliaTemplating.CompositionTransaction, _aureliaTemplating.CompositionEngine), _dec(_class = (0, _aureliaTemplating.noView)(_class = _dec2(_class = (_class2 = function () {
+    function RouterView(element, container, viewSlot, router, viewLocator, compositionTransaction, compositionEngine) {
+      
+
+      _initDefineProp(this, 'swapOrder', _descriptor, this);
+
+      _initDefineProp(this, 'layoutView', _descriptor2, this);
+
+      _initDefineProp(this, 'layoutViewModel', _descriptor3, this);
+
+      _initDefineProp(this, 'layoutModel', _descriptor4, this);
+
+      this.element = element;
+      this.container = container;
+      this.viewSlot = viewSlot;
+      this.router = router;
+      this.viewLocator = viewLocator;
+      this.compositionTransaction = compositionTransaction;
+      this.compositionEngine = compositionEngine;
+      this.router.registerViewPort(this, this.element.getAttribute('name'));
+
+      if (!('initialComposition' in compositionTransaction)) {
+        compositionTransaction.initialComposition = true;
+        this.compositionTransactionNotifier = compositionTransaction.enlist();
+      }
+    }
+
+    RouterView.prototype.created = function created(owningView) {
+      this.owningView = owningView;
+    };
+
+    RouterView.prototype.bind = function bind(bindingContext, overrideContext) {
+      this.container.viewModel = bindingContext;
+      this.overrideContext = overrideContext;
+    };
+
+    RouterView.prototype.process = function process(viewPortInstruction, waitToSwap) {
+      var _this = this;
+
+      var component = viewPortInstruction.component;
+      var childContainer = component.childContainer;
+      var viewModel = component.viewModel;
+      var viewModelResource = component.viewModelResource;
+      var metadata = viewModelResource.metadata;
+      var config = component.router.currentInstruction.config;
+      var viewPort = config.viewPorts ? config.viewPorts[viewPortInstruction.name] : {};
+
+      var layoutInstruction = {
+        viewModel: viewPort.layoutViewModel || config.layoutViewModel || this.layoutViewModel,
+        view: viewPort.layoutView || config.layoutView || this.layoutView,
+        model: viewPort.layoutModel || config.layoutModel || this.layoutModel,
+        router: viewPortInstruction.component.router,
+        childContainer: childContainer,
+        viewSlot: this.viewSlot
+      };
+
+      var viewStrategy = this.viewLocator.getViewStrategy(component.view || viewModel);
+      if (viewStrategy && component.view) {
+        viewStrategy.makeRelativeTo(_aureliaMetadata.Origin.get(component.router.container.viewModel.constructor).moduleId);
+      }
+
+      return metadata.load(childContainer, viewModelResource.value, null, viewStrategy, true).then(function (viewFactory) {
+        if (!_this.compositionTransactionNotifier) {
+          _this.compositionTransactionOwnershipToken = _this.compositionTransaction.tryCapture();
+        }
+
+        if (layoutInstruction.viewModel || layoutInstruction.view) {
+          viewPortInstruction.layoutInstruction = layoutInstruction;
+        }
+
+        viewPortInstruction.controller = metadata.create(childContainer, _aureliaTemplating.BehaviorInstruction.dynamic(_this.element, viewModel, viewFactory));
+
+        if (waitToSwap) {
+          return;
+        }
+
+        _this.swap(viewPortInstruction);
+      });
+    };
+
+    RouterView.prototype.swap = function swap(viewPortInstruction) {
+      var _this2 = this;
+
+      var work = function work() {
+        var previousView = _this2.view;
+        var swapStrategy = void 0;
+        var viewSlot = _this2.viewSlot;
+        var layoutInstruction = viewPortInstruction.layoutInstruction;
+
+        swapStrategy = _this2.swapOrder in swapStrategies ? swapStrategies[_this2.swapOrder] : swapStrategies.after;
+
+        swapStrategy(viewSlot, previousView, function () {
+          var waitForView = void 0;
+
+          if (layoutInstruction) {
+            if (!layoutInstruction.viewModel) {
+              layoutInstruction.viewModel = {};
+            }
+
+            waitForView = _this2.compositionEngine.createController(layoutInstruction).then(function (layout) {
+              _aureliaTemplating.ShadowDOM.distributeView(viewPortInstruction.controller.view, layout.slots || layout.view.slots);
+              return layout.view || layout;
+            });
+          } else {
+            waitForView = Promise.resolve(viewPortInstruction.controller.view);
+          }
+
+          return waitForView.then(function (newView) {
+            _this2.view = newView;
+            return viewSlot.add(newView);
+          }).then(function () {
+            _this2._notify();
+          });
+        });
+      };
+
+      viewPortInstruction.controller.automate(this.overrideContext, this.owningView);
+
+      if (this.compositionTransactionOwnershipToken) {
+        return this.compositionTransactionOwnershipToken.waitForCompositionComplete().then(function () {
+          _this2.compositionTransactionOwnershipToken = null;
+          return work();
+        });
+      }
+
+      return work();
+    };
+
+    RouterView.prototype._notify = function _notify() {
+      if (this.compositionTransactionNotifier) {
+        this.compositionTransactionNotifier.done();
+        this.compositionTransactionNotifier = null;
+      }
+    };
+
+    return RouterView;
+  }(), (_descriptor = _applyDecoratedDescriptor(_class2.prototype, 'swapOrder', [_aureliaTemplating.bindable], {
+    enumerable: true,
+    initializer: null
+  }), _descriptor2 = _applyDecoratedDescriptor(_class2.prototype, 'layoutView', [_aureliaTemplating.bindable], {
+    enumerable: true,
+    initializer: null
+  }), _descriptor3 = _applyDecoratedDescriptor(_class2.prototype, 'layoutViewModel', [_aureliaTemplating.bindable], {
+    enumerable: true,
+    initializer: null
+  }), _descriptor4 = _applyDecoratedDescriptor(_class2.prototype, 'layoutModel', [_aureliaTemplating.bindable], {
+    enumerable: true,
+    initializer: null
+  })), _class2)) || _class) || _class) || _class);
+});
+define('aurelia-templating-router/route-href',['exports', 'aurelia-templating', 'aurelia-dependency-injection', 'aurelia-router', 'aurelia-pal', 'aurelia-logging'], function (exports, _aureliaTemplating, _aureliaDependencyInjection, _aureliaRouter, _aureliaPal, _aureliaLogging) {
+  'use strict';
+
+  Object.defineProperty(exports, "__esModule", {
+    value: true
+  });
+  exports.RouteHref = undefined;
+
+  var LogManager = _interopRequireWildcard(_aureliaLogging);
+
+  function _interopRequireWildcard(obj) {
+    if (obj && obj.__esModule) {
+      return obj;
+    } else {
+      var newObj = {};
+
+      if (obj != null) {
+        for (var key in obj) {
+          if (Object.prototype.hasOwnProperty.call(obj, key)) newObj[key] = obj[key];
+        }
+      }
+
+      newObj.default = obj;
+      return newObj;
+    }
+  }
+
+  
+
+  var _dec, _dec2, _dec3, _dec4, _dec5, _class;
+
+  var logger = LogManager.getLogger('route-href');
+
+  var RouteHref = exports.RouteHref = (_dec = (0, _aureliaTemplating.customAttribute)('route-href'), _dec2 = (0, _aureliaTemplating.bindable)({ name: 'route', changeHandler: 'processChange' }), _dec3 = (0, _aureliaTemplating.bindable)({ name: 'params', changeHandler: 'processChange' }), _dec4 = (0, _aureliaTemplating.bindable)({ name: 'attribute', defaultValue: 'href' }), _dec5 = (0, _aureliaDependencyInjection.inject)(_aureliaRouter.Router, _aureliaPal.DOM.Element), _dec(_class = _dec2(_class = _dec3(_class = _dec4(_class = _dec5(_class = function () {
+    function RouteHref(router, element) {
+      
+
+      this.router = router;
+      this.element = element;
+    }
+
+    RouteHref.prototype.bind = function bind() {
+      this.isActive = true;
+      this.processChange();
+    };
+
+    RouteHref.prototype.unbind = function unbind() {
+      this.isActive = false;
+    };
+
+    RouteHref.prototype.attributeChanged = function attributeChanged(value, previous) {
+      if (previous) {
+        this.element.removeAttribute(previous);
+      }
+
+      this.processChange();
+    };
+
+    RouteHref.prototype.processChange = function processChange() {
+      var _this = this;
+
+      return this.router.ensureConfigured().then(function () {
+        if (!_this.isActive) {
+          return null;
+        }
+
+        var href = _this.router.generate(_this.route, _this.params);
+        _this.element.setAttribute(_this.attribute, href);
+        return null;
+      }).catch(function (reason) {
+        logger.error(reason);
+      });
+    };
+
+    return RouteHref;
+  }()) || _class) || _class) || _class) || _class) || _class);
+});
 define('aurelia-testing/aurelia-testing',['exports', './compile-spy', './view-spy', './component-tester'], function (exports, _compileSpy, _viewSpy, _componentTester) {
   'use strict';
 
@@ -23186,672 +24315,6 @@ define('aurelia-testing/component-tester',['exports', 'aurelia-templating', 'aur
 
     return ComponentTester;
   }();
-});
-define('aurelia-templating-binding',['exports', 'aurelia-logging', 'aurelia-binding', 'aurelia-templating'], function (exports, _aureliaLogging, _aureliaBinding, _aureliaTemplating) {
-  'use strict';
-
-  Object.defineProperty(exports, "__esModule", {
-    value: true
-  });
-  exports.TemplatingBindingLanguage = exports.SyntaxInterpreter = exports.ChildInterpolationBinding = exports.InterpolationBinding = exports.InterpolationBindingExpression = exports.AttributeMap = undefined;
-  exports.configure = configure;
-
-  var LogManager = _interopRequireWildcard(_aureliaLogging);
-
-  function _interopRequireWildcard(obj) {
-    if (obj && obj.__esModule) {
-      return obj;
-    } else {
-      var newObj = {};
-
-      if (obj != null) {
-        for (var key in obj) {
-          if (Object.prototype.hasOwnProperty.call(obj, key)) newObj[key] = obj[key];
-        }
-      }
-
-      newObj.default = obj;
-      return newObj;
-    }
-  }
-
-  function _possibleConstructorReturn(self, call) {
-    if (!self) {
-      throw new ReferenceError("this hasn't been initialised - super() hasn't been called");
-    }
-
-    return call && (typeof call === "object" || typeof call === "function") ? call : self;
-  }
-
-  function _inherits(subClass, superClass) {
-    if (typeof superClass !== "function" && superClass !== null) {
-      throw new TypeError("Super expression must either be null or a function, not " + typeof superClass);
-    }
-
-    subClass.prototype = Object.create(superClass && superClass.prototype, {
-      constructor: {
-        value: subClass,
-        enumerable: false,
-        writable: true,
-        configurable: true
-      }
-    });
-    if (superClass) Object.setPrototypeOf ? Object.setPrototypeOf(subClass, superClass) : subClass.__proto__ = superClass;
-  }
-
-  
-
-  var _class, _temp, _dec, _class2, _class3, _temp2, _class4, _temp3;
-
-  var AttributeMap = exports.AttributeMap = (_temp = _class = function () {
-    function AttributeMap(svg) {
-      
-
-      this.elements = Object.create(null);
-      this.allElements = Object.create(null);
-
-      this.svg = svg;
-
-      this.registerUniversal('accesskey', 'accessKey');
-      this.registerUniversal('contenteditable', 'contentEditable');
-      this.registerUniversal('tabindex', 'tabIndex');
-      this.registerUniversal('textcontent', 'textContent');
-      this.registerUniversal('innerhtml', 'innerHTML');
-      this.registerUniversal('scrolltop', 'scrollTop');
-      this.registerUniversal('scrollleft', 'scrollLeft');
-      this.registerUniversal('readonly', 'readOnly');
-
-      this.register('label', 'for', 'htmlFor');
-
-      this.register('input', 'maxlength', 'maxLength');
-      this.register('input', 'minlength', 'minLength');
-      this.register('input', 'formaction', 'formAction');
-      this.register('input', 'formenctype', 'formEncType');
-      this.register('input', 'formmethod', 'formMethod');
-      this.register('input', 'formnovalidate', 'formNoValidate');
-      this.register('input', 'formtarget', 'formTarget');
-
-      this.register('textarea', 'maxlength', 'maxLength');
-
-      this.register('td', 'rowspan', 'rowSpan');
-      this.register('td', 'colspan', 'colSpan');
-      this.register('th', 'rowspan', 'rowSpan');
-      this.register('th', 'colspan', 'colSpan');
-    }
-
-    AttributeMap.prototype.register = function register(elementName, attributeName, propertyName) {
-      elementName = elementName.toLowerCase();
-      attributeName = attributeName.toLowerCase();
-      var element = this.elements[elementName] = this.elements[elementName] || Object.create(null);
-      element[attributeName] = propertyName;
-    };
-
-    AttributeMap.prototype.registerUniversal = function registerUniversal(attributeName, propertyName) {
-      attributeName = attributeName.toLowerCase();
-      this.allElements[attributeName] = propertyName;
-    };
-
-    AttributeMap.prototype.map = function map(elementName, attributeName) {
-      if (this.svg.isStandardSvgAttribute(elementName, attributeName)) {
-        return attributeName;
-      }
-      elementName = elementName.toLowerCase();
-      attributeName = attributeName.toLowerCase();
-      var element = this.elements[elementName];
-      if (element !== undefined && attributeName in element) {
-        return element[attributeName];
-      }
-      if (attributeName in this.allElements) {
-        return this.allElements[attributeName];
-      }
-
-      if (/(^data-)|(^aria-)|:/.test(attributeName)) {
-        return attributeName;
-      }
-      return (0, _aureliaBinding.camelCase)(attributeName);
-    };
-
-    return AttributeMap;
-  }(), _class.inject = [_aureliaBinding.SVGAnalyzer], _temp);
-
-  var InterpolationBindingExpression = exports.InterpolationBindingExpression = function () {
-    function InterpolationBindingExpression(observerLocator, targetProperty, parts, mode, lookupFunctions, attribute) {
-      
-
-      this.observerLocator = observerLocator;
-      this.targetProperty = targetProperty;
-      this.parts = parts;
-      this.mode = mode;
-      this.lookupFunctions = lookupFunctions;
-      this.attribute = this.attrToRemove = attribute;
-      this.discrete = false;
-    }
-
-    InterpolationBindingExpression.prototype.createBinding = function createBinding(target) {
-      if (this.parts.length === 3) {
-        return new ChildInterpolationBinding(target, this.observerLocator, this.parts[1], this.mode, this.lookupFunctions, this.targetProperty, this.parts[0], this.parts[2]);
-      }
-      return new InterpolationBinding(this.observerLocator, this.parts, target, this.targetProperty, this.mode, this.lookupFunctions);
-    };
-
-    return InterpolationBindingExpression;
-  }();
-
-  function validateTarget(target, propertyName) {
-    if (propertyName === 'style') {
-      LogManager.getLogger('templating-binding').info('Internet Explorer does not support interpolation in "style" attributes.  Use the style attribute\'s alias, "css" instead.');
-    } else if (target.parentElement && target.parentElement.nodeName === 'TEXTAREA' && propertyName === 'textContent') {
-      throw new Error('Interpolation binding cannot be used in the content of a textarea element.  Use <textarea value.bind="expression"></textarea> instead.');
-    }
-  }
-
-  var InterpolationBinding = exports.InterpolationBinding = function () {
-    function InterpolationBinding(observerLocator, parts, target, targetProperty, mode, lookupFunctions) {
-      
-
-      validateTarget(target, targetProperty);
-      this.observerLocator = observerLocator;
-      this.parts = parts;
-      this.target = target;
-      this.targetProperty = targetProperty;
-      this.targetAccessor = observerLocator.getAccessor(target, targetProperty);
-      this.mode = mode;
-      this.lookupFunctions = lookupFunctions;
-    }
-
-    InterpolationBinding.prototype.interpolate = function interpolate() {
-      if (this.isBound) {
-        var value = '';
-        var parts = this.parts;
-        for (var i = 0, ii = parts.length; i < ii; i++) {
-          value += i % 2 === 0 ? parts[i] : this['childBinding' + i].value;
-        }
-        this.targetAccessor.setValue(value, this.target, this.targetProperty);
-      }
-    };
-
-    InterpolationBinding.prototype.updateOneTimeBindings = function updateOneTimeBindings() {
-      for (var i = 1, ii = this.parts.length; i < ii; i += 2) {
-        var child = this['childBinding' + i];
-        if (child.mode === _aureliaBinding.bindingMode.oneTime) {
-          child.call();
-        }
-      }
-    };
-
-    InterpolationBinding.prototype.bind = function bind(source) {
-      if (this.isBound) {
-        if (this.source === source) {
-          return;
-        }
-        this.unbind();
-      }
-      this.source = source;
-
-      var parts = this.parts;
-      for (var i = 1, ii = parts.length; i < ii; i += 2) {
-        var binding = new ChildInterpolationBinding(this, this.observerLocator, parts[i], this.mode, this.lookupFunctions);
-        binding.bind(source);
-        this['childBinding' + i] = binding;
-      }
-
-      this.isBound = true;
-      this.interpolate();
-    };
-
-    InterpolationBinding.prototype.unbind = function unbind() {
-      if (!this.isBound) {
-        return;
-      }
-      this.isBound = false;
-      this.source = null;
-      var parts = this.parts;
-      for (var i = 1, ii = parts.length; i < ii; i += 2) {
-        var name = 'childBinding' + i;
-        this[name].unbind();
-      }
-    };
-
-    return InterpolationBinding;
-  }();
-
-  var ChildInterpolationBinding = exports.ChildInterpolationBinding = (_dec = (0, _aureliaBinding.connectable)(), _dec(_class2 = function () {
-    function ChildInterpolationBinding(target, observerLocator, sourceExpression, mode, lookupFunctions, targetProperty, left, right) {
-      
-
-      if (target instanceof InterpolationBinding) {
-        this.parent = target;
-      } else {
-        validateTarget(target, targetProperty);
-        this.target = target;
-        this.targetProperty = targetProperty;
-        this.targetAccessor = observerLocator.getAccessor(target, targetProperty);
-      }
-      this.observerLocator = observerLocator;
-      this.sourceExpression = sourceExpression;
-      this.mode = mode;
-      this.lookupFunctions = lookupFunctions;
-      this.left = left;
-      this.right = right;
-    }
-
-    ChildInterpolationBinding.prototype.updateTarget = function updateTarget(value) {
-      value = value === null || value === undefined ? '' : value.toString();
-      if (value !== this.value) {
-        this.value = value;
-        if (this.parent) {
-          this.parent.interpolate();
-        } else {
-          this.targetAccessor.setValue(this.left + value + this.right, this.target, this.targetProperty);
-        }
-      }
-    };
-
-    ChildInterpolationBinding.prototype.call = function call() {
-      if (!this.isBound) {
-        return;
-      }
-
-      this.rawValue = this.sourceExpression.evaluate(this.source, this.lookupFunctions);
-      this.updateTarget(this.rawValue);
-
-      if (this.mode !== _aureliaBinding.bindingMode.oneTime) {
-        this._version++;
-        this.sourceExpression.connect(this, this.source);
-        if (this.rawValue instanceof Array) {
-          this.observeArray(this.rawValue);
-        }
-        this.unobserve(false);
-      }
-    };
-
-    ChildInterpolationBinding.prototype.bind = function bind(source) {
-      if (this.isBound) {
-        if (this.source === source) {
-          return;
-        }
-        this.unbind();
-      }
-      this.isBound = true;
-      this.source = source;
-
-      var sourceExpression = this.sourceExpression;
-      if (sourceExpression.bind) {
-        sourceExpression.bind(this, source, this.lookupFunctions);
-      }
-
-      this.rawValue = sourceExpression.evaluate(source, this.lookupFunctions);
-      this.updateTarget(this.rawValue);
-
-      if (this.mode === _aureliaBinding.bindingMode.oneWay) {
-        (0, _aureliaBinding.enqueueBindingConnect)(this);
-      }
-    };
-
-    ChildInterpolationBinding.prototype.unbind = function unbind() {
-      if (!this.isBound) {
-        return;
-      }
-      this.isBound = false;
-      var sourceExpression = this.sourceExpression;
-      if (sourceExpression.unbind) {
-        sourceExpression.unbind(this, this.source);
-      }
-      this.source = null;
-      this.value = null;
-      this.rawValue = null;
-      this.unobserve(true);
-    };
-
-    ChildInterpolationBinding.prototype.connect = function connect(evaluate) {
-      if (!this.isBound) {
-        return;
-      }
-      if (evaluate) {
-        this.rawValue = this.sourceExpression.evaluate(this.source, this.lookupFunctions);
-        this.updateTarget(this.rawValue);
-      }
-      this.sourceExpression.connect(this, this.source);
-      if (this.rawValue instanceof Array) {
-        this.observeArray(this.rawValue);
-      }
-    };
-
-    return ChildInterpolationBinding;
-  }()) || _class2);
-  var SyntaxInterpreter = exports.SyntaxInterpreter = (_temp2 = _class3 = function () {
-    function SyntaxInterpreter(parser, observerLocator, eventManager, attributeMap) {
-      
-
-      this.parser = parser;
-      this.observerLocator = observerLocator;
-      this.eventManager = eventManager;
-      this.attributeMap = attributeMap;
-    }
-
-    SyntaxInterpreter.prototype.interpret = function interpret(resources, element, info, existingInstruction, context) {
-      if (info.command in this) {
-        return this[info.command](resources, element, info, existingInstruction, context);
-      }
-
-      return this.handleUnknownCommand(resources, element, info, existingInstruction, context);
-    };
-
-    SyntaxInterpreter.prototype.handleUnknownCommand = function handleUnknownCommand(resources, element, info, existingInstruction, context) {
-      LogManager.getLogger('templating-binding').warn('Unknown binding command.', info);
-      return existingInstruction;
-    };
-
-    SyntaxInterpreter.prototype.determineDefaultBindingMode = function determineDefaultBindingMode(element, attrName, context) {
-      var tagName = element.tagName.toLowerCase();
-
-      if (tagName === 'input' && (attrName === 'value' || attrName === 'files') && element.type !== 'checkbox' && element.type !== 'radio' || tagName === 'input' && attrName === 'checked' && (element.type === 'checkbox' || element.type === 'radio') || (tagName === 'textarea' || tagName === 'select') && attrName === 'value' || (attrName === 'textcontent' || attrName === 'innerhtml') && element.contentEditable === 'true' || attrName === 'scrolltop' || attrName === 'scrollleft') {
-        return _aureliaBinding.bindingMode.twoWay;
-      }
-
-      if (context && attrName in context.attributes && context.attributes[attrName] && context.attributes[attrName].defaultBindingMode >= _aureliaBinding.bindingMode.oneTime) {
-        return context.attributes[attrName].defaultBindingMode;
-      }
-
-      return _aureliaBinding.bindingMode.oneWay;
-    };
-
-    SyntaxInterpreter.prototype.bind = function bind(resources, element, info, existingInstruction, context) {
-      var instruction = existingInstruction || _aureliaTemplating.BehaviorInstruction.attribute(info.attrName);
-
-      instruction.attributes[info.attrName] = new _aureliaBinding.BindingExpression(this.observerLocator, this.attributeMap.map(element.tagName, info.attrName), this.parser.parse(info.attrValue), info.defaultBindingMode || this.determineDefaultBindingMode(element, info.attrName, context), resources.lookupFunctions);
-
-      return instruction;
-    };
-
-    SyntaxInterpreter.prototype.trigger = function trigger(resources, element, info) {
-      return new _aureliaBinding.ListenerExpression(this.eventManager, info.attrName, this.parser.parse(info.attrValue), false, true, resources.lookupFunctions);
-    };
-
-    SyntaxInterpreter.prototype.delegate = function delegate(resources, element, info) {
-      return new _aureliaBinding.ListenerExpression(this.eventManager, info.attrName, this.parser.parse(info.attrValue), true, true, resources.lookupFunctions);
-    };
-
-    SyntaxInterpreter.prototype.call = function call(resources, element, info, existingInstruction) {
-      var instruction = existingInstruction || _aureliaTemplating.BehaviorInstruction.attribute(info.attrName);
-
-      instruction.attributes[info.attrName] = new _aureliaBinding.CallExpression(this.observerLocator, info.attrName, this.parser.parse(info.attrValue), resources.lookupFunctions);
-
-      return instruction;
-    };
-
-    SyntaxInterpreter.prototype.options = function options(resources, element, info, existingInstruction, context) {
-      var instruction = existingInstruction || _aureliaTemplating.BehaviorInstruction.attribute(info.attrName);
-      var attrValue = info.attrValue;
-      var language = this.language;
-      var name = null;
-      var target = '';
-      var current = void 0;
-      var i = void 0;
-      var ii = void 0;
-      var inString = false;
-      var inEscape = false;
-
-      for (i = 0, ii = attrValue.length; i < ii; ++i) {
-        current = attrValue[i];
-
-        if (current === ';' && !inString) {
-          info = language.inspectAttribute(resources, '?', name, target.trim());
-          language.createAttributeInstruction(resources, element, info, instruction, context);
-
-          if (!instruction.attributes[info.attrName]) {
-            instruction.attributes[info.attrName] = info.attrValue;
-          }
-
-          target = '';
-          name = null;
-        } else if (current === ':' && name === null) {
-          name = target.trim();
-          target = '';
-        } else if (current === '\\') {
-          target += current;
-          inEscape = true;
-          continue;
-        } else {
-          target += current;
-
-          if (name !== null && inEscape === false && current === '\'') {
-            inString = !inString;
-          }
-        }
-
-        inEscape = false;
-      }
-
-      if (name !== null) {
-        info = language.inspectAttribute(resources, '?', name, target.trim());
-        language.createAttributeInstruction(resources, element, info, instruction, context);
-
-        if (!instruction.attributes[info.attrName]) {
-          instruction.attributes[info.attrName] = info.attrValue;
-        }
-      }
-
-      return instruction;
-    };
-
-    SyntaxInterpreter.prototype['for'] = function _for(resources, element, info, existingInstruction) {
-      var parts = void 0;
-      var keyValue = void 0;
-      var instruction = void 0;
-      var attrValue = void 0;
-      var isDestructuring = void 0;
-
-      attrValue = info.attrValue;
-      isDestructuring = attrValue.match(/^ *[[].+[\]]/);
-      parts = isDestructuring ? attrValue.split('of ') : attrValue.split(' of ');
-
-      if (parts.length !== 2) {
-        throw new Error('Incorrect syntax for "for". The form is: "$local of $items" or "[$key, $value] of $items".');
-      }
-
-      instruction = existingInstruction || _aureliaTemplating.BehaviorInstruction.attribute(info.attrName);
-
-      if (isDestructuring) {
-        keyValue = parts[0].replace(/[[\]]/g, '').replace(/,/g, ' ').replace(/\s+/g, ' ').trim().split(' ');
-        instruction.attributes.key = keyValue[0];
-        instruction.attributes.value = keyValue[1];
-      } else {
-        instruction.attributes.local = parts[0];
-      }
-
-      instruction.attributes.items = new _aureliaBinding.BindingExpression(this.observerLocator, 'items', this.parser.parse(parts[1]), _aureliaBinding.bindingMode.oneWay, resources.lookupFunctions);
-
-      return instruction;
-    };
-
-    SyntaxInterpreter.prototype['two-way'] = function twoWay(resources, element, info, existingInstruction) {
-      var instruction = existingInstruction || _aureliaTemplating.BehaviorInstruction.attribute(info.attrName);
-
-      instruction.attributes[info.attrName] = new _aureliaBinding.BindingExpression(this.observerLocator, this.attributeMap.map(element.tagName, info.attrName), this.parser.parse(info.attrValue), _aureliaBinding.bindingMode.twoWay, resources.lookupFunctions);
-
-      return instruction;
-    };
-
-    SyntaxInterpreter.prototype['one-way'] = function oneWay(resources, element, info, existingInstruction) {
-      var instruction = existingInstruction || _aureliaTemplating.BehaviorInstruction.attribute(info.attrName);
-
-      instruction.attributes[info.attrName] = new _aureliaBinding.BindingExpression(this.observerLocator, this.attributeMap.map(element.tagName, info.attrName), this.parser.parse(info.attrValue), _aureliaBinding.bindingMode.oneWay, resources.lookupFunctions);
-
-      return instruction;
-    };
-
-    SyntaxInterpreter.prototype['one-time'] = function oneTime(resources, element, info, existingInstruction) {
-      var instruction = existingInstruction || _aureliaTemplating.BehaviorInstruction.attribute(info.attrName);
-
-      instruction.attributes[info.attrName] = new _aureliaBinding.BindingExpression(this.observerLocator, this.attributeMap.map(element.tagName, info.attrName), this.parser.parse(info.attrValue), _aureliaBinding.bindingMode.oneTime, resources.lookupFunctions);
-
-      return instruction;
-    };
-
-    return SyntaxInterpreter;
-  }(), _class3.inject = [_aureliaBinding.Parser, _aureliaBinding.ObserverLocator, _aureliaBinding.EventManager, AttributeMap], _temp2);
-
-  var info = {};
-
-  var TemplatingBindingLanguage = exports.TemplatingBindingLanguage = (_temp3 = _class4 = function (_BindingLanguage) {
-    _inherits(TemplatingBindingLanguage, _BindingLanguage);
-
-    function TemplatingBindingLanguage(parser, observerLocator, syntaxInterpreter, attributeMap) {
-      
-
-      var _this = _possibleConstructorReturn(this, _BindingLanguage.call(this));
-
-      _this.parser = parser;
-      _this.observerLocator = observerLocator;
-      _this.syntaxInterpreter = syntaxInterpreter;
-      _this.emptyStringExpression = _this.parser.parse('\'\'');
-      syntaxInterpreter.language = _this;
-      _this.attributeMap = attributeMap;
-      return _this;
-    }
-
-    TemplatingBindingLanguage.prototype.inspectAttribute = function inspectAttribute(resources, elementName, attrName, attrValue) {
-      var parts = attrName.split('.');
-
-      info.defaultBindingMode = null;
-
-      if (parts.length === 2) {
-        info.attrName = parts[0].trim();
-        info.attrValue = attrValue;
-        info.command = parts[1].trim();
-
-        if (info.command === 'ref') {
-          info.expression = new _aureliaBinding.NameExpression(this.parser.parse(attrValue), info.attrName, resources.lookupFunctions);
-          info.command = null;
-          info.attrName = 'ref';
-        } else {
-          info.expression = null;
-        }
-      } else if (attrName === 'ref') {
-        info.attrName = attrName;
-        info.attrValue = attrValue;
-        info.command = null;
-        info.expression = new _aureliaBinding.NameExpression(this.parser.parse(attrValue), 'element', resources.lookupFunctions);
-      } else {
-        info.attrName = attrName;
-        info.attrValue = attrValue;
-        info.command = null;
-        var interpolationParts = this.parseInterpolation(resources, attrValue);
-        if (interpolationParts === null) {
-          info.expression = null;
-        } else {
-          info.expression = new InterpolationBindingExpression(this.observerLocator, this.attributeMap.map(elementName, attrName), interpolationParts, _aureliaBinding.bindingMode.oneWay, resources.lookupFunctions, attrName);
-        }
-      }
-
-      return info;
-    };
-
-    TemplatingBindingLanguage.prototype.createAttributeInstruction = function createAttributeInstruction(resources, element, theInfo, existingInstruction, context) {
-      var instruction = void 0;
-
-      if (theInfo.expression) {
-        if (theInfo.attrName === 'ref') {
-          return theInfo.expression;
-        }
-
-        instruction = existingInstruction || _aureliaTemplating.BehaviorInstruction.attribute(theInfo.attrName);
-        instruction.attributes[theInfo.attrName] = theInfo.expression;
-      } else if (theInfo.command) {
-        instruction = this.syntaxInterpreter.interpret(resources, element, theInfo, existingInstruction, context);
-      }
-
-      return instruction;
-    };
-
-    TemplatingBindingLanguage.prototype.inspectTextContent = function inspectTextContent(resources, value) {
-      var parts = this.parseInterpolation(resources, value);
-      if (parts === null) {
-        return null;
-      }
-      return new InterpolationBindingExpression(this.observerLocator, 'textContent', parts, _aureliaBinding.bindingMode.oneWay, resources.lookupFunctions, 'textContent');
-    };
-
-    TemplatingBindingLanguage.prototype.parseInterpolation = function parseInterpolation(resources, value) {
-      var i = value.indexOf('${', 0);
-      var ii = value.length;
-      var char = void 0;
-      var pos = 0;
-      var open = 0;
-      var quote = null;
-      var interpolationStart = void 0;
-      var parts = void 0;
-      var partIndex = 0;
-
-      while (i >= 0 && i < ii - 2) {
-        open = 1;
-        interpolationStart = i;
-        i += 2;
-
-        do {
-          char = value[i];
-          i++;
-
-          if (char === "'" || char === '"') {
-            if (quote === null) {
-              quote = char;
-            } else if (quote === char) {
-              quote = null;
-            }
-            continue;
-          }
-
-          if (char === '\\') {
-            i++;
-            continue;
-          }
-
-          if (quote !== null) {
-            continue;
-          }
-
-          if (char === '{') {
-            open++;
-          } else if (char === '}') {
-            open--;
-          }
-        } while (open > 0 && i < ii);
-
-        if (open === 0) {
-          parts = parts || [];
-          if (value[interpolationStart - 1] === '\\' && value[interpolationStart - 2] !== '\\') {
-            parts[partIndex] = value.substring(pos, interpolationStart - 1) + value.substring(interpolationStart, i);
-            partIndex++;
-            parts[partIndex] = this.emptyStringExpression;
-            partIndex++;
-          } else {
-            parts[partIndex] = value.substring(pos, interpolationStart);
-            partIndex++;
-            parts[partIndex] = this.parser.parse(value.substring(interpolationStart + 2, i - 1));
-            partIndex++;
-          }
-          pos = i;
-          i = value.indexOf('${', i);
-        } else {
-          break;
-        }
-      }
-
-      if (partIndex === 0) {
-        return null;
-      }
-
-      parts[partIndex] = value.substr(pos);
-      return parts;
-    };
-
-    return TemplatingBindingLanguage;
-  }(_aureliaTemplating.BindingLanguage), _class4.inject = [_aureliaBinding.Parser, _aureliaBinding.ObserverLocator, SyntaxInterpreter, AttributeMap], _temp3);
-  function configure(config) {
-    config.container.registerSingleton(_aureliaTemplating.BindingLanguage, TemplatingBindingLanguage);
-    config.container.registerAlias(_aureliaTemplating.BindingLanguage, TemplatingBindingLanguage);
-  }
 });
 define('aurelia-templating-resources/aurelia-templating-resources',['exports', './compose', './if', './with', './repeat', './show', './hide', './sanitize-html', './replaceable', './focus', 'aurelia-templating', './css-resource', './html-sanitizer', './binding-mode-behaviors', './throttle-binding-behavior', './debounce-binding-behavior', './signal-binding-behavior', './binding-signaler', './update-trigger-binding-behavior', './abstract-repeater', './repeat-strategy-locator', './html-resource-plugin', './null-repeat-strategy', './array-repeat-strategy', './map-repeat-strategy', './set-repeat-strategy', './number-repeat-strategy', './repeat-utilities', './analyze-view-factory', './aurelia-hide-style'], function (exports, _compose, _if, _with, _repeat, _show, _hide, _sanitizeHtml, _replaceable, _focus, _aureliaTemplating, _cssResource, _htmlSanitizer, _bindingModeBehaviors, _throttleBindingBehavior, _debounceBindingBehavior, _signalBindingBehavior, _bindingSignaler, _updateTriggerBindingBehavior, _abstractRepeater, _repeatStrategyLocator, _htmlResourcePlugin, _nullRepeatStrategy, _arrayRepeatStrategy, _mapRepeatStrategy, _setRepeatStrategy, _numberRepeatStrategy, _repeatUtilities, _analyzeViewFactory, _aureliaHideStyle) {
   'use strict';
@@ -26208,36 +26671,33 @@ define('aurelia-templating-resources/dynamic-element',['exports', 'aurelia-templ
     return DynamicElement;
   }
 });
-define('aurelia-templating-router/aurelia-templating-router',['exports', 'aurelia-router', './route-loader', './router-view', './route-href'], function (exports, _aureliaRouter, _routeLoader, _routerView, _routeHref) {
+define('aurelia-templating-binding',['exports', 'aurelia-logging', 'aurelia-binding', 'aurelia-templating'], function (exports, _aureliaLogging, _aureliaBinding, _aureliaTemplating) {
   'use strict';
 
   Object.defineProperty(exports, "__esModule", {
     value: true
   });
-  exports.configure = exports.RouteHref = exports.RouterView = exports.TemplatingRouteLoader = undefined;
-
-
-  function configure(config) {
-    config.singleton(_aureliaRouter.RouteLoader, _routeLoader.TemplatingRouteLoader).singleton(_aureliaRouter.Router, _aureliaRouter.AppRouter).globalResources('./router-view', './route-href');
-
-    config.container.registerAlias(_aureliaRouter.Router, _aureliaRouter.AppRouter);
-  }
-
-  exports.TemplatingRouteLoader = _routeLoader.TemplatingRouteLoader;
-  exports.RouterView = _routerView.RouterView;
-  exports.RouteHref = _routeHref.RouteHref;
+  exports.TemplatingBindingLanguage = exports.SyntaxInterpreter = exports.ChildInterpolationBinding = exports.InterpolationBinding = exports.InterpolationBindingExpression = exports.AttributeMap = undefined;
   exports.configure = configure;
-});;define('aurelia-templating-router', ['aurelia-templating-router/aurelia-templating-router'], function (main) { return main; });
 
-define('aurelia-templating-router/route-loader',['exports', 'aurelia-dependency-injection', 'aurelia-templating', 'aurelia-router', 'aurelia-path', 'aurelia-metadata'], function (exports, _aureliaDependencyInjection, _aureliaTemplating, _aureliaRouter, _aureliaPath, _aureliaMetadata) {
-  'use strict';
+  var LogManager = _interopRequireWildcard(_aureliaLogging);
 
-  Object.defineProperty(exports, "__esModule", {
-    value: true
-  });
-  exports.TemplatingRouteLoader = undefined;
+  function _interopRequireWildcard(obj) {
+    if (obj && obj.__esModule) {
+      return obj;
+    } else {
+      var newObj = {};
 
-  
+      if (obj != null) {
+        for (var key in obj) {
+          if (Object.prototype.hasOwnProperty.call(obj, key)) newObj[key] = obj[key];
+        }
+      }
+
+      newObj.default = obj;
+      return newObj;
+    }
+  }
 
   function _possibleConstructorReturn(self, call) {
     if (!self) {
@@ -26263,360 +26723,617 @@ define('aurelia-templating-router/route-loader',['exports', 'aurelia-dependency-
     if (superClass) Object.setPrototypeOf ? Object.setPrototypeOf(subClass, superClass) : subClass.__proto__ = superClass;
   }
 
-  var _dec, _class;
+  
 
-  var TemplatingRouteLoader = exports.TemplatingRouteLoader = (_dec = (0, _aureliaDependencyInjection.inject)(_aureliaTemplating.CompositionEngine), _dec(_class = function (_RouteLoader) {
-    _inherits(TemplatingRouteLoader, _RouteLoader);
+  var _class, _temp, _dec, _class2, _class3, _temp2, _class4, _temp3;
 
-    function TemplatingRouteLoader(compositionEngine) {
+  var AttributeMap = exports.AttributeMap = (_temp = _class = function () {
+    function AttributeMap(svg) {
       
 
-      var _this = _possibleConstructorReturn(this, _RouteLoader.call(this));
+      this.elements = Object.create(null);
+      this.allElements = Object.create(null);
 
-      _this.compositionEngine = compositionEngine;
+      this.svg = svg;
+
+      this.registerUniversal('accesskey', 'accessKey');
+      this.registerUniversal('contenteditable', 'contentEditable');
+      this.registerUniversal('tabindex', 'tabIndex');
+      this.registerUniversal('textcontent', 'textContent');
+      this.registerUniversal('innerhtml', 'innerHTML');
+      this.registerUniversal('scrolltop', 'scrollTop');
+      this.registerUniversal('scrollleft', 'scrollLeft');
+      this.registerUniversal('readonly', 'readOnly');
+
+      this.register('label', 'for', 'htmlFor');
+
+      this.register('input', 'maxlength', 'maxLength');
+      this.register('input', 'minlength', 'minLength');
+      this.register('input', 'formaction', 'formAction');
+      this.register('input', 'formenctype', 'formEncType');
+      this.register('input', 'formmethod', 'formMethod');
+      this.register('input', 'formnovalidate', 'formNoValidate');
+      this.register('input', 'formtarget', 'formTarget');
+
+      this.register('textarea', 'maxlength', 'maxLength');
+
+      this.register('td', 'rowspan', 'rowSpan');
+      this.register('td', 'colspan', 'colSpan');
+      this.register('th', 'rowspan', 'rowSpan');
+      this.register('th', 'colspan', 'colSpan');
+    }
+
+    AttributeMap.prototype.register = function register(elementName, attributeName, propertyName) {
+      elementName = elementName.toLowerCase();
+      attributeName = attributeName.toLowerCase();
+      var element = this.elements[elementName] = this.elements[elementName] || Object.create(null);
+      element[attributeName] = propertyName;
+    };
+
+    AttributeMap.prototype.registerUniversal = function registerUniversal(attributeName, propertyName) {
+      attributeName = attributeName.toLowerCase();
+      this.allElements[attributeName] = propertyName;
+    };
+
+    AttributeMap.prototype.map = function map(elementName, attributeName) {
+      if (this.svg.isStandardSvgAttribute(elementName, attributeName)) {
+        return attributeName;
+      }
+      elementName = elementName.toLowerCase();
+      attributeName = attributeName.toLowerCase();
+      var element = this.elements[elementName];
+      if (element !== undefined && attributeName in element) {
+        return element[attributeName];
+      }
+      if (attributeName in this.allElements) {
+        return this.allElements[attributeName];
+      }
+
+      if (/(^data-)|(^aria-)|:/.test(attributeName)) {
+        return attributeName;
+      }
+      return (0, _aureliaBinding.camelCase)(attributeName);
+    };
+
+    return AttributeMap;
+  }(), _class.inject = [_aureliaBinding.SVGAnalyzer], _temp);
+
+  var InterpolationBindingExpression = exports.InterpolationBindingExpression = function () {
+    function InterpolationBindingExpression(observerLocator, targetProperty, parts, mode, lookupFunctions, attribute) {
+      
+
+      this.observerLocator = observerLocator;
+      this.targetProperty = targetProperty;
+      this.parts = parts;
+      this.mode = mode;
+      this.lookupFunctions = lookupFunctions;
+      this.attribute = this.attrToRemove = attribute;
+      this.discrete = false;
+    }
+
+    InterpolationBindingExpression.prototype.createBinding = function createBinding(target) {
+      if (this.parts.length === 3) {
+        return new ChildInterpolationBinding(target, this.observerLocator, this.parts[1], this.mode, this.lookupFunctions, this.targetProperty, this.parts[0], this.parts[2]);
+      }
+      return new InterpolationBinding(this.observerLocator, this.parts, target, this.targetProperty, this.mode, this.lookupFunctions);
+    };
+
+    return InterpolationBindingExpression;
+  }();
+
+  function validateTarget(target, propertyName) {
+    if (propertyName === 'style') {
+      LogManager.getLogger('templating-binding').info('Internet Explorer does not support interpolation in "style" attributes.  Use the style attribute\'s alias, "css" instead.');
+    } else if (target.parentElement && target.parentElement.nodeName === 'TEXTAREA' && propertyName === 'textContent') {
+      throw new Error('Interpolation binding cannot be used in the content of a textarea element.  Use <textarea value.bind="expression"></textarea> instead.');
+    }
+  }
+
+  var InterpolationBinding = exports.InterpolationBinding = function () {
+    function InterpolationBinding(observerLocator, parts, target, targetProperty, mode, lookupFunctions) {
+      
+
+      validateTarget(target, targetProperty);
+      this.observerLocator = observerLocator;
+      this.parts = parts;
+      this.target = target;
+      this.targetProperty = targetProperty;
+      this.targetAccessor = observerLocator.getAccessor(target, targetProperty);
+      this.mode = mode;
+      this.lookupFunctions = lookupFunctions;
+    }
+
+    InterpolationBinding.prototype.interpolate = function interpolate() {
+      if (this.isBound) {
+        var value = '';
+        var parts = this.parts;
+        for (var i = 0, ii = parts.length; i < ii; i++) {
+          value += i % 2 === 0 ? parts[i] : this['childBinding' + i].value;
+        }
+        this.targetAccessor.setValue(value, this.target, this.targetProperty);
+      }
+    };
+
+    InterpolationBinding.prototype.updateOneTimeBindings = function updateOneTimeBindings() {
+      for (var i = 1, ii = this.parts.length; i < ii; i += 2) {
+        var child = this['childBinding' + i];
+        if (child.mode === _aureliaBinding.bindingMode.oneTime) {
+          child.call();
+        }
+      }
+    };
+
+    InterpolationBinding.prototype.bind = function bind(source) {
+      if (this.isBound) {
+        if (this.source === source) {
+          return;
+        }
+        this.unbind();
+      }
+      this.source = source;
+
+      var parts = this.parts;
+      for (var i = 1, ii = parts.length; i < ii; i += 2) {
+        var binding = new ChildInterpolationBinding(this, this.observerLocator, parts[i], this.mode, this.lookupFunctions);
+        binding.bind(source);
+        this['childBinding' + i] = binding;
+      }
+
+      this.isBound = true;
+      this.interpolate();
+    };
+
+    InterpolationBinding.prototype.unbind = function unbind() {
+      if (!this.isBound) {
+        return;
+      }
+      this.isBound = false;
+      this.source = null;
+      var parts = this.parts;
+      for (var i = 1, ii = parts.length; i < ii; i += 2) {
+        var name = 'childBinding' + i;
+        this[name].unbind();
+      }
+    };
+
+    return InterpolationBinding;
+  }();
+
+  var ChildInterpolationBinding = exports.ChildInterpolationBinding = (_dec = (0, _aureliaBinding.connectable)(), _dec(_class2 = function () {
+    function ChildInterpolationBinding(target, observerLocator, sourceExpression, mode, lookupFunctions, targetProperty, left, right) {
+      
+
+      if (target instanceof InterpolationBinding) {
+        this.parent = target;
+      } else {
+        validateTarget(target, targetProperty);
+        this.target = target;
+        this.targetProperty = targetProperty;
+        this.targetAccessor = observerLocator.getAccessor(target, targetProperty);
+      }
+      this.observerLocator = observerLocator;
+      this.sourceExpression = sourceExpression;
+      this.mode = mode;
+      this.lookupFunctions = lookupFunctions;
+      this.left = left;
+      this.right = right;
+    }
+
+    ChildInterpolationBinding.prototype.updateTarget = function updateTarget(value) {
+      value = value === null || value === undefined ? '' : value.toString();
+      if (value !== this.value) {
+        this.value = value;
+        if (this.parent) {
+          this.parent.interpolate();
+        } else {
+          this.targetAccessor.setValue(this.left + value + this.right, this.target, this.targetProperty);
+        }
+      }
+    };
+
+    ChildInterpolationBinding.prototype.call = function call() {
+      if (!this.isBound) {
+        return;
+      }
+
+      this.rawValue = this.sourceExpression.evaluate(this.source, this.lookupFunctions);
+      this.updateTarget(this.rawValue);
+
+      if (this.mode !== _aureliaBinding.bindingMode.oneTime) {
+        this._version++;
+        this.sourceExpression.connect(this, this.source);
+        if (this.rawValue instanceof Array) {
+          this.observeArray(this.rawValue);
+        }
+        this.unobserve(false);
+      }
+    };
+
+    ChildInterpolationBinding.prototype.bind = function bind(source) {
+      if (this.isBound) {
+        if (this.source === source) {
+          return;
+        }
+        this.unbind();
+      }
+      this.isBound = true;
+      this.source = source;
+
+      var sourceExpression = this.sourceExpression;
+      if (sourceExpression.bind) {
+        sourceExpression.bind(this, source, this.lookupFunctions);
+      }
+
+      this.rawValue = sourceExpression.evaluate(source, this.lookupFunctions);
+      this.updateTarget(this.rawValue);
+
+      if (this.mode === _aureliaBinding.bindingMode.oneWay) {
+        (0, _aureliaBinding.enqueueBindingConnect)(this);
+      }
+    };
+
+    ChildInterpolationBinding.prototype.unbind = function unbind() {
+      if (!this.isBound) {
+        return;
+      }
+      this.isBound = false;
+      var sourceExpression = this.sourceExpression;
+      if (sourceExpression.unbind) {
+        sourceExpression.unbind(this, this.source);
+      }
+      this.source = null;
+      this.value = null;
+      this.rawValue = null;
+      this.unobserve(true);
+    };
+
+    ChildInterpolationBinding.prototype.connect = function connect(evaluate) {
+      if (!this.isBound) {
+        return;
+      }
+      if (evaluate) {
+        this.rawValue = this.sourceExpression.evaluate(this.source, this.lookupFunctions);
+        this.updateTarget(this.rawValue);
+      }
+      this.sourceExpression.connect(this, this.source);
+      if (this.rawValue instanceof Array) {
+        this.observeArray(this.rawValue);
+      }
+    };
+
+    return ChildInterpolationBinding;
+  }()) || _class2);
+  var SyntaxInterpreter = exports.SyntaxInterpreter = (_temp2 = _class3 = function () {
+    function SyntaxInterpreter(parser, observerLocator, eventManager, attributeMap) {
+      
+
+      this.parser = parser;
+      this.observerLocator = observerLocator;
+      this.eventManager = eventManager;
+      this.attributeMap = attributeMap;
+    }
+
+    SyntaxInterpreter.prototype.interpret = function interpret(resources, element, info, existingInstruction, context) {
+      if (info.command in this) {
+        return this[info.command](resources, element, info, existingInstruction, context);
+      }
+
+      return this.handleUnknownCommand(resources, element, info, existingInstruction, context);
+    };
+
+    SyntaxInterpreter.prototype.handleUnknownCommand = function handleUnknownCommand(resources, element, info, existingInstruction, context) {
+      LogManager.getLogger('templating-binding').warn('Unknown binding command.', info);
+      return existingInstruction;
+    };
+
+    SyntaxInterpreter.prototype.determineDefaultBindingMode = function determineDefaultBindingMode(element, attrName, context) {
+      var tagName = element.tagName.toLowerCase();
+
+      if (tagName === 'input' && (attrName === 'value' || attrName === 'files') && element.type !== 'checkbox' && element.type !== 'radio' || tagName === 'input' && attrName === 'checked' && (element.type === 'checkbox' || element.type === 'radio') || (tagName === 'textarea' || tagName === 'select') && attrName === 'value' || (attrName === 'textcontent' || attrName === 'innerhtml') && element.contentEditable === 'true' || attrName === 'scrolltop' || attrName === 'scrollleft') {
+        return _aureliaBinding.bindingMode.twoWay;
+      }
+
+      if (context && attrName in context.attributes && context.attributes[attrName] && context.attributes[attrName].defaultBindingMode >= _aureliaBinding.bindingMode.oneTime) {
+        return context.attributes[attrName].defaultBindingMode;
+      }
+
+      return _aureliaBinding.bindingMode.oneWay;
+    };
+
+    SyntaxInterpreter.prototype.bind = function bind(resources, element, info, existingInstruction, context) {
+      var instruction = existingInstruction || _aureliaTemplating.BehaviorInstruction.attribute(info.attrName);
+
+      instruction.attributes[info.attrName] = new _aureliaBinding.BindingExpression(this.observerLocator, this.attributeMap.map(element.tagName, info.attrName), this.parser.parse(info.attrValue), info.defaultBindingMode || this.determineDefaultBindingMode(element, info.attrName, context), resources.lookupFunctions);
+
+      return instruction;
+    };
+
+    SyntaxInterpreter.prototype.trigger = function trigger(resources, element, info) {
+      return new _aureliaBinding.ListenerExpression(this.eventManager, info.attrName, this.parser.parse(info.attrValue), false, true, resources.lookupFunctions);
+    };
+
+    SyntaxInterpreter.prototype.delegate = function delegate(resources, element, info) {
+      return new _aureliaBinding.ListenerExpression(this.eventManager, info.attrName, this.parser.parse(info.attrValue), true, true, resources.lookupFunctions);
+    };
+
+    SyntaxInterpreter.prototype.call = function call(resources, element, info, existingInstruction) {
+      var instruction = existingInstruction || _aureliaTemplating.BehaviorInstruction.attribute(info.attrName);
+
+      instruction.attributes[info.attrName] = new _aureliaBinding.CallExpression(this.observerLocator, info.attrName, this.parser.parse(info.attrValue), resources.lookupFunctions);
+
+      return instruction;
+    };
+
+    SyntaxInterpreter.prototype.options = function options(resources, element, info, existingInstruction, context) {
+      var instruction = existingInstruction || _aureliaTemplating.BehaviorInstruction.attribute(info.attrName);
+      var attrValue = info.attrValue;
+      var language = this.language;
+      var name = null;
+      var target = '';
+      var current = void 0;
+      var i = void 0;
+      var ii = void 0;
+      var inString = false;
+      var inEscape = false;
+
+      for (i = 0, ii = attrValue.length; i < ii; ++i) {
+        current = attrValue[i];
+
+        if (current === ';' && !inString) {
+          info = language.inspectAttribute(resources, '?', name, target.trim());
+          language.createAttributeInstruction(resources, element, info, instruction, context);
+
+          if (!instruction.attributes[info.attrName]) {
+            instruction.attributes[info.attrName] = info.attrValue;
+          }
+
+          target = '';
+          name = null;
+        } else if (current === ':' && name === null) {
+          name = target.trim();
+          target = '';
+        } else if (current === '\\') {
+          target += current;
+          inEscape = true;
+          continue;
+        } else {
+          target += current;
+
+          if (name !== null && inEscape === false && current === '\'') {
+            inString = !inString;
+          }
+        }
+
+        inEscape = false;
+      }
+
+      if (name !== null) {
+        info = language.inspectAttribute(resources, '?', name, target.trim());
+        language.createAttributeInstruction(resources, element, info, instruction, context);
+
+        if (!instruction.attributes[info.attrName]) {
+          instruction.attributes[info.attrName] = info.attrValue;
+        }
+      }
+
+      return instruction;
+    };
+
+    SyntaxInterpreter.prototype['for'] = function _for(resources, element, info, existingInstruction) {
+      var parts = void 0;
+      var keyValue = void 0;
+      var instruction = void 0;
+      var attrValue = void 0;
+      var isDestructuring = void 0;
+
+      attrValue = info.attrValue;
+      isDestructuring = attrValue.match(/^ *[[].+[\]]/);
+      parts = isDestructuring ? attrValue.split('of ') : attrValue.split(' of ');
+
+      if (parts.length !== 2) {
+        throw new Error('Incorrect syntax for "for". The form is: "$local of $items" or "[$key, $value] of $items".');
+      }
+
+      instruction = existingInstruction || _aureliaTemplating.BehaviorInstruction.attribute(info.attrName);
+
+      if (isDestructuring) {
+        keyValue = parts[0].replace(/[[\]]/g, '').replace(/,/g, ' ').replace(/\s+/g, ' ').trim().split(' ');
+        instruction.attributes.key = keyValue[0];
+        instruction.attributes.value = keyValue[1];
+      } else {
+        instruction.attributes.local = parts[0];
+      }
+
+      instruction.attributes.items = new _aureliaBinding.BindingExpression(this.observerLocator, 'items', this.parser.parse(parts[1]), _aureliaBinding.bindingMode.oneWay, resources.lookupFunctions);
+
+      return instruction;
+    };
+
+    SyntaxInterpreter.prototype['two-way'] = function twoWay(resources, element, info, existingInstruction) {
+      var instruction = existingInstruction || _aureliaTemplating.BehaviorInstruction.attribute(info.attrName);
+
+      instruction.attributes[info.attrName] = new _aureliaBinding.BindingExpression(this.observerLocator, this.attributeMap.map(element.tagName, info.attrName), this.parser.parse(info.attrValue), _aureliaBinding.bindingMode.twoWay, resources.lookupFunctions);
+
+      return instruction;
+    };
+
+    SyntaxInterpreter.prototype['one-way'] = function oneWay(resources, element, info, existingInstruction) {
+      var instruction = existingInstruction || _aureliaTemplating.BehaviorInstruction.attribute(info.attrName);
+
+      instruction.attributes[info.attrName] = new _aureliaBinding.BindingExpression(this.observerLocator, this.attributeMap.map(element.tagName, info.attrName), this.parser.parse(info.attrValue), _aureliaBinding.bindingMode.oneWay, resources.lookupFunctions);
+
+      return instruction;
+    };
+
+    SyntaxInterpreter.prototype['one-time'] = function oneTime(resources, element, info, existingInstruction) {
+      var instruction = existingInstruction || _aureliaTemplating.BehaviorInstruction.attribute(info.attrName);
+
+      instruction.attributes[info.attrName] = new _aureliaBinding.BindingExpression(this.observerLocator, this.attributeMap.map(element.tagName, info.attrName), this.parser.parse(info.attrValue), _aureliaBinding.bindingMode.oneTime, resources.lookupFunctions);
+
+      return instruction;
+    };
+
+    return SyntaxInterpreter;
+  }(), _class3.inject = [_aureliaBinding.Parser, _aureliaBinding.ObserverLocator, _aureliaBinding.EventManager, AttributeMap], _temp2);
+
+  var info = {};
+
+  var TemplatingBindingLanguage = exports.TemplatingBindingLanguage = (_temp3 = _class4 = function (_BindingLanguage) {
+    _inherits(TemplatingBindingLanguage, _BindingLanguage);
+
+    function TemplatingBindingLanguage(parser, observerLocator, syntaxInterpreter, attributeMap) {
+      
+
+      var _this = _possibleConstructorReturn(this, _BindingLanguage.call(this));
+
+      _this.parser = parser;
+      _this.observerLocator = observerLocator;
+      _this.syntaxInterpreter = syntaxInterpreter;
+      _this.emptyStringExpression = _this.parser.parse('\'\'');
+      syntaxInterpreter.language = _this;
+      _this.attributeMap = attributeMap;
       return _this;
     }
 
-    TemplatingRouteLoader.prototype.loadRoute = function loadRoute(router, config) {
-      var childContainer = router.container.createChild();
-      var instruction = {
-        viewModel: (0, _aureliaPath.relativeToFile)(config.moduleId, _aureliaMetadata.Origin.get(router.container.viewModel.constructor).moduleId),
-        childContainer: childContainer,
-        view: config.view || config.viewStrategy,
-        router: router
-      };
+    TemplatingBindingLanguage.prototype.inspectAttribute = function inspectAttribute(resources, elementName, attrName, attrValue) {
+      var parts = attrName.split('.');
 
-      childContainer.getChildRouter = function () {
-        var childRouter = void 0;
+      info.defaultBindingMode = null;
 
-        childContainer.registerHandler(_aureliaRouter.Router, function (c) {
-          return childRouter || (childRouter = router.createChild(childContainer));
-        });
+      if (parts.length === 2) {
+        info.attrName = parts[0].trim();
+        info.attrValue = attrValue;
+        info.command = parts[1].trim();
 
-        return childContainer.get(_aureliaRouter.Router);
-      };
-
-      return this.compositionEngine.ensureViewModel(instruction);
-    };
-
-    return TemplatingRouteLoader;
-  }(_aureliaRouter.RouteLoader)) || _class);
-});
-define('aurelia-templating-router/router-view',['exports', 'aurelia-dependency-injection', 'aurelia-templating', 'aurelia-router', 'aurelia-metadata', 'aurelia-pal'], function (exports, _aureliaDependencyInjection, _aureliaTemplating, _aureliaRouter, _aureliaMetadata, _aureliaPal) {
-  'use strict';
-
-  Object.defineProperty(exports, "__esModule", {
-    value: true
-  });
-  exports.RouterView = undefined;
-
-  function _initDefineProp(target, property, descriptor, context) {
-    if (!descriptor) return;
-    Object.defineProperty(target, property, {
-      enumerable: descriptor.enumerable,
-      configurable: descriptor.configurable,
-      writable: descriptor.writable,
-      value: descriptor.initializer ? descriptor.initializer.call(context) : void 0
-    });
-  }
-
-  function _applyDecoratedDescriptor(target, property, decorators, descriptor, context) {
-    var desc = {};
-    Object['ke' + 'ys'](descriptor).forEach(function (key) {
-      desc[key] = descriptor[key];
-    });
-    desc.enumerable = !!desc.enumerable;
-    desc.configurable = !!desc.configurable;
-
-    if ('value' in desc || desc.initializer) {
-      desc.writable = true;
-    }
-
-    desc = decorators.slice().reverse().reduce(function (desc, decorator) {
-      return decorator(target, property, desc) || desc;
-    }, desc);
-
-    if (context && desc.initializer !== void 0) {
-      desc.value = desc.initializer ? desc.initializer.call(context) : void 0;
-      desc.initializer = undefined;
-    }
-
-    if (desc.initializer === void 0) {
-      Object['define' + 'Property'](target, property, desc);
-      desc = null;
-    }
-
-    return desc;
-  }
-
-  function _initializerWarningHelper(descriptor, context) {
-    throw new Error('Decorating class property failed. Please ensure that transform-class-properties is enabled.');
-  }
-
-  var _dec, _dec2, _class, _desc, _value, _class2, _descriptor, _descriptor2, _descriptor3, _descriptor4;
-
-  
-
-  var SwapStrategies = function () {
-    function SwapStrategies() {
-      
-    }
-
-    SwapStrategies.prototype.before = function before(viewSlot, previousView, callback) {
-      var promise = Promise.resolve(callback());
-
-      if (previousView !== undefined) {
-        return promise.then(function () {
-          return viewSlot.remove(previousView, true);
-        });
+        if (info.command === 'ref') {
+          info.expression = new _aureliaBinding.NameExpression(this.parser.parse(attrValue), info.attrName, resources.lookupFunctions);
+          info.command = null;
+          info.attrName = 'ref';
+        } else {
+          info.expression = null;
+        }
+      } else if (attrName === 'ref') {
+        info.attrName = attrName;
+        info.attrValue = attrValue;
+        info.command = null;
+        info.expression = new _aureliaBinding.NameExpression(this.parser.parse(attrValue), 'element', resources.lookupFunctions);
+      } else {
+        info.attrName = attrName;
+        info.attrValue = attrValue;
+        info.command = null;
+        var interpolationParts = this.parseInterpolation(resources, attrValue);
+        if (interpolationParts === null) {
+          info.expression = null;
+        } else {
+          info.expression = new InterpolationBindingExpression(this.observerLocator, this.attributeMap.map(elementName, attrName), interpolationParts, _aureliaBinding.bindingMode.oneWay, resources.lookupFunctions, attrName);
+        }
       }
 
-      return promise;
+      return info;
     };
 
-    SwapStrategies.prototype.with = function _with(viewSlot, previousView, callback) {
-      var promise = Promise.resolve(callback());
+    TemplatingBindingLanguage.prototype.createAttributeInstruction = function createAttributeInstruction(resources, element, theInfo, existingInstruction, context) {
+      var instruction = void 0;
 
-      if (previousView !== undefined) {
-        return Promise.all([viewSlot.remove(previousView, true), promise]);
-      }
-
-      return promise;
-    };
-
-    SwapStrategies.prototype.after = function after(viewSlot, previousView, callback) {
-      return Promise.resolve(viewSlot.removeAll(true)).then(callback);
-    };
-
-    return SwapStrategies;
-  }();
-
-  var swapStrategies = new SwapStrategies();
-
-  var RouterView = exports.RouterView = (_dec = (0, _aureliaTemplating.customElement)('router-view'), _dec2 = (0, _aureliaDependencyInjection.inject)(_aureliaPal.DOM.Element, _aureliaDependencyInjection.Container, _aureliaTemplating.ViewSlot, _aureliaRouter.Router, _aureliaTemplating.ViewLocator, _aureliaTemplating.CompositionTransaction, _aureliaTemplating.CompositionEngine), _dec(_class = (0, _aureliaTemplating.noView)(_class = _dec2(_class = (_class2 = function () {
-    function RouterView(element, container, viewSlot, router, viewLocator, compositionTransaction, compositionEngine) {
-      
-
-      _initDefineProp(this, 'swapOrder', _descriptor, this);
-
-      _initDefineProp(this, 'layoutView', _descriptor2, this);
-
-      _initDefineProp(this, 'layoutViewModel', _descriptor3, this);
-
-      _initDefineProp(this, 'layoutModel', _descriptor4, this);
-
-      this.element = element;
-      this.container = container;
-      this.viewSlot = viewSlot;
-      this.router = router;
-      this.viewLocator = viewLocator;
-      this.compositionTransaction = compositionTransaction;
-      this.compositionEngine = compositionEngine;
-      this.router.registerViewPort(this, this.element.getAttribute('name'));
-
-      if (!('initialComposition' in compositionTransaction)) {
-        compositionTransaction.initialComposition = true;
-        this.compositionTransactionNotifier = compositionTransaction.enlist();
-      }
-    }
-
-    RouterView.prototype.created = function created(owningView) {
-      this.owningView = owningView;
-    };
-
-    RouterView.prototype.bind = function bind(bindingContext, overrideContext) {
-      this.container.viewModel = bindingContext;
-      this.overrideContext = overrideContext;
-    };
-
-    RouterView.prototype.process = function process(viewPortInstruction, waitToSwap) {
-      var _this = this;
-
-      var component = viewPortInstruction.component;
-      var childContainer = component.childContainer;
-      var viewModel = component.viewModel;
-      var viewModelResource = component.viewModelResource;
-      var metadata = viewModelResource.metadata;
-      var config = component.router.currentInstruction.config;
-      var viewPort = config.viewPorts ? config.viewPorts[viewPortInstruction.name] : {};
-
-      var layoutInstruction = {
-        viewModel: viewPort.layoutViewModel || config.layoutViewModel || this.layoutViewModel,
-        view: viewPort.layoutView || config.layoutView || this.layoutView,
-        model: viewPort.layoutModel || config.layoutModel || this.layoutModel,
-        router: viewPortInstruction.component.router,
-        childContainer: childContainer,
-        viewSlot: this.viewSlot
-      };
-
-      var viewStrategy = this.viewLocator.getViewStrategy(component.view || viewModel);
-      if (viewStrategy && component.view) {
-        viewStrategy.makeRelativeTo(_aureliaMetadata.Origin.get(component.router.container.viewModel.constructor).moduleId);
-      }
-
-      return metadata.load(childContainer, viewModelResource.value, null, viewStrategy, true).then(function (viewFactory) {
-        if (!_this.compositionTransactionNotifier) {
-          _this.compositionTransactionOwnershipToken = _this.compositionTransaction.tryCapture();
+      if (theInfo.expression) {
+        if (theInfo.attrName === 'ref') {
+          return theInfo.expression;
         }
 
-        if (layoutInstruction.viewModel || layoutInstruction.view) {
-          viewPortInstruction.layoutInstruction = layoutInstruction;
-        }
+        instruction = existingInstruction || _aureliaTemplating.BehaviorInstruction.attribute(theInfo.attrName);
+        instruction.attributes[theInfo.attrName] = theInfo.expression;
+      } else if (theInfo.command) {
+        instruction = this.syntaxInterpreter.interpret(resources, element, theInfo, existingInstruction, context);
+      }
 
-        viewPortInstruction.controller = metadata.create(childContainer, _aureliaTemplating.BehaviorInstruction.dynamic(_this.element, viewModel, viewFactory));
-
-        if (waitToSwap) {
-          return;
-        }
-
-        _this.swap(viewPortInstruction);
-      });
+      return instruction;
     };
 
-    RouterView.prototype.swap = function swap(viewPortInstruction) {
-      var _this2 = this;
+    TemplatingBindingLanguage.prototype.inspectTextContent = function inspectTextContent(resources, value) {
+      var parts = this.parseInterpolation(resources, value);
+      if (parts === null) {
+        return null;
+      }
+      return new InterpolationBindingExpression(this.observerLocator, 'textContent', parts, _aureliaBinding.bindingMode.oneWay, resources.lookupFunctions, 'textContent');
+    };
 
-      var work = function work() {
-        var previousView = _this2.view;
-        var swapStrategy = void 0;
-        var viewSlot = _this2.viewSlot;
-        var layoutInstruction = viewPortInstruction.layoutInstruction;
+    TemplatingBindingLanguage.prototype.parseInterpolation = function parseInterpolation(resources, value) {
+      var i = value.indexOf('${', 0);
+      var ii = value.length;
+      var char = void 0;
+      var pos = 0;
+      var open = 0;
+      var quote = null;
+      var interpolationStart = void 0;
+      var parts = void 0;
+      var partIndex = 0;
 
-        swapStrategy = _this2.swapOrder in swapStrategies ? swapStrategies[_this2.swapOrder] : swapStrategies.after;
+      while (i >= 0 && i < ii - 2) {
+        open = 1;
+        interpolationStart = i;
+        i += 2;
 
-        swapStrategy(viewSlot, previousView, function () {
-          var waitForView = void 0;
+        do {
+          char = value[i];
+          i++;
 
-          if (layoutInstruction) {
-            if (!layoutInstruction.viewModel) {
-              layoutInstruction.viewModel = {};
+          if (char === "'" || char === '"') {
+            if (quote === null) {
+              quote = char;
+            } else if (quote === char) {
+              quote = null;
             }
-
-            waitForView = _this2.compositionEngine.createController(layoutInstruction).then(function (layout) {
-              _aureliaTemplating.ShadowDOM.distributeView(viewPortInstruction.controller.view, layout.slots || layout.view.slots);
-              return layout.view || layout;
-            });
-          } else {
-            waitForView = Promise.resolve(viewPortInstruction.controller.view);
+            continue;
           }
 
-          return waitForView.then(function (newView) {
-            _this2.view = newView;
-            return viewSlot.add(newView);
-          }).then(function () {
-            _this2._notify();
-          });
-        });
-      };
+          if (char === '\\') {
+            i++;
+            continue;
+          }
 
-      viewPortInstruction.controller.automate(this.overrideContext, this.owningView);
+          if (quote !== null) {
+            continue;
+          }
 
-      if (this.compositionTransactionOwnershipToken) {
-        return this.compositionTransactionOwnershipToken.waitForCompositionComplete().then(function () {
-          _this2.compositionTransactionOwnershipToken = null;
-          return work();
-        });
-      }
+          if (char === '{') {
+            open++;
+          } else if (char === '}') {
+            open--;
+          }
+        } while (open > 0 && i < ii);
 
-      return work();
-    };
-
-    RouterView.prototype._notify = function _notify() {
-      if (this.compositionTransactionNotifier) {
-        this.compositionTransactionNotifier.done();
-        this.compositionTransactionNotifier = null;
-      }
-    };
-
-    return RouterView;
-  }(), (_descriptor = _applyDecoratedDescriptor(_class2.prototype, 'swapOrder', [_aureliaTemplating.bindable], {
-    enumerable: true,
-    initializer: null
-  }), _descriptor2 = _applyDecoratedDescriptor(_class2.prototype, 'layoutView', [_aureliaTemplating.bindable], {
-    enumerable: true,
-    initializer: null
-  }), _descriptor3 = _applyDecoratedDescriptor(_class2.prototype, 'layoutViewModel', [_aureliaTemplating.bindable], {
-    enumerable: true,
-    initializer: null
-  }), _descriptor4 = _applyDecoratedDescriptor(_class2.prototype, 'layoutModel', [_aureliaTemplating.bindable], {
-    enumerable: true,
-    initializer: null
-  })), _class2)) || _class) || _class) || _class);
-});
-define('aurelia-templating-router/route-href',['exports', 'aurelia-templating', 'aurelia-dependency-injection', 'aurelia-router', 'aurelia-pal', 'aurelia-logging'], function (exports, _aureliaTemplating, _aureliaDependencyInjection, _aureliaRouter, _aureliaPal, _aureliaLogging) {
-  'use strict';
-
-  Object.defineProperty(exports, "__esModule", {
-    value: true
-  });
-  exports.RouteHref = undefined;
-
-  var LogManager = _interopRequireWildcard(_aureliaLogging);
-
-  function _interopRequireWildcard(obj) {
-    if (obj && obj.__esModule) {
-      return obj;
-    } else {
-      var newObj = {};
-
-      if (obj != null) {
-        for (var key in obj) {
-          if (Object.prototype.hasOwnProperty.call(obj, key)) newObj[key] = obj[key];
+        if (open === 0) {
+          parts = parts || [];
+          if (value[interpolationStart - 1] === '\\' && value[interpolationStart - 2] !== '\\') {
+            parts[partIndex] = value.substring(pos, interpolationStart - 1) + value.substring(interpolationStart, i);
+            partIndex++;
+            parts[partIndex] = this.emptyStringExpression;
+            partIndex++;
+          } else {
+            parts[partIndex] = value.substring(pos, interpolationStart);
+            partIndex++;
+            parts[partIndex] = this.parser.parse(value.substring(interpolationStart + 2, i - 1));
+            partIndex++;
+          }
+          pos = i;
+          i = value.indexOf('${', i);
+        } else {
+          break;
         }
       }
 
-      newObj.default = obj;
-      return newObj;
-    }
-  }
-
-  
-
-  var _dec, _dec2, _dec3, _dec4, _dec5, _class;
-
-  var logger = LogManager.getLogger('route-href');
-
-  var RouteHref = exports.RouteHref = (_dec = (0, _aureliaTemplating.customAttribute)('route-href'), _dec2 = (0, _aureliaTemplating.bindable)({ name: 'route', changeHandler: 'processChange' }), _dec3 = (0, _aureliaTemplating.bindable)({ name: 'params', changeHandler: 'processChange' }), _dec4 = (0, _aureliaTemplating.bindable)({ name: 'attribute', defaultValue: 'href' }), _dec5 = (0, _aureliaDependencyInjection.inject)(_aureliaRouter.Router, _aureliaPal.DOM.Element), _dec(_class = _dec2(_class = _dec3(_class = _dec4(_class = _dec5(_class = function () {
-    function RouteHref(router, element) {
-      
-
-      this.router = router;
-      this.element = element;
-    }
-
-    RouteHref.prototype.bind = function bind() {
-      this.isActive = true;
-      this.processChange();
-    };
-
-    RouteHref.prototype.unbind = function unbind() {
-      this.isActive = false;
-    };
-
-    RouteHref.prototype.attributeChanged = function attributeChanged(value, previous) {
-      if (previous) {
-        this.element.removeAttribute(previous);
-      }
-
-      this.processChange();
-    };
-
-    RouteHref.prototype.processChange = function processChange() {
-      var _this = this;
-
-      return this.router.ensureConfigured().then(function () {
-        if (!_this.isActive) {
-          return null;
-        }
-
-        var href = _this.router.generate(_this.route, _this.params);
-        _this.element.setAttribute(_this.attribute, href);
+      if (partIndex === 0) {
         return null;
-      }).catch(function (reason) {
-        logger.error(reason);
-      });
+      }
+
+      parts[partIndex] = value.substr(pos);
+      return parts;
     };
 
-    return RouteHref;
-  }()) || _class) || _class) || _class) || _class) || _class);
+    return TemplatingBindingLanguage;
+  }(_aureliaTemplating.BindingLanguage), _class4.inject = [_aureliaBinding.Parser, _aureliaBinding.ObserverLocator, SyntaxInterpreter, AttributeMap], _temp3);
+  function configure(config) {
+    config.container.registerSingleton(_aureliaTemplating.BindingLanguage, TemplatingBindingLanguage);
+    config.container.registerAlias(_aureliaTemplating.BindingLanguage, TemplatingBindingLanguage);
+  }
 });

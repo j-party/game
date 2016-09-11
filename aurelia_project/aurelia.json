@@ -138,6 +138,11 @@
             "path": "../node_modules/aurelia-testing/dist/amd",
             "main": "aurelia-testing",
             "env": "dev"
+          },
+          {
+            "name": "random-js",
+            "path": "../node_modules/random-js/lib",
+            "main": "random"
           }
         ]
       }

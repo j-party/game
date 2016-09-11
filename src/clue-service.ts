@@ -3,9 +3,9 @@ import { HttpClient } from 'aurelia-fetch-client';
 
 import { Clue, Category } from './clue';
 import { DatabaseRow, DatabaseParser } from './database-parser';
-// import { Randomizer } from './randomizer.service';
+import { Randomizer } from './randomizer';
 
-@inject(DatabaseParser, HttpClient)
+@inject(DatabaseParser, HttpClient, Randomizer)
 export class ClueService {
   private categoriesFile = 'categories.txt';
   private cluesFile = 'clues.txt';
@@ -13,15 +13,15 @@ export class ClueService {
   constructor(
     private dbParser: DatabaseParser,
     private http: HttpClient,
-  //   private randomizer: Randomizer
+    private randomizer: Randomizer
   ) {}
   // Chooses X number of categories with clues.
   choose(num: Number): Promise<Category[]> {
     // TODO This should not have possible duplicates.
     let categories: Category[] = [];
     for (let i = 0; i < num; i++) {
-      // let index = this.randomizer.generate(0, this.clues.length);
-      categories.push(this.clues[i]);
+      let index = this.randomizer.generate(0, this.clues.length);
+      categories.push(this.clues[index]);
     }
     return Promise.resolve(categories);
   }
