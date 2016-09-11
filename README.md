@@ -2,7 +2,7 @@
 
 This project is the software piece of the J!Party collection.
 
-It is built on top of the AngularJS framework; no server required.
+It is built on top of the [Aurelia](http://aurelia.io/) framework; no server required.
 
 ## Installation
 
@@ -14,6 +14,7 @@ To build the game, you need the following tools:
 * [gulp](http://gulpjs.com/)
 * [bower](http://bower.io/)
 * [sqlite3](https://www.sqlite.org/)
+* the [aurelia-cli](https://github.com/aurelia/cli) (`au`) tool
 
 Next, install the package dependencies in the project folder: `npm install`
 
@@ -22,9 +23,10 @@ You'll need a *clues database*, in the format created by [the J!Party crawler](h
 Once you have the packages installed, you can run any of the following tasks:
 
 ```shell
-gulp build       # compiles the game
-gulp serve       # serves the game at http://localhost:9000
-gulp test        # runs the test suite
+au build         # compiles the game
+au run           # serves the game at http://localhost:9000
+au run --watch   # serves the game and watches for changes to files
+au test          # runs the test suite
 ```
 
 ## Configuration

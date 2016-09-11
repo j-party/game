@@ -1,5 +1,6 @@
 node_modules/
-typings/
+.idea
+.DS_STORE
 categories.txt
 clues.db
 clues.txt
