@@ -1,7 +1,17 @@
-define('app',["require", "exports"], function (require, exports) {
+var __decorate = (this && this.__decorate) || function (decorators, target, key, desc) {
+    var c = arguments.length, r = c < 3 ? target : desc === null ? desc = Object.getOwnPropertyDescriptor(target, key) : desc, d;
+    if (typeof Reflect === "object" && typeof Reflect.decorate === "function") r = Reflect.decorate(decorators, target, key, desc);
+    else for (var i = decorators.length - 1; i >= 0; i--) if (d = decorators[i]) r = (c < 3 ? d(r) : c > 3 ? d(target, key, r) : d(target, key)) || r;
+    return c > 3 && r && Object.defineProperty(target, key, r), r;
+};
+var __metadata = (this && this.__metadata) || function (k, v) {
+    if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
+};
+define('app',["require", "exports", 'aurelia-framework', './clue-service'], function (require, exports, aurelia_framework_1, clue_service_1) {
     "use strict";
     var App = (function () {
-        function App() {
+        function App(clueService) {
+            this.clueService = clueService;
             this.title = 'J!Party';
         }
         App.prototype.configureRouter = function (config, router) {
@@ -14,6 +24,16 @@ define('app',["require", "exports"], function (require, exports) {
             ]);
             this.router = router;
         };
+        App.prototype.created = function () {
+            console.log('Loading clues...');
+            this.clueService.loadClues().then(function () {
+                console.log('clues loaded');
+            }).catch(function (err) { console.log('ERROR!', err); });
+        };
+        App = __decorate([
+            aurelia_framework_1.inject(clue_service_1.ClueService), 
+            __metadata('design:paramtypes', [clue_service_1.ClueService])
+        ], App);
         return App;
     }());
     exports.App = App;
@@ -101,6 +121,7 @@ define('clue-service',["require", "exports", 'aurelia-framework', 'aurelia-fetch
             this.categoriesFile = 'categories.txt';
             this.cluesFile = 'clues.txt';
             this.clues = [];
+            this.hasLoaded = false;
         }
         ClueService.prototype.choose = function (num) {
             var categories = [];
@@ -176,7 +197,7 @@ define('clue-service',["require", "exports", 'aurelia-framework', 'aurelia-fetch
                     });
                 });
             };
-            return loadDataFiles().then(parseData);
+            return loadDataFiles().then(parseData).then(function () { _this.hasLoaded = true; });
         };
         ClueService = __decorate([
             aurelia_framework_1.inject(database_parser_1.DatabaseParser, aurelia_fetch_client_1.HttpClient, randomizer_1.Randomizer), 
@@ -403,7 +424,8 @@ var __metadata = (this && this.__metadata) || function (k, v) {
 define('title-screen',["require", "exports", 'aurelia-framework', 'aurelia-router', './clue-service', './input-service'], function (require, exports, aurelia_framework_1, aurelia_router_1, clue_service_1, input_service_1) {
     "use strict";
     var TitleScreen = (function () {
-        function TitleScreen(clueService, inputService, router) {
+        function TitleScreen(bindingEngine, clueService, inputService, router) {
+            this.bindingEngine = bindingEngine;
             this.clueService = clueService;
             this.inputService = inputService;
             this.router = router;
@@ -417,14 +439,16 @@ define('title-screen',["require", "exports", 'aurelia-framework', 'aurelia-route
                     _this.router.navigateToRoute('dashboard');
                 });
             };
-            this.clueService.loadClues().then(function () {
+            var subscription = this.bindingEngine.propertyObserver(this.clueService, 'hasLoaded')
+                .subscribe(function (newValue, oldValue) {
                 turnOffLoading();
                 waitForInput();
-            }).catch(function (err) { console.log('ERROR!', err); });
+                subscription.dispose();
+            });
         };
         TitleScreen = __decorate([
-            aurelia_framework_1.inject(clue_service_1.ClueService, input_service_1.InputService, aurelia_router_1.Router), 
-            __metadata('design:paramtypes', [clue_service_1.ClueService, input_service_1.InputService, aurelia_router_1.Router])
+            aurelia_framework_1.inject(aurelia_framework_1.BindingEngine, clue_service_1.ClueService, input_service_1.InputService, aurelia_router_1.Router), 
+            __metadata('design:paramtypes', [aurelia_framework_1.BindingEngine, clue_service_1.ClueService, input_service_1.InputService, aurelia_router_1.Router])
         ], TitleScreen);
         return TitleScreen;
     }());
