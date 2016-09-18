@@ -1,17 +1,20 @@
-import { inject } from 'aurelia-framework';
+import { BindingEngine, inject } from 'aurelia-framework';
 import { Router } from 'aurelia-router';
 
 import { ClueService } from './clue-service';
 import { InputService } from './input-service';
 
-@inject(ClueService, InputService, Router)
+@inject(BindingEngine, ClueService, InputService, Router)
 export class TitleScreen {
   private loading: boolean = true;
+
   constructor(
+    private bindingEngine: BindingEngine,
     private clueService: ClueService,
     private inputService: InputService,
     private router: Router
   ) {}
+
   created() {
     let turnOffLoading = () => this.loading = false;
 
@@ -21,9 +24,11 @@ export class TitleScreen {
       });
     };
 
-    this.clueService.loadClues().then(() => {
-      turnOffLoading();
-      waitForInput();
-    }).catch(err => { console.log('ERROR!', err) });
+    let subscription = this.bindingEngine.propertyObserver(this.clueService, 'hasLoaded')
+      .subscribe((newValue, oldValue) => {
+        turnOffLoading();
+        waitForInput();
+        subscription.dispose();
+      });
   }
 }

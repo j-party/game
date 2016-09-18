@@ -10,6 +10,7 @@ export class ClueService {
   private categoriesFile = 'categories.txt';
   private cluesFile = 'clues.txt';
   private clues: Category[] = [];
+  private hasLoaded = false;
   constructor(
     private dbParser: DatabaseParser,
     private http: HttpClient,
@@ -97,6 +98,6 @@ export class ClueService {
       });
     };
 
-    return loadDataFiles().then(parseData);
+    return loadDataFiles().then(parseData).then(() => { this.hasLoaded = true; });
   }
 }
