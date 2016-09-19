@@ -1,44 +1,3 @@
-var __decorate = (this && this.__decorate) || function (decorators, target, key, desc) {
-    var c = arguments.length, r = c < 3 ? target : desc === null ? desc = Object.getOwnPropertyDescriptor(target, key) : desc, d;
-    if (typeof Reflect === "object" && typeof Reflect.decorate === "function") r = Reflect.decorate(decorators, target, key, desc);
-    else for (var i = decorators.length - 1; i >= 0; i--) if (d = decorators[i]) r = (c < 3 ? d(r) : c > 3 ? d(target, key, r) : d(target, key)) || r;
-    return c > 3 && r && Object.defineProperty(target, key, r), r;
-};
-var __metadata = (this && this.__metadata) || function (k, v) {
-    if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
-};
-define('app',["require", "exports", 'aurelia-framework', './clue-service'], function (require, exports, aurelia_framework_1, clue_service_1) {
-    "use strict";
-    var App = (function () {
-        function App(clueService) {
-            this.clueService = clueService;
-            this.title = 'J!Party';
-        }
-        App.prototype.configureRouter = function (config, router) {
-            config.title = this.title;
-            config.map([
-                { route: '', moduleId: 'title-screen' },
-                { route: 'dashboard', moduleId: 'dashboard', name: 'dashboard' },
-                { route: 'board', moduleId: 'clues', name: 'board' },
-                { route: 'clue/:id', moduleId: 'clue-detail', name: 'clueDetail' },
-            ]);
-            this.router = router;
-        };
-        App.prototype.created = function () {
-            console.log('Loading clues...');
-            this.clueService.loadClues().then(function () {
-                console.log('clues loaded');
-            }).catch(function (err) { console.log('ERROR!', err); });
-        };
-        App = __decorate([
-            aurelia_framework_1.inject(clue_service_1.ClueService), 
-            __metadata('design:paramtypes', [clue_service_1.ClueService])
-        ], App);
-        return App;
-    }());
-    exports.App = App;
-});
-
 define('clue',["require", "exports"], function (require, exports) {
     "use strict";
     var Clue = (function () {
@@ -206,6 +165,47 @@ define('clue-service',["require", "exports", 'aurelia-framework', 'aurelia-fetch
         return ClueService;
     }());
     exports.ClueService = ClueService;
+});
+
+var __decorate = (this && this.__decorate) || function (decorators, target, key, desc) {
+    var c = arguments.length, r = c < 3 ? target : desc === null ? desc = Object.getOwnPropertyDescriptor(target, key) : desc, d;
+    if (typeof Reflect === "object" && typeof Reflect.decorate === "function") r = Reflect.decorate(decorators, target, key, desc);
+    else for (var i = decorators.length - 1; i >= 0; i--) if (d = decorators[i]) r = (c < 3 ? d(r) : c > 3 ? d(target, key, r) : d(target, key)) || r;
+    return c > 3 && r && Object.defineProperty(target, key, r), r;
+};
+var __metadata = (this && this.__metadata) || function (k, v) {
+    if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
+};
+define('app',["require", "exports", 'aurelia-framework', './clue-service'], function (require, exports, aurelia_framework_1, clue_service_1) {
+    "use strict";
+    var App = (function () {
+        function App(clueService) {
+            this.clueService = clueService;
+            this.title = 'J!Party';
+        }
+        App.prototype.configureRouter = function (config, router) {
+            config.title = this.title;
+            config.map([
+                { route: '', moduleId: 'title-screen' },
+                { route: 'dashboard', moduleId: 'dashboard', name: 'dashboard' },
+                { route: 'board', moduleId: 'clues', name: 'board' },
+                { route: 'clue/:id', moduleId: 'clue-detail', name: 'clueDetail' },
+            ]);
+            this.router = router;
+        };
+        App.prototype.created = function () {
+            console.log('Loading clues...');
+            this.clueService.loadClues().then(function () {
+                console.log('clues loaded');
+            }).catch(function (err) { console.log('ERROR!', err); });
+        };
+        App = __decorate([
+            aurelia_framework_1.inject(clue_service_1.ClueService), 
+            __metadata('design:paramtypes', [clue_service_1.ClueService])
+        ], App);
+        return App;
+    }());
+    exports.App = App;
 });
 
 var __decorate = (this && this.__decorate) || function (decorators, target, key, desc) {
@@ -470,5 +470,5 @@ define('text!clues.html', ['module'], function(module) { module.exports = "<temp
 define('text!clues.css', ['module'], function(module) { module.exports = ".selected {\n  background-color: #CFD8DC !important;\n  color: white; }\n\n.clues {\n  margin: 0 0 2em 0;\n  list-style-type: none;\n  padding: 0;\n  width: 15em; }\n\n.clues li {\n  cursor: pointer;\n  position: relative;\n  left: 0;\n  background-color: #EEE;\n  margin: .5em;\n  padding: .3em 0;\n  border-radius: 4px; }\n\n.clues li label {\n  display: block; }\n\n.clues li.selected:hover {\n  background-color: #BBD8DC !important;\n  color: white; }\n\n.clues li:hover {\n  color: #607D8B;\n  background-color: #DDD;\n  left: .1em; }\n\n.clues .text {\n  position: relative;\n  top: -3px; }\n\n.clues .badge {\n  display: inline-block;\n  font-size: small;\n  color: white;\n  padding: 0.8em 0.7em 0 0.7em;\n  background-color: #607D8B;\n  line-height: 1em;\n  position: relative;\n  left: -1px;\n  top: -4px;\n  height: 1.8em;\n  margin-right: .8em;\n  border-radius: 4px 0 0 4px; }\n"; });
 define('text!dashboard.html', ['module'], function(module) { module.exports = "<template>\n  <require from=\"./dashboard.css\"></require>\n  <h3>Top Clues</h3>\n  <table border=\"1\">\n    <thead>\n      <tr>\n        <th repeat.for=\"category of categories\">${category.name}</th>\n      </tr>\n    </thead>\n    <tbody>\n      <tr>\n        <td repeat.for=\"category of categories\" click.trigger=\"gotoDetail(category.clues[0])\">${category.clues[0].clue}</td>\n      </tr>\n      <tr>\n        <td repeat.for=\"category of categories\" click.trigger=\"gotoDetail(category.clues[1])\">${category.clues[1].clue}</td>\n      </tr>\n      <tr>\n        <td repeat.for=\"category of categories\" click.trigger=\"gotoDetail(category.clues[2])\">${category.clues[2].clue}</td>\n      </tr>\n      <tr>\n        <td repeat.for=\"category of categories\" click.trigger=\"gotoDetail(category.clues[3])\">${category.clues[3].clue}</td>\n      </tr>\n      <tr>\n        <td repeat.for=\"category of categories\" click.trigger=\"gotoDetail(category.clues[4])\">${category.clues[4].clue}</td>\n      </tr>\n    </tbody>\n  </table>\n</template>\n"; });
 define('text!dashboard.css', ['module'], function(module) { module.exports = "[class*='col-'] {\n  float: left; }\n\n*, *:after, *:before {\n  -webkit-box-sizing: border-box;\n  -moz-box-sizing: border-box;\n  box-sizing: border-box; }\n\nh3 {\n  text-align: center;\n  margin-bottom: 0; }\n\n[class*='col-'] {\n  padding-right: 20px;\n  padding-bottom: 20px; }\n\n[class*='col-']:last-of-type {\n  padding-right: 0; }\n\n.grid {\n  margin: 0; }\n\n.col-1-4 {\n  width: 25%; }\n\n.module {\n  padding: 20px;\n  text-align: center;\n  color: #eee;\n  max-height: 120px;\n  min-width: 120px;\n  background-color: #607D8B;\n  border-radius: 2px; }\n\nh4 {\n  position: relative; }\n\n.module:hover {\n  background-color: #EEE;\n  cursor: pointer;\n  color: #607d8b; }\n\n.grid-pad {\n  padding: 10px 0; }\n\n.grid-pad > [class*='col-']:last-of-type {\n  padding-right: 20px; }\n\n@media (max-width: 600px) {\n  .module {\n    font-size: 10px;\n    max-height: 75px; } }\n\n@media (max-width: 1024px) {\n  .grid {\n    margin: 0; }\n  .module {\n    min-width: 60px; } }\n"; });
-define('text!title-screen.html', ['module'], function(module) { module.exports = "<template>\n  <div class=\"title-screen\">\n    <h1>J!Party</h1>\n    <p if.bind=\"loading\">Loading...</p>\n    <p if.bind=\"!loading\">Press any key to continue</p>\n    <p class=\"legalese\">\n      Copyright © 2016 Eric Heikes and licensed under the Apache 2.0 License.\n      The Jeopardy! game show and all elements thereof, including but not limited to copyright and trademark thereto, are the property of Jeopardy Productions, Inc. and are protected under law. This software is not affiliated with, sponsored by, or operated by Jeopardy Productions, Inc.\n    </p>\n  </div>\n</template>\n"; });
+define('text!title-screen.html', ['module'], function(module) { module.exports = "<template>\n  <div class=\"title-screen\">\n    <h1>J!Party</h1>\n    <p if.bind=\"loading\">Loading...</p>\n    <p if.bind=\"!loading\" class=\"press-any\">Press any key to continue</p>\n    <p class=\"legalese\">\n      Copyright © 2016 Eric Heikes and licensed under the Apache 2.0 License.\n      The Jeopardy! game show and all elements thereof, including but not limited to copyright and trademark thereto, are the property of Jeopardy Productions, Inc. and are protected under law. This software is not affiliated with, sponsored by, or operated by Jeopardy Productions, Inc.\n    </p>\n  </div>\n</template>\n"; });
 //# sourceMappingURL=app-bundle.js.map

@@ -26,7 +26,8 @@ Once you have the packages installed, you can run any of the following tasks:
 au build         # compiles the game
 au run           # serves the game at http://localhost:9000
 au run --watch   # serves the game and watches for changes to files
-au test          # runs the test suite
+au test          # runs the unit test suite (can also add --watch)
+au e2e           # runs the end-to-end test suite
 ```
 
 ## Configuration
