@@ -11,8 +11,8 @@ export class Dashboard {
     private clueService: ClueService,
     private router: Router
   ) {}
-  created() {
-    this.clueService.choose(6).then(categories => { this.categories = categories; });
+  created(): Promise<void> {
+    return this.clueService.choose(6).then(categories => { this.categories = categories; });
   }
   gotoDetail(clue: Clue) {
     this.router.navigateToRoute('clueDetail', { id: clue.id });
