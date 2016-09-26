@@ -22,5 +22,5 @@ export function configure(aurelia: Aurelia) {
     aurelia.use.plugin('aurelia-testing');
   }
 
-  aurelia.start().then(() => aurelia.setRoot());
+  return aurelia.start().then(() => aurelia.setRoot());
 }

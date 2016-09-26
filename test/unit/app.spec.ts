@@ -40,7 +40,7 @@ describe('App component', () => {
   describe('when created', () => {
 
     beforeEach(() => {
-      new App(clueService).created()
+      new App(clueService).created();
     });
 
     it('should load the clues from ClueService', () => {
