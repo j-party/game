@@ -2,8 +2,13 @@ import { configure } from '../../src/main';
 
 describe('Main configuration', () => {
 
-  let aurelia
-  let developmentLogging, feature, plugin, setRoot, standardConfiguration, start;
+  let aurelia: any;
+  let developmentLogging: any;
+  let feature: any;
+  let plugin: any;
+  let setRoot: any;
+  let standardConfiguration: any;
+  let start: any;
 
   beforeEach(done => {
     developmentLogging = jasmine.createSpy('developmentLogging');

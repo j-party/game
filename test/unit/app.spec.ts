@@ -2,8 +2,10 @@ import { App } from '../../src/app';
 
 describe('App component', () => {
 
-  let clueService, router, routerConfig;
-  let app;
+  let clueService: any;
+  let router: any;
+  let routerConfig: any;
+  let app: App;
 
   beforeEach(() => {
     clueService = jasmine.createSpyObj('ClueService', ['loadClues']);

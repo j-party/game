@@ -2,6 +2,7 @@
 // Service for parsing the database text file.
 //
 export interface DatabaseRow {
+  [key: string]: any,
   done?: boolean,
   total?: number,
 

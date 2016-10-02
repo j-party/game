@@ -1,9 +1,9 @@
 import { KeyboardService } from '../../src/keyboard-service';
-import { InputType } from '../../src/input';
+import { Input, InputType } from '../../src/input';
 
 describe('KeyboardService', () => {
 
-  let keyboardService;
+  let keyboardService: KeyboardService;
 
   beforeEach(() => {
     keyboardService = new KeyboardService();
@@ -11,7 +11,7 @@ describe('KeyboardService', () => {
 
   describe('waitForAny()', () => {
 
-    let inputResult;
+    let inputResult: Input;
 
     beforeEach(done => {
       keyboardService.waitForAny().then(input => { inputResult = input; }).then(done);

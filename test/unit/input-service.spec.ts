@@ -3,7 +3,8 @@ import { Input, InputType } from '../../src/input';
 
 describe('InputService', () => {
 
-  let inputService, keyboardService;
+  let inputService: InputService;
+  let keyboardService: any;
 
   beforeEach(() => {
     keyboardService = jasmine.createSpyObj('keyboardService', ['waitForAny']);
@@ -12,7 +13,7 @@ describe('InputService', () => {
 
   describe('waitForAny()', () => {
 
-    let input, inputResult;
+    let input: Input, inputResult: Input;
 
     beforeEach(done => {
       input = new Input(InputType.Keyboard);

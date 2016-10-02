@@ -3,7 +3,8 @@ import { Clue } from '../../src/clue';
 
 describe('Clue Detail component', () => {
 
-  let clueService, clueDetail;
+  let clueService: any;
+  let clueDetail: ClueDetailComponent;
 
   beforeEach(() => {
     clueService = jasmine.createSpyObj('ClueService', ['getClue']);

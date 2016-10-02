@@ -2,7 +2,7 @@ import { Randomizer } from '../../src/randomizer';
 
 describe('Randomizer', () => {
 
-  let randomizer;
+  let randomizer: Randomizer;
 
   beforeEach(() => {
     randomizer = new Randomizer();

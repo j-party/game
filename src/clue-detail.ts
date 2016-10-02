@@ -8,7 +8,7 @@ export class ClueDetailComponent {
   constructor(
     private clueService: ClueService,
   ) {}
-  activate(params) {
+  activate(params: { id?: number }) {
     let id = Number(params.id);
     this.clue = this.clueService.getClue(id);
   }

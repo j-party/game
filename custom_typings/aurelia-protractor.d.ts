@@ -7,7 +7,7 @@
 declare module protractor {
   interface IBrowser extends protractor.Protractor {
     loadAndWaitForAureliaPage(url: string): protractor.Protractor;
-    waitForRouterComplete();
+    waitForRouterComplete(): Promise<any>;
   }
 
   interface IProtractorLocatorStrategy {

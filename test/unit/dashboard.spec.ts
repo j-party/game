@@ -3,7 +3,9 @@ import { Category, Clue } from '../../src/clue';
 
 describe('Dashboard', () => {
 
-  let dashboard, clueService, router;
+  let clueService: any;
+  let router: any;
+  let dashboard: Dashboard;
 
   beforeEach(() => {
     clueService = jasmine.createSpyObj('clueService', ['choose']);
@@ -37,7 +39,7 @@ describe('Dashboard', () => {
 
   describe('gotoDetail()', () => {
 
-    let clue;
+    let clue: Clue;
 
     beforeEach(() => {
       clue = new Clue();

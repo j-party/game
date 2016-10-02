@@ -2,8 +2,11 @@ import { TitleScreen } from '../../src/title-screen';
 
 describe('TitleScreen', () => {
 
-  let titleScreen;
-  let bindingEngine, clueService, inputService, router;
+  let titleScreen: TitleScreen;
+  let bindingEngine: any;
+  let clueService: any;
+  let inputService: any;
+  let router: any;
 
   beforeEach(() => {
     clueService = {};
@@ -32,18 +35,19 @@ describe('TitleScreen', () => {
 
     describe('when clueService.hasLoaded changes', () => {
 
-      let callback, dispose;
+      let callback: Function;
+      let dispose: Function;
 
       beforeEach(() => {
         dispose = jasmine.createSpy('dispose');
         bindingEngine.propertyObserver.and.returnValue({
-          subscribe: cb => {
+          subscribe: (cb: Function) => {
             callback = cb;
             return { dispose: dispose };
           }
         });
         inputService.waitForAny.and.returnValue({
-          then: cb => { cb(); }
+          then: (cb: Function) => { cb(); }
         });
         titleScreen.created();
         callback();

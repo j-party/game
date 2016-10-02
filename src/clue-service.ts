@@ -26,7 +26,7 @@ export class ClueService {
     }
     return Promise.resolve(categories);
   }
-  getClue(id): Clue {
+  getClue(id: number): Clue {
     return this.clues[0].clues[0];
   }
   // Returns all clues in the database.
@@ -69,12 +69,15 @@ export class ClueService {
       ]).then((data: [DatabaseRow[], DatabaseRow[]]) => {
         let [categoryParsedData, clueParsedData] = data;
 
-        let indexedData = {};
+        interface IIndexedData {
+          [key: number]: Category;
+        }
+        let indexedData: IIndexedData = {};
         categoryParsedData.forEach(category => {
           let categoryId = Number(category.id);
           let newCategory: Category = {
             id: categoryId,
-            name: category.name,
+            name: String(category.name),
             isFinal: false,
             clues: []
           }
@@ -85,15 +88,15 @@ export class ClueService {
           let level = Number(clue.level) === 999 ? 0 : Number(clue.level);
           let newClue: Clue = {
             id: Number(clue.id),
-            clue: clue.clue,
-            answer: clue.answer
+            clue: String(clue.clue),
+            answer: String(clue.answer)
           };
           indexedData[categoryId].isFinal = Number(clue.level) === 999;
           indexedData[categoryId].clues[level] = newClue;
         });
 
         this.clues = Object.keys(indexedData).map(key => {
-          return indexedData[key];
+          return indexedData[Number(key)];
         });
       });
     };
