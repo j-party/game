@@ -1,20 +1,20 @@
-import { Dashboard } from '../../src/dashboard';
+import { Board } from '../../src/board';
 import { Category, Clue } from '../../src/clue';
 
-describe('Dashboard', () => {
+describe('Board Screen', () => {
 
   let clueService: any;
   let router: any;
-  let dashboard: Dashboard;
+  let board: Board;
 
   beforeEach(() => {
     clueService = jasmine.createSpyObj('clueService', ['choose']);
     router = jasmine.createSpyObj('router', ['navigateToRoute']);
-    dashboard = new Dashboard(clueService, router);
+    board = new Board(clueService, router);
   });
 
   it('should start with no categories', () => {
-    expect(dashboard.categories).toEqual([]);
+    expect(board.categories).toEqual([]);
   });
 
   describe('created()', () => {
@@ -23,7 +23,7 @@ describe('Dashboard', () => {
 
     beforeEach(done => {
       clueService.choose.and.returnValue(Promise.resolve([category]));
-      dashboard.created().then(done);
+      board.created().then(done);
     });
 
     it('should choose 6 categories from ClueService', () => {
@@ -31,8 +31,8 @@ describe('Dashboard', () => {
     });
 
     it('should save the categories', () => {
-      expect(dashboard.categories.length).toBe(1);
-      expect(dashboard.categories[0]).toBe(category);
+      expect(board.categories.length).toBe(1);
+      expect(board.categories[0]).toBe(category);
     });
 
   });
@@ -44,7 +44,7 @@ describe('Dashboard', () => {
     beforeEach(() => {
       clue = new Clue();
       clue.id = 42;
-      dashboard.gotoDetail(clue);
+      board.gotoDetail(clue);
     })
 
     it('should navigate to the "clueDetail" route for the given clue ID', () => {

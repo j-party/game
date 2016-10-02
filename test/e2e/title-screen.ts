@@ -16,7 +16,7 @@ describe('Title Screen', () => {
     });
 
     it('should go to the board screen', () => {
-      expect(browser.getCurrentUrl()).toMatch('#/dashboard');
+      expect(browser.getCurrentUrl()).toMatch('#/board');
     });
   });
 

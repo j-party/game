@@ -20,7 +20,7 @@ export class TitleScreen {
 
     let waitForInput = () => {
       return this.inputService.waitForAny().then(() => {
-        this.router.navigateToRoute('dashboard');
+        this.router.navigateToRoute('board');
       });
     };
 

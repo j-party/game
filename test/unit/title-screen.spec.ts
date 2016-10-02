@@ -61,8 +61,8 @@ describe('TitleScreen', () => {
         expect(inputService.waitForAny).toHaveBeenCalled();
       });
 
-      it('should navigation to the Dashboard when input is received', () => {
-        expect(router.navigateToRoute).toHaveBeenCalledWith('dashboard');
+      it('should navigation to the Board screen when input is received', () => {
+        expect(router.navigateToRoute).toHaveBeenCalledWith('board');
       });
 
       it('should turn off the subscription', () => {

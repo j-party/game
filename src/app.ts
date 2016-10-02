@@ -15,8 +15,7 @@ export class App {
     config.title = this.title;
     config.map([
       { route: '',          moduleId: 'title-screen' },
-      { route: 'dashboard', moduleId: 'dashboard',   name: 'dashboard' },
-      { route: 'board',     moduleId: 'clues',       name: 'board' },
+      { route: 'board',     moduleId: 'board',       name: 'board' },
       { route: 'clue/:id',  moduleId: 'clue-detail', name: 'clueDetail' },
     ]);
     this.router = router;

@@ -5,7 +5,7 @@ import { Category, Clue } from './clue';
 import { ClueService } from './clue-service';
 
 @inject(ClueService, Router)
-export class Dashboard {
+export class Board {
   categories: Category[] = [];
   constructor(
     private clueService: ClueService,
