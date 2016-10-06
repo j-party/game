@@ -1,27 +1,33 @@
 import { App } from '../../src/app';
+import { Category } from '../../src/clue';
 
 describe('App component', () => {
 
   let clueService: any;
+  let gameState: any;
+  let categories: Category[];
   let router: any;
   let routerConfig: any;
   let app: App;
 
   beforeEach(() => {
-    clueService = jasmine.createSpyObj('ClueService', ['loadClues']);
+    categories = [new Category()];
+    clueService = jasmine.createSpyObj('ClueService', ['choose', 'loadClues']);
+    clueService.choose.and.returnValue(Promise.resolve(categories));
     clueService.loadClues.and.returnValue(Promise.resolve());
+    gameState = jasmine.createSpyObj('GameState', ['reset']);
     router = { fake: true };
     routerConfig = { map: jasmine.createSpy('RouterConfiguration.map()') };
   });
 
   it('should set a title', () => {
-    expect(new App(clueService).title).toEqual(jasmine.any(String));
+    expect(new App(clueService, gameState).title).toEqual(jasmine.any(String));
   });
 
   describe('when the router is configured', () => {
 
     beforeEach(() => {
-      app = new App(clueService);
+      app = new App(clueService, gameState);
       app.configureRouter(routerConfig, router);
     });
 
@@ -41,12 +47,27 @@ describe('App component', () => {
 
   describe('when created', () => {
 
-    beforeEach(() => {
-      new App(clueService).created();
+    beforeEach(done => {
+      app = new App(clueService, gameState);
+      app.created().then(done);
     });
 
     it('should load the clues from ClueService', () => {
       expect(clueService.loadClues).toHaveBeenCalled();
+    });
+
+    it('should choose 6 categories from ClueService', () => {
+      expect(clueService.choose).toHaveBeenCalledWith(6);
+    });
+
+    it('should reset the game state with 3 players', () => {
+      let playersArg = gameState.reset.calls.mostRecent().args[0];
+      expect(playersArg.length).toBe(3);
+    });
+
+    it('should reset the game state with the selected categories', () => {
+      let categoriesArg = gameState.reset.calls.mostRecent().args[1];
+      expect(categoriesArg).toBe(categories);
     });
 
   });

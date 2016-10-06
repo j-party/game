@@ -1,14 +1,17 @@
 import { inject } from 'aurelia-framework';
 import { Router, RouterConfiguration } from 'aurelia-router';
 import { ClueService } from './clue-service';
+import { GameState } from './game-state';
+import { Player } from './player';
 
-@inject(ClueService)
+@inject(ClueService, GameState)
 export class App {
   title = 'J!Party';
   router: Router;
 
   constructor(
-    private clueService: ClueService
+    private clueService: ClueService,
+    private gameState: GameState
   ) {}
 
   configureRouter(config: RouterConfiguration, router: Router) {
@@ -23,8 +26,16 @@ export class App {
 
   created() {
     console.log('Loading clues...');
-    this.clueService.loadClues().then(() => {
+    return this.clueService.loadClues().then(() => {
       console.log('clues loaded');
+      return this.clueService.choose(6);
+    }).then(categories => {
+      let players = [
+        new Player('You'),
+        new Player('Computer 1'),
+        new Player('Computer 2'),
+      ];
+      this.gameState.reset(players, categories);
     }).catch(err => { console.log('ERROR!', err) });
   }
 }
