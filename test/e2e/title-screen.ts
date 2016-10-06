@@ -1,6 +1,6 @@
 import { TitleScreen } from './title-screen.po';
 
-describe('Title Screen', () => {
+describe('Title screen', () => {
   let titleScreen: TitleScreen;
 
   beforeEach(() => {

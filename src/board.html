@@ -1,6 +1,6 @@
 <template>
   <require from="./board.css"></require>
-  <h3>Top Clues</h3>
+  <h3>${round.name}</h3>
   <table border="1">
     <thead>
       <tr>
@@ -25,4 +25,8 @@
       </tr>
     </tbody>
   </table>
+  <p class="please-choose">${currentPlayer.name}, choose a category.</p>
+  <ul class="players">
+    <li repeat.for="player of players">${player.name} $${player.money}</li>
+  </ul>
 </template>
