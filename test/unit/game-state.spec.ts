@@ -1,4 +1,5 @@
 import { GameRound, GameState } from '../../src/game-state';
+import { appData } from '../../src/app-data';
 import { Category } from '../../src/clue';
 import { Player } from '../../src/player';
 
@@ -14,8 +15,8 @@ describe('GameRound', () => {
     expect(round.number).toBe(0);
   });
 
-  it('should init with name of "J!Party"', () => {
-    expect(round.name).toBe('J!Party');
+  it('should init with app name', () => {
+    expect(round.name).toBe(appData.name);
   });
 
 });

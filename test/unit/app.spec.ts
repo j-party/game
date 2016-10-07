@@ -1,4 +1,5 @@
 import { App } from '../../src/app';
+import { appData } from '../../src/app-data';
 import { Category } from '../../src/clue';
 
 describe('App component', () => {
@@ -20,8 +21,8 @@ describe('App component', () => {
     routerConfig = { map: jasmine.createSpy('RouterConfiguration.map()') };
   });
 
-  it('should set a title', () => {
-    expect(new App(clueService, gameState).title).toEqual(jasmine.any(String));
+  it('should set the title to the app name', () => {
+    expect(new App(clueService, gameState).title).toEqual(appData.name);
   });
 
   describe('when the router is configured', () => {

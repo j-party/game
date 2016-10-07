@@ -1,3 +1,4 @@
+import { appData } from './app-data';
 import { Category } from './clue';
 import { Player } from './player';
 
@@ -6,7 +7,7 @@ export class GameRound {
   name: string;
   constructor() {
     this.number = 0;
-    this.name = 'J!Party';
+    this.name = appData.name;
   }
 }
 

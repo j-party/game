@@ -1,10 +1,10 @@
 <template>
   <div class="title-screen">
-    <h1>J!Party</h1>
+    <h1>${app.name}</h1>
     <p if.bind="loading">Loading...</p>
     <p if.bind="!loading" class="press-any">Press any key to continue</p>
     <p class="legalese">
-      Copyright © 2016 Eric Heikes and licensed under the Apache 2.0 License.
+      Copyright © ${app.date} ${app.author} and licensed under the ${app.license} License.
       The Jeopardy! game show and all elements thereof, including but not limited to copyright and trademark thereto, are the property of Jeopardy Productions, Inc. and are protected under law. This software is not affiliated with, sponsored by, or operated by Jeopardy Productions, Inc.
     </p>
   </div>

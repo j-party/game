@@ -1,12 +1,14 @@
 import { inject } from 'aurelia-framework';
 import { Router, RouterConfiguration } from 'aurelia-router';
+
+import { appData } from './app-data';
 import { ClueService } from './clue-service';
 import { GameState } from './game-state';
 import { Player } from './player';
 
 @inject(ClueService, GameState)
 export class App {
-  title = 'J!Party';
+  title = appData.name;
   router: Router;
 
   constructor(
