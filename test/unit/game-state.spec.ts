@@ -19,6 +19,14 @@ describe('GameRound', () => {
     expect(round.name).toBe(appData.name);
   });
 
+  it('should init with a base amount of $100', () => {
+    expect(round.baseValue).toBe(100);
+  });
+
+  it('should init with an incremental amount of $100', () => {
+    expect(round.incrementalValue).toBe(100);
+  });
+
 });
 
 describe('GameState', () => {

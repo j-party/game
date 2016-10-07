@@ -193,8 +193,10 @@ define('game-state',["require", "exports", './app-data'], function (require, exp
     "use strict";
     var GameRound = (function () {
         function GameRound() {
-            this.number = 0;
+            this.baseValue = 100;
+            this.incrementalValue = 100;
             this.name = app_data_1.appData.name;
+            this.number = 0;
         }
         return GameRound;
     }());

@@ -3,12 +3,10 @@ import { Category } from './clue';
 import { Player } from './player';
 
 export class GameRound {
-  number: number;
-  name: string;
-  constructor() {
-    this.number = 0;
-    this.name = appData.name;
-  }
+  baseValue: number = 100;
+  incrementalValue: number = 100;
+  name: string = appData.name;
+  number: number = 0;
 }
 
 export class GameState {
