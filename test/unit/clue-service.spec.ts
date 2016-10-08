@@ -5,7 +5,7 @@ import { Randomizer } from '../../src/randomizer';
 
 describe('Clue Service', () => {
 
-  let clueService;
+  let clueService: ClueService;
   let dbParser = new DatabaseParser();
   let http = jasmine.createSpyObj('http', ['fetch']);
   let randomizer = new Randomizer();
