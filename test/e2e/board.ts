@@ -22,6 +22,15 @@ describe('Board screen', () => {
     expect(element.all(by.css('tbody td')).count()).toBe(5*6);
   });
 
+  it('should display clue values', done => {
+    let isRealValue = function(str: string) {
+      return str.match(/^\$\d{3}$/);
+    };
+    element.all(by.css('tbody td')).getText().then(texts => {
+      expect(texts.filter(isRealValue).length).toBe(texts.length);
+    }).then(done);
+  });
+
   it('should ask the current player to choose a category', () => {
     expect(element(by.css('.please-choose')).isDisplayed()).toBe(true);
     expect(element(by.css('.please-choose')).getText()).toMatch('^You');
