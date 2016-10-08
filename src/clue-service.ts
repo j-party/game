@@ -89,7 +89,9 @@ export class ClueService {
           let newClue: Clue = {
             id: Number(clue.id),
             clue: String(clue.clue),
-            answer: String(clue.answer)
+            answer: String(clue.answer),
+            value: 0,
+            isRevealed: false
           };
           indexedData[categoryId].isFinal = Number(clue.level) === 999;
           indexedData[categoryId].clues[level] = newClue;
