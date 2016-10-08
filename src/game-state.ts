@@ -1,5 +1,5 @@
 import { appData } from './app-data';
-import { Category } from './clue';
+import { Category, Clue } from './clue';
 import { Player } from './player';
 
 export class GameRound {
@@ -11,6 +11,7 @@ export class GameRound {
 
 export class GameState {
   public categories: Category[];
+  public currentClue: Clue | null = null;
   public currentPlayer: Player;
   public players: Player[];
   public round: GameRound;
@@ -28,6 +29,7 @@ export class GameState {
   reset(players: Player[], categories: Category[]) {
     this.players = players;
     this.currentPlayer = this.players[0];
+    this.currentClue = null;
     this.categories = categories;
     this.round = new GameRound();
     this.calculateValues();

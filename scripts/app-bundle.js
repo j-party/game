@@ -206,6 +206,7 @@ define('game-state',["require", "exports", './app-data'], function (require, exp
     exports.GameRound = GameRound;
     var GameState = (function () {
         function GameState() {
+            this.currentClue = null;
         }
         GameState.prototype.calculateValues = function () {
             var _this = this;
@@ -220,6 +221,7 @@ define('game-state',["require", "exports", './app-data'], function (require, exp
         GameState.prototype.reset = function (players, categories) {
             this.players = players;
             this.currentPlayer = this.players[0];
+            this.currentClue = null;
             this.categories = categories;
             this.round = new GameRound();
             this.calculateValues();

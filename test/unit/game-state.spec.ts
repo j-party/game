@@ -37,6 +37,10 @@ describe('GameState', () => {
     state = new GameState();
   });
 
+  it('should init currentClue to null', () => {
+    expect(state.currentClue).toBe(null);
+  });
+
   describe('reset()', () => {
 
     let players: Player[];
@@ -56,6 +60,7 @@ describe('GameState', () => {
         new Player('Dave'),
         new Player('Iago')
       ];
+      state.currentClue = clue1;
       state.reset(players, categories);
     });
 
@@ -69,6 +74,10 @@ describe('GameState', () => {
 
     it('should set the current player as the first player', () => {
       expect(state.currentPlayer).toBe(players[0]);
+    });
+
+    it('should unset the current clue', () => {
+      expect(state.currentClue).toBe(null);
     });
 
     it('should create a new GameRound', () => {
