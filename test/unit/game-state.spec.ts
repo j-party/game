@@ -37,10 +37,6 @@ describe('GameState', () => {
     state = new GameState();
   });
 
-  it('should init currentCategory to null', () => {
-    expect(state.currentCategory).toBe(null);
-  });
-
   it('should init currentClue to null', () => {
     expect(state.currentClue).toBe(null);
   });
@@ -64,7 +60,6 @@ describe('GameState', () => {
         new Player('Dave'),
         new Player('Iago')
       ];
-      state.currentCategory = category1;
       state.currentClue = clue1;
       state.reset(players, categories);
     });
@@ -79,10 +74,6 @@ describe('GameState', () => {
 
     it('should set the current player as the first player', () => {
       expect(state.currentPlayer).toBe(players[0]);
-    });
-
-    it('should unset the current category', () => {
-      expect(state.currentCategory).toBe(null);
     });
 
     it('should unset the current clue', () => {
