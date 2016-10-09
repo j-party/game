@@ -158,6 +158,7 @@ define('clue-service',["require", "exports", 'aurelia-framework', 'aurelia-fetch
                             id: Number(clue.id),
                             clue: String(clue.clue),
                             answer: String(clue.answer),
+                            category: indexedData[categoryId],
                             value: 0,
                             isRevealed: false
                         };
@@ -304,6 +305,7 @@ define('board',["require", "exports", 'aurelia-framework', 'aurelia-router', './
             this.round = this.gameState.round;
         };
         Board.prototype.gotoClue = function (clue) {
+            this.gameState.currentClue = clue;
             this.router.navigateToRoute('clueDetail', { id: clue.id });
         };
         Board = __decorate([
@@ -324,22 +326,28 @@ var __decorate = (this && this.__decorate) || function (decorators, target, key,
 var __metadata = (this && this.__metadata) || function (k, v) {
     if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
 };
-define('clue-detail',["require", "exports", 'aurelia-framework', './clue-service'], function (require, exports, aurelia_framework_1, clue_service_1) {
+define('clue-detail',["require", "exports", 'aurelia-framework', './game-state'], function (require, exports, aurelia_framework_1, game_state_1) {
     "use strict";
     var ClueDetailComponent = (function () {
-        function ClueDetailComponent(clueService) {
-            this.clueService = clueService;
+        function ClueDetailComponent(gameState) {
+            this.gameState = gameState;
+            if (this.gameState.currentClue) {
+                this.clue = this.gameState.currentClue;
+            }
         }
-        ClueDetailComponent.prototype.activate = function (params) {
-            var id = Number(params.id);
-            this.clue = this.clueService.getClue(id);
-        };
-        ClueDetailComponent.prototype.goBack = function () {
-            window.history.back();
+        ClueDetailComponent.prototype.attached = function () {
+            var _this = this;
+            if (this.clue.isRevealed) {
+            }
+            else {
+                window.setTimeout(function () {
+                    _this.clue.isRevealed = true;
+                }, 3000);
+            }
         };
         ClueDetailComponent = __decorate([
-            aurelia_framework_1.inject(clue_service_1.ClueService), 
-            __metadata('design:paramtypes', [clue_service_1.ClueService])
+            aurelia_framework_1.inject(game_state_1.GameState), 
+            __metadata('design:paramtypes', [game_state_1.GameState])
         ], ClueDetailComponent);
         return ClueDetailComponent;
     }());
@@ -495,7 +503,6 @@ define('text!app.html', ['module'], function(module) { module.exports = "<templa
 define('text!app.css', ['module'], function(module) { module.exports = "h1 {\n  font-size: 1.2em;\n  color: #999;\n  margin-bottom: 0; }\n\nh2 {\n  font-size: 2em;\n  margin-top: 0;\n  padding-top: 0; }\n\nnav a {\n  padding: 5px 10px;\n  text-decoration: none;\n  margin-top: 10px;\n  display: inline-block;\n  background-color: #eee;\n  border-radius: 4px; }\n\nnav a:visited, a:link {\n  color: #607D8B; }\n\nnav a:hover {\n  color: #039be5;\n  background-color: #CFD8DC; }\n\nnav a.router-link-active {\n  color: #039be5; }\n"; });
 define('text!board.html', ['module'], function(module) { module.exports = "<template>\n  <require from=\"./board.css\"></require>\n  <h3>${round.name}</h3>\n  <table border=\"1\">\n    <thead>\n      <tr>\n        <th repeat.for=\"category of categories\">${category.name}</th>\n      </tr>\n    </thead>\n    <tbody>\n      <tr>\n        <td repeat.for=\"category of categories\">\n          <a href click.trigger=\"gotoClue(category.clues[0])\">$${category.clues[0].value}</a>\n        </td>\n      </tr>\n      <tr>\n        <td repeat.for=\"category of categories\">\n          <a href click.trigger=\"gotoClue(category.clues[1])\">$${category.clues[1].value}</a>\n        </td>\n      </tr>\n      <tr>\n        <td repeat.for=\"category of categories\">\n          <a href click.trigger=\"gotoClue(category.clues[2])\">$${category.clues[2].value}</a>\n        </td>\n      </tr>\n      <tr>\n        <td repeat.for=\"category of categories\">\n          <a href click.trigger=\"gotoClue(category.clues[3])\">$${category.clues[3].value}</a>\n        </td>\n      </tr>\n      <tr>\n        <td repeat.for=\"category of categories\">\n          <a href click.trigger=\"gotoClue(category.clues[4])\">$${category.clues[4].value}</a>\n        </td>\n      </tr>\n    </tbody>\n  </table>\n  <p class=\"please-choose\">${currentPlayer.name}, choose a category.</p>\n  <ul class=\"players\">\n    <li repeat.for=\"player of players\">${player.name} $${player.money}</li>\n  </ul>\n</template>\n"; });
 define('text!board.css', ['module'], function(module) { module.exports = "[class*='col-'] {\n  float: left; }\n\n*, *:after, *:before {\n  -webkit-box-sizing: border-box;\n  -moz-box-sizing: border-box;\n  box-sizing: border-box; }\n\nh3 {\n  text-align: center;\n  margin-bottom: 0; }\n\n[class*='col-'] {\n  padding-right: 20px;\n  padding-bottom: 20px; }\n\n[class*='col-']:last-of-type {\n  padding-right: 0; }\n\n.grid {\n  margin: 0; }\n\n.col-1-4 {\n  width: 25%; }\n\n.module {\n  padding: 20px;\n  text-align: center;\n  color: #eee;\n  max-height: 120px;\n  min-width: 120px;\n  background-color: #607D8B;\n  border-radius: 2px; }\n\nh4 {\n  position: relative; }\n\n.module:hover {\n  background-color: #EEE;\n  cursor: pointer;\n  color: #607d8b; }\n\n.grid-pad {\n  padding: 10px 0; }\n\n.grid-pad > [class*='col-']:last-of-type {\n  padding-right: 20px; }\n\n@media (max-width: 600px) {\n  .module {\n    font-size: 10px;\n    max-height: 75px; } }\n\n@media (max-width: 1024px) {\n  .grid {\n    margin: 0; }\n  .module {\n    min-width: 60px; } }\n"; });
-define('text!clue-detail.html', ['module'], function(module) { module.exports = "<template>\n  <require from=\"./clue-detail.css\"></require>\n  <div if.bind=\"clue\">\n    <h2>Clue details!</h2>\n    <div><label>ID: </label>${clue.id}</div>\n    <label>Level: <input value.bind=\"clue.level\" placeholder=\"level\"></label>\n    <label>Clue: <input value.bind=\"clue.clue\" placeholder=\"clue\"></label>\n    <label>Answer: <input value.bind=\"clue.answer\" placeholder=\"answer\"></label>\n  </div>\n  <button click.trigger=\"goBack()\">Back</button>\n</template>\n"; });
-define('text!clue-detail.css', ['module'], function(module) { module.exports = "label {\n  display: inline-block;\n  width: 3em;\n  margin: .5em 0;\n  color: #607D8B;\n  font-weight: bold; }\n\ninput {\n  height: 2em;\n  font-size: 1em;\n  padding-left: .4em; }\n\nbutton {\n  margin-top: 20px;\n  font-family: Arial;\n  background-color: #eee;\n  border: none;\n  padding: 5px 10px;\n  border-radius: 4px;\n  cursor: pointer;\n  cursor: hand; }\n\nbutton:hover {\n  background-color: #cfd8dc; }\n\nbutton:disabled {\n  background-color: #eee;\n  color: #ccc;\n  cursor: auto; }\n"; });
+define('text!clue-detail.html', ['module'], function(module) { module.exports = "<template>\n  <div>\n    <div class=\"title\">${clue.category.name}</div>\n    <main if.bind=\"!clue.isRevealed\">$${clue.value}</main>\n    <main if.bind=\"clue.isRevealed\">${clue.clue}</main>\n  </div>\n</template>\n"; });
 define('text!title-screen.html', ['module'], function(module) { module.exports = "<template>\n  <div class=\"title-screen\">\n    <h1>${app.name}</h1>\n    <p if.bind=\"loading\">Loading...</p>\n    <p if.bind=\"!loading\" class=\"press-any\">Press any key to continue</p>\n    <p class=\"legalese\">\n      Copyright © ${app.date} ${app.author} and licensed under the ${app.license} License.\n      The Jeopardy! game show and all elements thereof, including but not limited to copyright and trademark thereto, are the property of Jeopardy Productions, Inc. and are protected under law. This software is not affiliated with, sponsored by, or operated by Jeopardy Productions, Inc.\n    </p>\n  </div>\n</template>\n"; });
 //# sourceMappingURL=app-bundle.js.map

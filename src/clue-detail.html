@@ -1,11 +1,7 @@
 <template>
-  <require from="./clue-detail.css"></require>
-  <div if.bind="clue">
-    <h2>Clue details!</h2>
-    <div><label>ID: </label>${clue.id}</div>
-    <label>Level: <input value.bind="clue.level" placeholder="level"></label>
-    <label>Clue: <input value.bind="clue.clue" placeholder="clue"></label>
-    <label>Answer: <input value.bind="clue.answer" placeholder="answer"></label>
+  <div>
+    <div class="title">${clue.category.name}</div>
+    <main if.bind="!clue.isRevealed">$${clue.value}</main>
+    <main if.bind="clue.isRevealed">${clue.clue}</main>
   </div>
-  <button click.trigger="goBack()">Back</button>
 </template>

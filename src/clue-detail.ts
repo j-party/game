@@ -1,18 +1,24 @@
 import { inject } from 'aurelia-framework';
 import { Clue } from './clue';
-import { ClueService } from './clue-service';
+import { GameState } from './game-state';
 
-@inject(ClueService)
+@inject(GameState)
 export class ClueDetailComponent {
   clue: Clue;
   constructor(
-    private clueService: ClueService,
-  ) {}
-  activate(params: { id?: number }) {
-    let id = Number(params.id);
-    this.clue = this.clueService.getClue(id);
+    private gameState: GameState,
+  ) {
+    if (this.gameState.currentClue) {
+      this.clue = this.gameState.currentClue;
+    }
   }
-  goBack() {
-    window.history.back();
+  attached() {
+    if (this.clue.isRevealed) {
+      // TODO wait for buzzer
+    } else {
+      window.setTimeout(() => {
+        this.clue.isRevealed = true;
+      }, 3000);
+    }
   }
 }

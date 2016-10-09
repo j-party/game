@@ -3,45 +3,58 @@ import { Clue } from '../../src/clue';
 
 describe('Clue Detail component', () => {
 
-  let clueService: any;
   let clueDetail: ClueDetailComponent;
+  let gameState: any;
 
   beforeEach(() => {
-    clueService = jasmine.createSpyObj('ClueService', ['getClue']);
+    gameState = {};
   });
 
-  describe('activate()', () => {
+  describe('constructor', () => {
 
-    let id = 42;
-    let fakeClue = new Clue();
+    it('should set the clue if currentClue exists', () => {
+      gameState.currentClue = new Clue();
+      clueDetail = new ClueDetailComponent(gameState);
+      expect(clueDetail.clue).toBe(gameState.currentClue);
+    });
+
+    it('should NOT set a clue if currentClue does not exist', () => {
+      clueDetail = new ClueDetailComponent(gameState);
+      expect(clueDetail.clue).toBeUndefined();
+    });
+
+  });
+
+  describe('attached()', () => {
 
     beforeEach(() => {
-      clueService.getClue.and.returnValue(fakeClue);
-      clueDetail = new ClueDetailComponent(clueService);
-      clueDetail.activate({ id: 42 });
+      gameState.currentClue = new Clue();
+      clueDetail = new ClueDetailComponent(gameState);
     });
 
-    it('should lookup the clue from the passed ID', () => {
-      expect(clueService.getClue).toHaveBeenCalledWith(id);
+    describe('when the clue has been revealed', () => {
+      // TODO
     });
 
-    it('should save the clue', () => {
-      expect(clueDetail.clue).toBe(fakeClue);
+    describe('when the clue has NOT been revealed', () => {
+
+      beforeEach(() => {
+        spyOn(window, 'setTimeout').and.callFake(func => { func(); });
+        clueDetail.attached();
+      });
+
+      it('should wait 3 seconds', () => {
+        expect(window.setTimeout).toHaveBeenCalledWith(
+          jasmine.any(Function),
+          3000
+        );
+      });
+
+      it('should then mark the clue as revealed', () => {
+        expect(clueDetail.clue.isRevealed).toBe(true);
+      });
+
     });
 
   });
-
-  describe('goBack()', () => {
-
-    beforeEach(() => {
-      spyOn(window.history, 'back');
-      new ClueDetailComponent(clueService).goBack();
-    });
-
-    it('should go back in the browser history', () => {
-      expect(window.history.back).toHaveBeenCalled();
-    });
-
-  });
-
 });

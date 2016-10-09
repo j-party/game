@@ -22,6 +22,7 @@ export class Board {
     this.round = this.gameState.round;
   }
   gotoClue(clue: Clue) {
+    this.gameState.currentClue = clue;
     this.router.navigateToRoute('clueDetail', { id: clue.id });
   }
 }

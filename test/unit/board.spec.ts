@@ -54,7 +54,11 @@ describe('Board Screen', () => {
       clue = new Clue();
       clue.id = 42;
       board.gotoClue(clue);
-    })
+    });
+
+    it('should set the currentClue', () => {
+      expect(board.gameState.currentClue).toBe(clue);
+    });
 
     it('should navigate to the "clueDetail" route for the given clue ID', () => {
       expect(router.navigateToRoute).toHaveBeenCalledWith(
