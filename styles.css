@@ -31,3 +31,6 @@ button:disabled {
 * {
   font-family: Arial, Helvetica, sans-serif;
 }
+:focus {
+  border: 2px solid red;
+}
