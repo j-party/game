@@ -2,6 +2,7 @@ export class Clue {
   id: number;
   clue: string;
   answer: string;
+  category: Category;
   value: number;
   isRevealed: boolean = false;
 }

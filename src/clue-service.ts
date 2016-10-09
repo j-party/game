@@ -90,6 +90,7 @@ export class ClueService {
             id: Number(clue.id),
             clue: String(clue.clue),
             answer: String(clue.answer),
+            category: indexedData[categoryId],
             value: 0,
             isRevealed: false
           };
