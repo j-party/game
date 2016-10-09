@@ -46,14 +46,14 @@ describe('Board Screen', () => {
 
   });
 
-  describe('gotoDetail()', () => {
+  describe('gotoClue()', () => {
 
     let clue: Clue;
 
     beforeEach(() => {
       clue = new Clue();
       clue.id = 42;
-      board.gotoDetail(clue);
+      board.gotoClue(clue);
     })
 
     it('should navigate to the "clueDetail" route for the given clue ID', () => {

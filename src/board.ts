@@ -21,7 +21,7 @@ export class Board {
     this.players = this.gameState.players;
     this.round = this.gameState.round;
   }
-  gotoDetail(clue: Clue) {
+  gotoClue(clue: Clue) {
     this.router.navigateToRoute('clueDetail', { id: clue.id });
   }
 }

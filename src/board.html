@@ -9,28 +9,28 @@
     </thead>
     <tbody>
       <tr>
-        <td repeat.for="category of categories" click.trigger="gotoDetail(category.clues[0])">
-          $${category.clues[0].value}
+        <td repeat.for="category of categories">
+          <a href click.trigger="gotoClue(category.clues[0])">$${category.clues[0].value}</a>
         </td>
       </tr>
       <tr>
-        <td repeat.for="category of categories" click.trigger="gotoDetail(category.clues[1])">
-          $${category.clues[1].value}
+        <td repeat.for="category of categories">
+          <a href click.trigger="gotoClue(category.clues[1])">$${category.clues[1].value}</a>
         </td>
       </tr>
       <tr>
-        <td repeat.for="category of categories" click.trigger="gotoDetail(category.clues[2])">
-          $${category.clues[2].value}
+        <td repeat.for="category of categories">
+          <a href click.trigger="gotoClue(category.clues[2])">$${category.clues[2].value}</a>
         </td>
       </tr>
       <tr>
-        <td repeat.for="category of categories" click.trigger="gotoDetail(category.clues[3])">
-          $${category.clues[3].value}
+        <td repeat.for="category of categories">
+          <a href click.trigger="gotoClue(category.clues[3])">$${category.clues[3].value}</a>
         </td>
       </tr>
       <tr>
-        <td repeat.for="category of categories" click.trigger="gotoDetail(category.clues[4])">
-          $${category.clues[4].value}
+        <td repeat.for="category of categories">
+          <a href click.trigger="gotoClue(category.clues[4])">$${category.clues[4].value}</a>
         </td>
       </tr>
     </tbody>
