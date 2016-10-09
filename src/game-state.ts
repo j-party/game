@@ -11,6 +11,7 @@ export class GameRound {
 
 export class GameState {
   public categories: Category[];
+  public currentCategory: Category | null = null;
   public currentClue: Clue | null = null;
   public currentPlayer: Player;
   public players: Player[];
@@ -29,6 +30,7 @@ export class GameState {
   reset(players: Player[], categories: Category[]) {
     this.players = players;
     this.currentPlayer = this.players[0];
+    this.currentCategory = null;
     this.currentClue = null;
     this.categories = categories;
     this.round = new GameRound();
