@@ -140,6 +140,11 @@
             "env": "dev"
           },
           {
+            "name": "mousetrap",
+            "path": "../node_modules/mousetrap",
+            "main": "mousetrap"
+          },
+          {
             "name": "random-js",
             "path": "../node_modules/random-js/lib",
             "main": "random"
