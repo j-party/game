@@ -6,6 +6,7 @@ export enum InputType {
 
 export class Input {
   constructor(
-    public type: InputType
+    public type: InputType,
+    public sequence?: string
   ) {}
 }
