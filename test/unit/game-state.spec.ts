@@ -32,9 +32,14 @@ describe('GameRound', () => {
 describe('GameState', () => {
 
   let state: GameState;
+  let config: any = {};
 
   beforeEach(() => {
-    state = new GameState();
+    state = new GameState(config);
+  });
+
+  it('should init config from the GameConfig', () => {
+    expect(state.config).toBe(config);
   });
 
   it('should init currentClue to null', () => {
