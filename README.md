@@ -4,6 +4,8 @@ This project is the software piece of the J!Party collection.
 
 It is built on top of the [Aurelia](http://aurelia.io/) framework; no server required.
 
+Runs on all modern browsers, including Chrome, Firefox, Safari, Edge, and Internet Explorer 11.
+
 ## Installation
 
 If you don't want to build the game from the source code, consider downloading the J!Party bundle instead.
