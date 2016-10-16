@@ -1,21 +1,10 @@
-import { TitleScreen } from './title-screen.po';
-import { BoardScreen } from './board.po';
+import { ClueDetailScreen } from './clue-detail.po';
 
 describe('Clue Detail screen', () => {
-  let titleScreen: TitleScreen;
-  let boardScreen: BoardScreen;
 
   beforeEach(() => {
-    browser.loadAndWaitForAureliaPage(browser.baseUrl);
-
-    titleScreen = new TitleScreen();
-    titleScreen.waitUntilLoaded();
-    titleScreen.pressAnyKey();
-    browser.waitForRouterComplete();
-
-    boardScreen = new BoardScreen();
-    boardScreen.chooseFirst();
-    browser.waitForRouterComplete();
+    let clueDetailScreen = new ClueDetailScreen();
+    clueDetailScreen.load();
   });
 
   it('should display the category name', () => {

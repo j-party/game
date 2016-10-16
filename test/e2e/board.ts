@@ -1,14 +1,10 @@
-import { TitleScreen } from './title-screen.po';
+import { BoardScreen } from './board.po';
 
 describe('Board screen', () => {
-  let titleScreen: TitleScreen;
 
   beforeEach(() => {
-    browser.loadAndWaitForAureliaPage(browser.baseUrl);
-    titleScreen = new TitleScreen();
-    titleScreen.waitUntilLoaded();
-    titleScreen.pressAnyKey();
-    browser.waitForRouterComplete();
+    let boardScreen = new BoardScreen();
+    boardScreen.load();
   });
 
   it('should display the round name at the top', () => {

@@ -1,11 +1,12 @@
 export class TitleScreen {
   private waitFor = protractor.ExpectedConditions;
 
-  pressAnyKey() {
-    $('body').sendKeys('a');
+  load() {
+    browser.loadAndWaitForAureliaPage(browser.baseUrl);
+    browser.wait(this.waitFor.visibilityOf($('.press-any')), 30000);
   }
 
-  waitUntilLoaded() {
-    browser.wait(this.waitFor.visibilityOf($('.press-any')), 30000);
+  pressAnyKey() {
+    $('body').sendKeys('a');
   }
 }

@@ -5,8 +5,7 @@ describe('Title screen', () => {
 
   beforeEach(() => {
     titleScreen = new TitleScreen();
-    browser.loadAndWaitForAureliaPage(browser.baseUrl);
-    titleScreen.waitUntilLoaded();
+    titleScreen.load();
   });
 
   describe('when a key is pressed', () => {
